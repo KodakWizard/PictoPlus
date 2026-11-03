@@ -1,0 +1,2 @@
+using System;using System.IO;using System.Diagnostics;using System.Windows.Forms;
+class Launcher{[STAThread]static void Main(){var root=AppDomain.CurrentDomain.BaseDirectory;var target=Path.Combine(root,"app","native","PictoPlus-v07.exe");if(!File.Exists(target)){MessageBox.Show("The app's main file is missing. Keep this launcher beside the app folder and rebuild or restore app/native/PictoPlus-v07.exe.","PictoPlus");return;}Process.Start(new ProcessStartInfo(target){WorkingDirectory=root,UseShellExecute=false});}}

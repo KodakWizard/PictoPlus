@@ -1,0 +1,2606 @@
+{
+  ".github/ISSUE_TEMPLATE/bug_report.md": {
+    "bytes": 317,
+    "sha256": "5036dd5cde43f15fb7221140b8500b27fe2ad2385c3725ecab0fe850c0828456"
+  },
+  ".github/workflows/check.yml": {
+    "bytes": 850,
+    "sha256": "c014a18f44548d508dcad58a635ec2e32d5b87375d46ef4d734ddb65312e5c75"
+  },
+  ".gitignore": {
+    "bytes": 275,
+    "sha256": "f577ff51b87df9b6d6463d9a64a1d25f09f63c56117afdc109c0770fed0d7838"
+  },
+  "CHANGELOG.md": {
+    "bytes": 1234,
+    "sha256": "c1ff7682a797518e28632505c83daa40e6aa49a9c96136de50e2d0d753db94eb"
+  },
+  "CONTRIBUTING.md": {
+    "bytes": 1361,
+    "sha256": "812d3b9599105b33f89dde10ac7b267fe334201b8a1d2dade30a8a4890d0a899"
+  },
+  "LICENSE": {
+    "bytes": 1080,
+    "sha256": "488fe36daea67c2a64d11478f4014e7b9e5b4ffffa72a8e6c174bae0e8d83860"
+  },
+  "LICENSES/ArticBase-MIT.txt": {
+    "bytes": 1065,
+    "sha256": "ec51afe7833e60f4f12f3a2f57eae83c649c3da2116fd0ef36ec6cf5fec740e4"
+  },
+  "LICENSES/GCC-runtime-exception.txt": {
+    "bytes": 3324,
+    "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+  },
+  "LICENSES/GPL-3.0.txt": {
+    "bytes": 35147,
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  "LICENSES/MPL-2.0.txt": {
+    "bytes": 16726,
+    "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04"
+  },
+  "LICENSES/Noto-OFL.txt": {
+    "bytes": 4377,
+    "sha256": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb"
+  },
+  "LICENSES/Python.txt": {
+    "bytes": 35407,
+    "sha256": "935cf13e19f8c31b497d20b05d73623431a226b230c3599bc30fa3348979bc68"
+  },
+  "LICENSES/Roslyn-MIT.txt": {
+    "bytes": 1253,
+    "sha256": "2b5a4fbf37951a9e3bee4b00b436e15c6d60221d077bae13bd6f57b672527f33"
+  },
+  "LICENSES/Roslyn-ThirdPartyNotices.rtf": {
+    "bytes": 2183,
+    "sha256": "ef4678850e7e3aaf9297f07e5c4060d477854e545ccf8e2ef8452d65a7b2efaf"
+  },
+  "LICENSES/SPICA-Unlicense.txt": {
+    "bytes": 1233,
+    "sha256": "a4ef5224f5b38684bbc95521f04b96325c2402c03da3ecb35e232d82a996282f"
+  },
+  "LICENSES/WebView2-SDK.txt": {
+    "bytes": 1487,
+    "sha256": "0af8f1b807512aae39c2ac1aa4d0cae65cabecb6fd554b8439a5162a0d6eca55"
+  },
+  "LICENSES/libctru.txt": {
+    "bytes": 2727,
+    "sha256": "6ca781f919d70afba6206e61415ac8bd003adce37fc08c10d8367c9114c77fd0"
+  },
+  "LICENSES/newlib.txt": {
+    "bytes": 78261,
+    "sha256": "fcfb5ec69b6ab52676dcc4dab7cf4338c8000ef97812dadd35b8592a640a8419"
+  },
+  "LICENSES/three-MIT.txt": {
+    "bytes": 1081,
+    "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+  },
+  "README.md": {
+    "bytes": 5485,
+    "sha256": "b363d7b3137b2286877b38614c14341444e26603cc2122d0be79987aadabb54e"
+  },
+  "SECURITY.md": {
+    "bytes": 501,
+    "sha256": "5f389341916c0f495d1b040fc00134e93be26e3f1a8244bceebea19ffa3ee2f9"
+  },
+  "app/assets/covers/PROMPTS.md": {
+    "bytes": 3633,
+    "sha256": "306af2d1f3e69ea397db149e5ee48fed5fc5297b1755e5bf6205a9ee06a776d6"
+  },
+  "app/assets/covers/art-01.png": {
+    "bytes": 2817646,
+    "sha256": "8ea7713894de8e4ca94dc02cf0505b142083eb0eb0468ed93497dc3bdbff3457"
+  },
+  "app/assets/covers/art-02.png": {
+    "bytes": 2609647,
+    "sha256": "5e49807a2b4d4d639c953e854dd3688106b25f3730b93076c44901f1419b33cd"
+  },
+  "app/assets/covers/art-03.png": {
+    "bytes": 2670220,
+    "sha256": "c0cbdd37f9d7e182d9a9e2532fedca1f0301e6d3b29ef1d704cbe85ced1eeb9a"
+  },
+  "app/assets/covers/art-04.png": {
+    "bytes": 2551595,
+    "sha256": "80db316c70de898302b580f1a8e7adb88c61cdfa297054469bc621125590f390"
+  },
+  "app/assets/covers/art-05.png": {
+    "bytes": 2475276,
+    "sha256": "98322f64920ebb2b73ad6a3a82cd483bc40bc2c63217b3d8b590988025aaa6d9"
+  },
+  "app/assets/covers/art-06.png": {
+    "bytes": 2613684,
+    "sha256": "c1d0696a2373dcd266caf483f3f679f9c6830ac52251e2b12ba44c502ae1c909"
+  },
+  "app/assets/covers/art-07.png": {
+    "bytes": 2748971,
+    "sha256": "fb7953b641ba0b2dc494f94d56a40e8b917d4f6e8ee3a61280cb19452136ee31"
+  },
+  "app/assets/covers/art-08.png": {
+    "bytes": 2823441,
+    "sha256": "5cd9b53efd2451ae8819a9c1c7558f402335a3e23f79a6a0f95778948ae56564"
+  },
+  "app/assets/covers/art-09.png": {
+    "bytes": 2391439,
+    "sha256": "89a373f309461fb8e53059358b21e281b8454fb9a01a38c49cc67121635c71e7"
+  },
+  "app/assets/covers/art-10.png": {
+    "bytes": 2292956,
+    "sha256": "de45e480268eef46f68d1d9be956376b5cf366c567ef1e9aeef5ac69890bd3de"
+  },
+  "app/assets/covers/catalog.json": {
+    "bytes": 3196,
+    "sha256": "909646ea0176d3bcc6461c4b4fb6f7ef9dcf18a2da0ef50b10dc9a4773858518"
+  },
+  "app/assets/covers/previews/01.png": {
+    "bytes": 63720,
+    "sha256": "1f7291b30223044b6fc4ceba8f73b4f3f2604877cca32784d7ad279dcfd3f753"
+  },
+  "app/assets/covers/previews/02.png": {
+    "bytes": 64420,
+    "sha256": "e5510360b3a3348d4fb797a930fe4bcc8874859b6096d48513d03ccbf30127cd"
+  },
+  "app/assets/covers/previews/03.png": {
+    "bytes": 65091,
+    "sha256": "0ac7128999647dd701d4a0b95da27d8ccb2d269512c1ccf93279ccf25e2349cf"
+  },
+  "app/assets/covers/previews/04.png": {
+    "bytes": 64271,
+    "sha256": "824ed00110d3fa18da5dfca74ba1459a90b355548950b9cb102f3ed47241a4be"
+  },
+  "app/assets/covers/previews/05.png": {
+    "bytes": 66301,
+    "sha256": "28f0ccc10e4dbeb0e0bbf71cc44f1c8eb64c55ffce4e7d2ff87c6f98ce227800"
+  },
+  "app/assets/covers/previews/06.png": {
+    "bytes": 55285,
+    "sha256": "6943fa2128cf42551534ebd278bb2476b2e0e03c83e59c31d1a066c7264fff46"
+  },
+  "app/assets/covers/previews/07.png": {
+    "bytes": 62344,
+    "sha256": "fd0432ef22f3f2c1c6b15733381be86c6fc70bcce37d0e7b8fb3b569f3a2d6e8"
+  },
+  "app/assets/covers/previews/08.png": {
+    "bytes": 64894,
+    "sha256": "00fbe28e6a10bbb344a146bf0024e9cbac2d51ebeb96df7cd093ea6f4397729d"
+  },
+  "app/assets/covers/previews/09.png": {
+    "bytes": 60545,
+    "sha256": "0184146c4786fd5caba13dae8548970fce99091076919b64792398d975dff600"
+  },
+  "app/assets/covers/previews/10.png": {
+    "bytes": 46503,
+    "sha256": "2a4169b3c7d8e547d20d7eaa4e0fb7d385a9e74cbc5a60a6a0574784c8fa914f"
+  },
+  "app/assets/pictoplus-logo.png": {
+    "bytes": 908101,
+    "sha256": "0ee826b9c6aeaad85c617b2a8f58337a8baabf8a002bbf6e40edd1727b65c0d6"
+  },
+  "app/assets/pictoplus.ico": {
+    "bytes": 69024,
+    "sha256": "225d89f10b10f7fd221ab28b14a4fcf3c625d51f2c9c6ff9f9e0148b5c68dde7"
+  },
+  "app/authoring-setup.html": {
+    "bytes": 4811,
+    "sha256": "25db674ad764292880d2598b0e65e4333067b59c9842ffd243286edda97608b7"
+  },
+  "app/authoring-setup.js": {
+    "bytes": 2306,
+    "sha256": "90942932803a3592f1586fdfa898ac623281c705cfa440596f66c6a46dd45cdb"
+  },
+  "app/authoring_setup.py": {
+    "bytes": 5846,
+    "sha256": "170c827d262c8cacc15d5849274e8154b9d624aa5a8978438d6901138221bad1"
+  },
+  "app/book_packs.py": {
+    "bytes": 17036,
+    "sha256": "12f67ebc9824a8ad0752359a27ecf4d84b3542292f876ec5c468944dace91cd4"
+  },
+  "app/config/authoring-manifest.json": {
+    "bytes": 77620,
+    "sha256": "37b915e3573079e3f579b79f5acaf4422d066ebd0c9a11e77659af0d24c44e5b"
+  },
+  "app/config/native-shape-map.json": {
+    "bytes": 2997,
+    "sha256": "3035cd005b937cc1a64cb3ddb9ea634abebb9006c3e18e310a00bcd1ae52b2df"
+  },
+  "app/core.py": {
+    "bytes": 37753,
+    "sha256": "d379c8fe9ee5de24eda24ce459baa2bd42ce3d9be12641e37d0ea3f35599fd11"
+  },
+  "app/designer-orbit.js": {
+    "bytes": 1709,
+    "sha256": "458c34e645c23772108fb1a2882156a16f8cb78e71590834495fac83cfcab016"
+  },
+  "app/designer-orbit.test.mjs": {
+    "bytes": 3328,
+    "sha256": "9b8a2ffcb5324d79bdfccc92879d33242b59b4839553a2a94ab8dbb0e87b8f41"
+  },
+  "app/difficulty_options.py": {
+    "bytes": 3091,
+    "sha256": "0994d96c78cbd57f4433587566d86265d4bc66b834d13c996bfe74960c42e877"
+  },
+  "app/distribution.py": {
+    "bytes": 1222,
+    "sha256": "e7c8a0f5780cd6bc31af8a3fe8f703df34874105c25908210712f289064fe669"
+  },
+  "app/distribution/USA/PictoPlus-USA-SD-Setup.zip": {
+    "bytes": 267974,
+    "sha256": "2f788c82a8b9fd06d5e5b26c8b2da8d86df8da583b96d53358d2b95562f52f0d"
+  },
+  "app/distribution/USA/build-info.json": {
+    "bytes": 183,
+    "sha256": "9c5d5c41ebb58d58bca47d0f6f5f6928062d44160403fba6b638ab0fd31f26f0"
+  },
+  "app/editor-model.js": {
+    "bytes": 978,
+    "sha256": "22d436e1f5398028f20d5bd34104957bdb9fb8fb153904f4ede4d00be2156480"
+  },
+  "app/editor-model.test.mjs": {
+    "bytes": 1131,
+    "sha256": "b26922061d514b597f213d04f778b34710262e4e612c3102ce647fce7c70a80e"
+  },
+  "app/export_assets.py": {
+    "bytes": 11708,
+    "sha256": "44f5a20071deb12fc9a666dfe8d47d13939fa3aa1483d41231fd4c16f9223298"
+  },
+  "app/export_preparation.py": {
+    "bytes": 12437,
+    "sha256": "96ab5d2b26033a86b10943e33590277d5516f76e20f3f9fceb47d337009ff6d9"
+  },
+  "app/game_asset_edits.py": {
+    "bytes": 3561,
+    "sha256": "41fa756cecc35b0d907917b158ae551705688f688f6725c4424beaabd18cccd4"
+  },
+  "app/import_contacts.py": {
+    "bytes": 7760,
+    "sha256": "fc530706c36e9e12f5890400a7ecdb2971da621c56209dc4f5e0b1fefa0ce7f6"
+  },
+  "app/import_shapes.py": {
+    "bytes": 10725,
+    "sha256": "c90d71583edd15ebe54410d760f4bf1b72d6f9402c3f4ab35edb3c618e3cb432"
+  },
+  "app/import_surfaces.py": {
+    "bytes": 1715,
+    "sha256": "ebc97130e784baf9ecf9ceeabbe8e876ab36308685c523a36ac7df25e929ed2d"
+  },
+  "app/import_symmetry.py": {
+    "bytes": 5889,
+    "sha256": "d2b1680deb34f2ef10be21e65b452ee1c8b270b6018f04d7c90ba1602d2793ab"
+  },
+  "app/index.html": {
+    "bytes": 30007,
+    "sha256": "4277b85764683af01567c67190ca8916ecc053118ef19fb1d002ba8a12b0fd28"
+  },
+  "app/model-positioning.js": {
+    "bytes": 796,
+    "sha256": "4a9ea3c06325742e9159f8818d8d99d14ef903e2cd3c3c4e42b8d3adb72a8339"
+  },
+  "app/model-positioning.test.mjs": {
+    "bytes": 1018,
+    "sha256": "eef03390db6af95cc304b51a093fa4627ca180723a1dfe5e5c3b56f5fa4c8ebd"
+  },
+  "app/native/AssemblyInfo.cs": {
+    "bytes": 525,
+    "sha256": "29dcd7f59404227d1f2ccdecc711469c866d113b7f2f50ec16bedbec3be81415"
+  },
+  "app/native/InstallerIntegrity.cs": {
+    "bytes": 710,
+    "sha256": "6f440a6a1aa1e1b6aa26dec0c47446e9652ee4e5fec4d3290bd1ae7f03af7fee"
+  },
+  "app/native/Launcher.cs": {
+    "bytes": 523,
+    "sha256": "79f3d0db6288b7ee56660b6099df13b43b847e68832031d81fda70c341c6ce01"
+  },
+  "app/native/Microsoft.Web.WebView2.Core.dll": {
+    "bytes": 649832,
+    "sha256": "e6c517412c245c0f0d65fc494d4f7bf883eba3cfd7023c3f66cc1fe774ec0a22"
+  },
+  "app/native/Microsoft.Web.WebView2.WinForms.dll": {
+    "bytes": 39000,
+    "sha256": "362ede7adc427ff631cd313418d6d331c01eb1f7874a5ca54911130739792145"
+  },
+  "app/native/PictoPlus.manifest": {
+    "bytes": 415,
+    "sha256": "2c21c43ea5190f0f89bf17618da6e9f9af48e8d603d980c4b330c128ae615b5c"
+  },
+  "app/native/Studio.cs": {
+    "bytes": 9774,
+    "sha256": "1536f1d4167a1b575ce8016a10d238ae92af0921d9af2146096ec174b09bbbf2"
+  },
+  "app/native/WebView2Loader.dll": {
+    "bytes": 159848,
+    "sha256": "2f965e10aed3b356a408978a0e6d74eb86e3e722dd008fa9ad39f68884479e85"
+  },
+  "app/native_book.py": {
+    "bytes": 6344,
+    "sha256": "6fd381de8f6f6c2c4f1462f6aa295d67063dbb10a2f6df82138dc1ecf23a54f1"
+  },
+  "app/number_layouts.py": {
+    "bytes": 5648,
+    "sha256": "15009d80d5a7dfd2004678757aa19a54efc4e0bd0bd863509fc81bfd86c819f9"
+  },
+  "app/pack_install.py": {
+    "bytes": 6160,
+    "sha256": "734d3833d4f792118e4abd4390f88a292ef1107d1b7d16b141dac30056ce9996"
+  },
+  "app/placement.js": {
+    "bytes": 1332,
+    "sha256": "fd2f770a053ffba8db8cca286430ee5f5ed558041dd33ed99c1a33627ea6dc1e"
+  },
+  "app/placement.test.mjs": {
+    "bytes": 1356,
+    "sha256": "a225d450e64746d408c7d9d83c41571955d0d49b6948c8f52474f09c302b9ef1"
+  },
+  "app/polish.css": {
+    "bytes": 20224,
+    "sha256": "cc3099b69c475cc5d987ceceee364e2e57b05b7668a6b9a70f39de4eb52bc543"
+  },
+  "app/public-release.json": {
+    "bytes": 103,
+    "sha256": "db6754ae45f4d985264780c669a0ec3202a931ad4732c53de3a63f551a5680bb"
+  },
+  "app/puzzle-numbers.js": {
+    "bytes": 2841,
+    "sha256": "8ada8d0f6e16f5a7c7a2930944132ba5c977183e03429dfa90dd73805242c485"
+  },
+  "app/puzzle-numbers.test.mjs": {
+    "bytes": 946,
+    "sha256": "cfea01b5be5e90555a447b288ca10ba40604c9dd4985ab04352607f912c99ef9"
+  },
+  "app/readability.css": {
+    "bytes": 9634,
+    "sha256": "6add64ab7d93468dd6e72e674e9b219137ddf03e46c000c8c0fcd78ff20a7a24"
+  },
+  "app/runtime/python/python314.zip": {
+    "bytes": 4158438,
+    "sha256": "4e97b321fe7f470c5a2cda0414f2b9caa896835edadf03eef251a0ebc3c24cc3"
+  },
+  "app/server.py": {
+    "bytes": 16334,
+    "sha256": "a905b5b0f49ef50d2802a54e54cf2b563f6cac62bb3de4a2822f5a3330302d22"
+  },
+  "app/setup-import.js": {
+    "bytes": 900,
+    "sha256": "96f30423b91ad6e8e900738c89cbf9c92d55fadb30e3b9fa0d22e1465e357bdb"
+  },
+  "app/setup-import.test.mjs": {
+    "bytes": 2253,
+    "sha256": "5ae9ec3f9e91f7331778be9f6a3efe0c193d6effeed9f9b897be5c8136033be1"
+  },
+  "app/startup.js": {
+    "bytes": 1088,
+    "sha256": "497893a88b6f295abc1ada98949df1c48f576887aa82c3e7eb5016b678143faa"
+  },
+  "app/startup.test.mjs": {
+    "bytes": 2477,
+    "sha256": "7156e35301d454a2e592f0ed77130ba86a0f5e88435f5f3c365903927fb9d511"
+  },
+  "app/studio-menus.js": {
+    "bytes": 1297,
+    "sha256": "7f46bb044fcfefb03fa919668e491a9cc84e928e8207e2cb6b0d2306e1249399"
+  },
+  "app/studio.js": {
+    "bytes": 117621,
+    "sha256": "08ccffaa628b98d2481e5b0874d166443f57f64a286254f71a9c99451f5b9c2d"
+  },
+  "app/style.css": {
+    "bytes": 31417,
+    "sha256": "94fbb466cf240d3637453cd601a9ab883f63dc1a87d82d8f9b6509e0f788f0b6"
+  },
+  "app/vendor/package/LICENSE": {
+    "bytes": 1081,
+    "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+  },
+  "app/vendor/package/build/three.core.js": {
+    "bytes": 1403455,
+    "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+  },
+  "app/vendor/package/build/three.module.js": {
+    "bytes": 603113,
+    "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+  },
+  "app/vendor/package/examples/jsm/controls/OrbitControls.js": {
+    "bytes": 38703,
+    "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c"
+  },
+  "app/vendor/package/examples/jsm/controls/TransformControls.js": {
+    "bytes": 49397,
+    "sha256": "621fb8894c0f748c2be2a6ff8a6bdd72c18a22b24ddfe21d506514544df5c84e"
+  },
+  "app/vendor/package/examples/jsm/loaders/GLTFLoader.js": {
+    "bytes": 114739,
+    "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a"
+  },
+  "app/vendor/package/examples/jsm/loaders/OBJLoader.js": {
+    "bytes": 22922,
+    "sha256": "e3ceb6a8ed48ca146049a8f0879c7acbf884d430f2e728779af26c6ea3a57c65"
+  },
+  "app/vendor/package/examples/jsm/loaders/STLLoader.js": {
+    "bytes": 10715,
+    "sha256": "023ed97f848b633d8bcd53d4db3b996d29d0c644088700691297c552257d480b"
+  },
+  "app/vendor/package/examples/jsm/renderers/CSS2DRenderer.js": {
+    "bytes": 6976,
+    "sha256": "dd667941bc67380ecb46c79fa682494e19a7b0a953806f7df24e78cfdfc6270e"
+  },
+  "app/vendor/package/examples/jsm/utils/BufferGeometryUtils.js": {
+    "bytes": 35539,
+    "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751"
+  },
+  "app/vendor/package/package.json": {
+    "bytes": 4635,
+    "sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93"
+  },
+  "app/vendor/webview2/LICENSE.txt": {
+    "bytes": 1487,
+    "sha256": "0af8f1b807512aae39c2ac1aa4d0cae65cabecb6fd554b8439a5162a0d6eca55"
+  },
+  "app/voxelise.py": {
+    "bytes": 3088,
+    "sha256": "638ca84713a05513b2526712552b15a83d9967520115258812d6ff2fcc10c67a"
+  },
+  "app/windows_process.py": {
+    "bytes": 1523,
+    "sha256": "06cfbf6d3cdbc843acd163f14093764749038e8352cedd04b7a0d792bc7bcdb1"
+  },
+  "docs/ASSETS-AND-LICENCES.md": {
+    "bytes": 3023,
+    "sha256": "7feba8df888c18c729e076faf74f5fae099f80ba637eb08c376af98cf4415c82"
+  },
+  "docs/BRANDING.md": {
+    "bytes": 930,
+    "sha256": "a682c3b947812e6020fbf637789581c12571debd80f65b1ae0208587ce4e3700"
+  },
+  "docs/BUILDING.md": {
+    "bytes": 2976,
+    "sha256": "678600ce697c64c0edd98a98e7c25785a42f400e5708aa2a3ff2ca0d1b422f14"
+  },
+  "docs/GITHUB-RELEASE.md": {
+    "bytes": 3082,
+    "sha256": "0ef255cab54de0407a3d80b9a4028c0fb98756fc8c593c112bf61f504b9fd780"
+  },
+  "docs/HARDWARE-TEST.md": {
+    "bytes": 3049,
+    "sha256": "314ee2cc63f7f9810c9a892111392611da256cdc7af71d5c85a25da4ad096228"
+  },
+  "docs/INSTALLATION.md": {
+    "bytes": 3145,
+    "sha256": "e8173df954d2f1a111a2d223a813b84a814dfb956c2567dd3a129c25cfa0ea0a"
+  },
+  "docs/RELEASE-AUDIT.md": {
+    "bytes": 6522,
+    "sha256": "981c278be305ee3e0178a3b4ef11581c833f7e103d656b7753f1d0b6583436ee"
+  },
+  "docs/SECURITY-REVIEW.md": {
+    "bytes": 2232,
+    "sha256": "8e506692c5392ba19c849d3988daba46f9251b76ee7cba7ed60716e2b48ef5f1"
+  },
+  "docs/TROUBLESHOOTING.md": {
+    "bytes": 2877,
+    "sha256": "63bcaaed78393b9075b8cea532eaaf7b15755d56db3a6efb436349c2ccd0ffa6"
+  },
+  "docs/images/designer.png": {
+    "bytes": 110168,
+    "sha256": "efad52fc4e74d0432d657c1a759fed83bb12070dcdab0e154bbfb3ac05e89a1c"
+  },
+  "docs/images/icon-128.png": {
+    "bytes": 13633,
+    "sha256": "42c2ff823521fe041a19b53a3e097d527a351d5de9743ee45adc455c870dee83"
+  },
+  "docs/images/icon-16.png": {
+    "bytes": 681,
+    "sha256": "8ddd84b6d91caefe6fb50806c257dafbf024b8744fd414c45ccaab989de6cf2e"
+  },
+  "docs/images/icon-24.png": {
+    "bytes": 1153,
+    "sha256": "54b5d93f845b63b83bab4fd02b861225f5b5eb47da648281aae0bf3d387ef5ad"
+  },
+  "docs/images/icon-256.png": {
+    "bytes": 44263,
+    "sha256": "f30c9303219faa90e5fd80e8bfaccc06079650d6a7fc07571e462775cd864854"
+  },
+  "docs/images/icon-32.png": {
+    "bytes": 1666,
+    "sha256": "87cf262808c3ad3957fcacd51b9fc958c4fd3947243037e7864e968711a6ec30"
+  },
+  "docs/images/icon-48.png": {
+    "bytes": 2936,
+    "sha256": "03d9dddbbe985fbaee7df638e6be250953e47d9f4a4ef5019f734ae56ab254f3"
+  },
+  "docs/images/icon-64.png": {
+    "bytes": 4574,
+    "sha256": "8d59e4714dc1013c20eb8bae9bd93e8b918c1d8736bc314c4e823c6c392cd1c6"
+  },
+  "docs/images/welcome.png": {
+    "bytes": 79824,
+    "sha256": "a16c78a1f459c1ad9039c01057472f8e7352f13035b2a8f743c18167ef8d2db7"
+  },
+  "native/README.md": {
+    "bytes": 1012,
+    "sha256": "ed99537524ee24bc07ed7fa474aedfbb032ae95f8e84235582a00d167a5ff6b5"
+  },
+  "native/usa/authoring_manifest.h": {
+    "bytes": 23037,
+    "sha256": "a62c5f5a32f3ef3e76c9b0895bad48eb151a61e26453e1e81614bd1172136a20"
+  },
+  "native/usa/catalogue.cpp": {
+    "bytes": 54589,
+    "sha256": "0ae7aaa01297c0b67e51aa8062aac679a9be8ac8c108bdbecb6095cffb4983d1"
+  },
+  "native/usa/decoder.s": {
+    "bytes": 705,
+    "sha256": "e11aa9a1e4bee87ca826b23cd35608806fc6e3888ed758e19b42aab5cf518471"
+  },
+  "native/usa/discovery.c": {
+    "bytes": 6856,
+    "sha256": "1f7ed68d2a227c0eed063949cf557d82cf7fac6f35529dc326f473a022b20633"
+  },
+  "native/usa/game_base_manifest.h": {
+    "bytes": 918,
+    "sha256": "1bbb4fb4a5a5c575e27bd81c21812b5986e8f6bcd34db79402cac90941a9ae1c"
+  },
+  "native/usa/game_hooks.c": {
+    "bytes": 19657,
+    "sha256": "b120942ce631b7b00aaf7debc09fe9b5751daab7b4b895f600c0d12dee648027"
+  },
+  "native/usa/game_hooks.s": {
+    "bytes": 1703,
+    "sha256": "dad1679262cc1d0e1a2a8dd37c25dd2ef631d1de2c3dbfca9e8be8a597735222"
+  },
+  "native/usa/game_layout_recipe.h": {
+    "bytes": 26294,
+    "sha256": "c2be0c888e98ee162492f01ae0f56c6ee6aff7e02650b3fde8f99fb14b865d92"
+  },
+  "native/usa/game_romfs.c": {
+    "bytes": 166,
+    "sha256": "3c83efe7b61f9607ab9a5f5f28cf1e3ccfbe9d0e22cc85a930ab3da914bec272"
+  },
+  "native/usa/loading_font.h": {
+    "bytes": 136620,
+    "sha256": "bc41771542c63291cc06a37a795e0b0d9202c29987578ed451a553c3a48ed8c1"
+  },
+  "native/usa/loading_logo.h": {
+    "bytes": 92933,
+    "sha256": "0513d1252cdc9e60322b7ac201d7fb3617c6e193e675982cba405b8a09da24e1"
+  },
+  "native/usa/loading_screen.c": {
+    "bytes": 9171,
+    "sha256": "de6fe99d0feb64194124ae3eb9af805d8e5b24970bef1c620a6b75a3b0e3bdd1"
+  },
+  "native/usa/page_timing.c": {
+    "bytes": 2443,
+    "sha256": "4e9c0557bda5903953dff6c733594c3ee8e7f7f44b28983986373f94cc762683"
+  },
+  "native/usa/paging_payloads.h": {
+    "bytes": 22268,
+    "sha256": "16efaec6322743f9c22a78f2edf049c9ab87b8dcd220fb06403b99ceb1480bd5"
+  },
+  "native/usa/startup.s": {
+    "bytes": 1330,
+    "sha256": "76210adf68931fd823d88997954cd3a70b9fc18468b1645c5819af1f9d7157dc"
+  },
+  "native/vendor/3gx.ld": {
+    "bytes": 4322,
+    "sha256": "f9d2b8e167e7b212cebcfe862797a4265f03f09065f6541167862bb3760a626e"
+  },
+  "native/vendor/ArticBase-MIT.txt": {
+    "bytes": 1065,
+    "sha256": "ec51afe7833e60f4f12f3a2f57eae83c649c3da2116fd0ef36ec6cf5fec740e4"
+  },
+  "native/vendor/csvc.h": {
+    "bytes": 6670,
+    "sha256": "92a19af054f81dc6d63bf8debbbcb20a5206fe736cac4d364c5d95aedc900608"
+  },
+  "native/vendor/csvc.s": {
+    "bytes": 2465,
+    "sha256": "4e8c16d77ba1ef31f13d0c49284d576651e8ed90f1820217083c34152a132134"
+  },
+  "tools/SPICA/LICENSE.txt": {
+    "bytes": 1233,
+    "sha256": "a4ef5224f5b38684bbc95521f04b96325c2402c03da3ecb35e232d82a996282f"
+  },
+  "tools/SPICA/SPICA/Compression/LZ4.cs": {
+    "bytes": 1971,
+    "sha256": "e38b6130e7ae464215c946fdf41417191d8c40836cab8d74813fef4f37c2e187"
+  },
+  "tools/SPICA/SPICA/Formats/Common/BitUtils.cs": {
+    "bytes": 2347,
+    "sha256": "368f1832a611b016746130e5500c9b799a92752491cbfb2c550aed146717b3c0"
+  },
+  "tools/SPICA/SPICA/Formats/Common/CRC32Hash.cs": {
+    "bytes": 1344,
+    "sha256": "627330e9b564292811d70f407e8a7ba0a2c29ba5ffbf6b7e5ca6833eb1625bbf"
+  },
+  "tools/SPICA/SPICA/Formats/Common/Exceptions.cs": {
+    "bytes": 1094,
+    "sha256": "1135e29802bd3fae610503e62225ae4f33a9c4c4f63853c79bb6187cd62b4df5"
+  },
+  "tools/SPICA/SPICA/Formats/Common/FNV1a.cs": {
+    "bytes": 2254,
+    "sha256": "b975c41451622287ac931a5a44fdab0db4dfa20acf7708a37652494c8c0071e1"
+  },
+  "tools/SPICA/SPICA/Formats/Common/INameIndexed.cs": {
+    "bytes": 124,
+    "sha256": "6efb639f17f579248ad21951a5881b9b609706854ed40349b4565ae383c55982"
+  },
+  "tools/SPICA/SPICA/Formats/Common/INamed.cs": {
+    "bytes": 119,
+    "sha256": "17ac9921a05bee998d9aa04ec4f0b187f0869f59522313f58f3b9e92fecff3a8"
+  },
+  "tools/SPICA/SPICA/Formats/Common/IOUtils.cs": {
+    "bytes": 2316,
+    "sha256": "bdcbd7caac5c1c5f8476555094bae61f4200666cbd5821d0ca89381d0837e3bd"
+  },
+  "tools/SPICA/SPICA/Formats/Common/IPatriciaDict.cs": {
+    "bytes": 410,
+    "sha256": "8afc9cd7cda3dc8061f506bd4ede9a58f917efc7fe62cce55de050fd675ce9d8"
+  },
+  "tools/SPICA/SPICA/Formats/Common/IPatriciaTreeNode.cs": {
+    "bytes": 340,
+    "sha256": "c367342be9ee1a87da956f2d8c8bfe685e0ded9b1287a4a3320486ba8b0ef7ac"
+  },
+  "tools/SPICA/SPICA/Formats/Common/InvalidMagicException.cs": {
+    "bytes": 346,
+    "sha256": "48dc42ab2b22ea390f4dc77e39c940e60ee949e11a28312c3a1281254aeca697"
+  },
+  "tools/SPICA/SPICA/Formats/Common/KeyFrame.cs": {
+    "bytes": 937,
+    "sha256": "5d9be0570aa51685e3e41bc6b4641deace88baf9a7aa05c91660e6ca4e92836e"
+  },
+  "tools/SPICA/SPICA/Formats/Common/KeyFrameQuantization.cs": {
+    "bytes": 287,
+    "sha256": "9d1f1774ec0f9bd0b9eaddaafdcb7b1112474f67d18d4698204af8ecab40fe80"
+  },
+  "tools/SPICA/SPICA/Formats/Common/KeyFrameQuantizationHelper.cs": {
+    "bytes": 7820,
+    "sha256": "db067b05283cfc5462edb6f283a6d582441e259f2808120cbac06eb3f4e0eb19"
+  },
+  "tools/SPICA/SPICA/Formats/Common/MeshTransform.cs": {
+    "bytes": 3532,
+    "sha256": "5f0964255f8292b9289d427ac01ac028b09aed103600bc138b8abc84ad6af94d"
+  },
+  "tools/SPICA/SPICA/Formats/Common/PatriciaTree.cs": {
+    "bytes": 2482,
+    "sha256": "bdb3d5a46c6a98ea4aae8d80dfe18dd21f7c19fb4ac024f010a852f1eb0e0cc4"
+  },
+  "tools/SPICA/SPICA/Formats/Common/StringUtils.cs": {
+    "bytes": 5812,
+    "sha256": "167aa068aff6f1f6fa892c6ea6133b1ef3ef0934d2711ad5554464efe74680d9"
+  },
+  "tools/SPICA/SPICA/Formats/Common/TextureTransform.cs": {
+    "bytes": 1617,
+    "sha256": "05acf311c0387e1fb1e118b908c4723a8d0c4d20c202447781a95124cf653915"
+  },
+  "tools/SPICA/SPICA/Formats/Common/TextureTransformType.cs": {
+    "bytes": 143,
+    "sha256": "fd45e829016b75b3218a666053c4e10f295c62b9db4c5369cf165caa1980a855"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/AnimGroup/GfxAnimEvaluationTiming.cs": {
+    "bytes": 158,
+    "sha256": "ec385487813eefb228ff7c60e788929b167c177bf27429fdb4cf66dd62c58c83"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/AnimGroup/GfxAnimGroup.cs": {
+    "bytes": 769,
+    "sha256": "46c38223635516aec95bb40751bd1bbea3c956c0e3d281ad59cd3f77cbec173d"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/AnimGroup/GfxAnimGroupBlendOp.cs": {
+    "bytes": 560,
+    "sha256": "4f5fb79b3e166d5e57dbe5f9236a7e5d1855410bac44d6ffef337519962ac352"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/AnimGroup/GfxAnimGroupBone.cs": {
+    "bytes": 524,
+    "sha256": "7e60cb4a0de411f3123071a6c51e559471dd7c2eddd0f69dabf1ef0fb98ba977"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/AnimGroup/GfxAnimGroupElement.cs": {
+    "bytes": 1114,
+    "sha256": "a008bdc44f40a0f4b492d58b3801573f2d6ce025460cad99ef7203ac4fa8a967"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/AnimGroup/GfxAnimGroupMaterialColor.cs": {
+    "bytes": 571,
+    "sha256": "edf9efe533ba73fd7b693ca2f8e5737b1448d5906413337094a4c0872a55e42e"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/AnimGroup/GfxAnimGroupMesh.cs": {
+    "bytes": 314,
+    "sha256": "e8dd8c34732f36da9415b6342bb0bbc2a6f0998528ec069968cfc3e3dca0070b"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/AnimGroup/GfxAnimGroupMeshNodeVis.cs": {
+    "bytes": 552,
+    "sha256": "1d1a3ae0d03c2ec2cc0e02a238bedd1e3a771a2fb322dd7502597e6f66530b22"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/AnimGroup/GfxAnimGroupModel.cs": {
+    "bytes": 284,
+    "sha256": "4516c37b3f461e520f285b308c37de8fda6c57fd0d06e260aacf6cd78dbdcd76"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/AnimGroup/GfxAnimGroupObjType.cs": {
+    "bytes": 285,
+    "sha256": "51c42c03cb2121335cb04252091507c0f9879525c15beeb63cfbae7761b9054a"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/AnimGroup/GfxAnimGroupTexCoord.cs": {
+    "bytes": 600,
+    "sha256": "92cef8125049051fdc42f7465be2e1ccde9653683758ebe73e14ab6d0f20b380"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/AnimGroup/GfxAnimGroupTexMapper.cs": {
+    "bytes": 597,
+    "sha256": "e01d12d1b6b4b26f2b99840648d08fb71723a27b9ea70887f895dab24116d9e8"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/AnimGroup/GfxAnimGroupTexSampler.cs": {
+    "bytes": 601,
+    "sha256": "962b3770490d85c8843be1ec34f191b1560b41ef770f36969e97e54adaadd6e7"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxAnimBoolean.cs": {
+    "bytes": 2078,
+    "sha256": "fc41defdf067b828c07be505f72ef9e1834c189e13af94b98c663f06ba0ab289"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxAnimFloat.cs": {
+    "bytes": 757,
+    "sha256": "5ee6e0f7fdf8939295914f2fa9868da93899429d5eb51f1805ec0e9de18e46bf"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxAnimMtxTransform.cs": {
+    "bytes": 503,
+    "sha256": "221865aa5d591bb156e60566b9e748565ac35e02be9407239d4f1771e35e0455"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxAnimQuatTransform.cs": {
+    "bytes": 5882,
+    "sha256": "2115117b3abba838d910e64b4dd20b536ccb713b47cb2092358a18675dd7d355"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxAnimQuatTransformFlags.cs": {
+    "bytes": 388,
+    "sha256": "df821e759360d0114b6af360fec2998ffc1013f4b5bdd8b68730e2669863e2e8"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxAnimRGBA.cs": {
+    "bytes": 1131,
+    "sha256": "965d24e4ef586a8fcc64503bf63f1553311cdfd7542e323a1072668c394a481f"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxAnimTransform.cs": {
+    "bytes": 6545,
+    "sha256": "3222ba002143dee13ca706766151c60325abab5f2d4b28d6dfb074bce6e4a550"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxAnimTransformFlags.cs": {
+    "bytes": 1286,
+    "sha256": "43a3d71537e3ffca9d637c8a82776726b2067c6a40ef947b599a01daefd9d8fc"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxAnimVector.cs": {
+    "bytes": 4311,
+    "sha256": "a25518979fadda446678e517fc0e554e562af2a1461cdbedd73c9593a391f239"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxAnimVector2D.cs": {
+    "bytes": 939,
+    "sha256": "6ff1ae74b1805c2ce9ffb5c1ae82595ba3dd190ca324a37807253233b6f6c98b"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxAnimVector3D.cs": {
+    "bytes": 1032,
+    "sha256": "2ae78893614178c096ca55666c4b44a6bbb2745e6d6c34f19feb3d2af8574330"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxAnimation.cs": {
+    "bytes": 20115,
+    "sha256": "ff4023a883052a5bb3367362aa355d28d60e613b153b48075c01451e5e0c49ef"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxAnimationElement.cs": {
+    "bytes": 2347,
+    "sha256": "0ba97a6e6b1a77f79ef6da8912a3cca492dcd5de46cffe55280878c90be4a0bf"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxFloatKeyFrameGroup.cs": {
+    "bytes": 9539,
+    "sha256": "96c7be9f93601a7b0808fe6cc2e8decf2dd5be1e4e0000ae167b58e665eea1d8"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxLoopMode.cs": {
+    "bytes": 133,
+    "sha256": "6487cdd81a61c7ce2e90d678a315b2516aec4fb07b40005ceb347cd94e369891"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxLoopType.cs": {
+    "bytes": 182,
+    "sha256": "f8e56c8bf1d9fa5b08ec145329e5258d3615826929c96b1856c099e07f558348"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Animation/GfxPrimitiveType.cs": {
+    "bytes": 295,
+    "sha256": "f50156a10fc216d1e7421cfdbf154811085c48113da623eb1315316e2159a7f5"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Camera/GfxCamera.cs": {
+    "bytes": 4346,
+    "sha256": "952414016d83687c994e0cdf699cd4fddd4e029769758975c5ee6d3451b925c8"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Camera/GfxCameraProjection.cs": {
+    "bytes": 406,
+    "sha256": "3f684eed7e7272b2f78384e3a7effd8d4da27cdf6f32bd4b7c642e41d4ba28d3"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Camera/GfxCameraProjectionFrustum.cs": {
+    "bytes": 129,
+    "sha256": "f89ef4b7f7337b1e0833a944179ce7463703e242870e5ae9df60d815e3a099ef"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Camera/GfxCameraProjectionOrthogonal.cs": {
+    "bytes": 257,
+    "sha256": "e09f999a16b909834c11da9f18420725583ea66e201e5efb725986c1c58f9fb4"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Camera/GfxCameraProjectionPerspective.cs": {
+    "bytes": 196,
+    "sha256": "9a1f4a808055ee0ec3859afa92135060c0ba2ea4a7073bf8ee1788bfe379e793"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Camera/GfxCameraProjectionType.cs": {
+    "bytes": 170,
+    "sha256": "a3c49876763198671395aa56035681cebf98bfff993b5d747222be1f363de890"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Camera/GfxCameraView.cs": {
+    "bytes": 304,
+    "sha256": "d53db4336515d2358209045602e51ae5f69492a3e2525d8b41e1832640d13bf0"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Camera/GfxCameraViewAim.cs": {
+    "bytes": 249,
+    "sha256": "a1c42e7413662bf7225623cb298c29a0cdd1609f962f05e17cc41daa0fe25ea2"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Camera/GfxCameraViewAimFlags.cs": {
+    "bytes": 198,
+    "sha256": "5ab406dc9e5b6fffbcc8bd99eff32858cd68de75357650401ecb55b52134f2a4"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Camera/GfxCameraViewLookAt.cs": {
+    "bytes": 258,
+    "sha256": "adeae450d29c3ba26e3fb98b7ccc6a765d05fc11757d662d98345eaa8c547409"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Camera/GfxCameraViewLookAtFlags.cs": {
+    "bytes": 250,
+    "sha256": "5f37b84a2499b32354a802fdb567a576366d3f76312d2dbebcee32c1ef7a42e7"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Camera/GfxCameraViewRotation.cs": {
+    "bytes": 216,
+    "sha256": "1c2c29cd89765ab07a7f4cef7b2b1338ecf2e3aaec95f613446c5454cc95a572"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Camera/GfxCameraViewType.cs": {
+    "bytes": 151,
+    "sha256": "575d2398fd7dd2168670d1e4fc7f7fd56ab4429f3672074dd2a21477ac2ebd69"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Emitter/GfxEmitter.cs": {
+    "bytes": 313,
+    "sha256": "d8f1ddc7597bf17b39eab5cbeef32cda09dc680ebb1e760540aa02dfc8256132"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Fog/GfxFog.cs": {
+    "bytes": 305,
+    "sha256": "cdc502979a3ae7dc032fbe81b21a527c88784093bc8ee5cde569e7c53f5b7edd"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Gfx.cs": {
+    "bytes": 31783,
+    "sha256": "bd6a925b9920668d8e2efe5b98c53ddf1fd447f747aab4040181b255c5f5f071"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxConstants.cs": {
+    "bytes": 272,
+    "sha256": "57b2ffa295a6425e9e46e7361e0b8d91d7f4e506eaf8940efb1a868967646b02"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxDict.cs": {
+    "bytes": 3062,
+    "sha256": "623aa62ea825492f1277856d7c8f210465b6ca9510af14370c21c473b6d86e45"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxDictionary.cs": {
+    "bytes": 4443,
+    "sha256": "a76d826ac010a9d27bac3c3874ef5b2d56c8c91dfb8f7eb1c52e6ab188d840e5"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxDictionaryNode.cs": {
+    "bytes": 852,
+    "sha256": "f2e90e46dcf8ee1ef1f9d7cf60b9fe422c68ed56040641e4c3599f234ee1cf94"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxFragLightLUT.cs": {
+    "bytes": 347,
+    "sha256": "f879ce1b5be03d28f4f52e017f09643df16d5ecfcccdd38d2023b44af89b23b4"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxHeader.cs": {
+    "bytes": 952,
+    "sha256": "aa86039c63c703480e533c22c2597711525bf566e45315e794a8c9d7f79f490c"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxLUTReference.cs": {
+    "bytes": 726,
+    "sha256": "cc9c11f57476f5fa2ac6b4dd188f8152b0d368f9ffd5ae96546876928e15b2e6"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxMetaData.cs": {
+    "bytes": 1764,
+    "sha256": "e3e2db9faf05888808be2eeae4c9920029ba73d189d002a997941d8a2c41c4ad"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxMetaDataType.cs": {
+    "bytes": 180,
+    "sha256": "37ab836d13db6f4a8b13406f3bdd0ae2e5869d4a8b0453ddc449df8922ffd479"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxNode.cs": {
+    "bytes": 816,
+    "sha256": "b84c70106ba34e548d1d72dda07e3e4de20389ccf82bf2818cb6266f5d996bde"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxNodeTransform.cs": {
+    "bytes": 364,
+    "sha256": "c337a04a59c1675d5052156ace3e28d8dbf0c4d1ecaae1fbc2ad1092edcfe934"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxObject.cs": {
+    "bytes": 1661,
+    "sha256": "8b51fdb5f5cf5f5c22582489ee0f3074a8eacb7dfaf4d3e5d9edd7de80a19c5a"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxRevHeader.cs": {
+    "bytes": 214,
+    "sha256": "19a1a8b34110e21f130a826b45961f64c007768209ce619b04e59b682101b73e"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxSectionHeader.cs": {
+    "bytes": 346,
+    "sha256": "4bd41a7737889f5b996a49f3f8090acb935b76e4c96f8e55c51dc57b6b1914f6"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxStringFormat.cs": {
+    "bytes": 161,
+    "sha256": "beabe14c4318b1fe15b63998d914b5f90429dee3b791a28d6744ab7448733ebd"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxStringUtf16BE.cs": {
+    "bytes": 870,
+    "sha256": "2afa8ac44c2066d01557c8d3dc404358c05417bf107a018bce84136472bd2308"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxStringUtf16LE.cs": {
+    "bytes": 870,
+    "sha256": "c87c4fc41b9da1340e4819bf40ae1b4c03f52a75efdf56c8b929b3fb7997a40c"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/GfxStringUtf8.cs": {
+    "bytes": 855,
+    "sha256": "2641a34879cfc13d3f8e6ff60763d37ec57f3333fefdd272709a044eb020b73e"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/LUT/GfxLUT.cs": {
+    "bytes": 345,
+    "sha256": "5bd0fb383fa946123f6df09f0acbc380a0989794744cdc47d33f2a150cd12a2f"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/LUT/GfxLUTSampler.cs": {
+    "bytes": 2613,
+    "sha256": "6157bf1066a7ecac1dc709468f258051a0c57359651191709ce6ba623224869a"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Light/GfxAmbientLight.cs": {
+    "bytes": 251,
+    "sha256": "4457188e68145a5ed6cc6618634128bd5c3ac4252ba1eb1181c1d2626e247269"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Light/GfxFragmentLight.cs": {
+    "bytes": 864,
+    "sha256": "2d5f03fe8472414a366b0814bd5ecf98a5890d796a77d89f89e83356024f5f14"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Light/GfxFragmentLightFlags.cs": {
+    "bytes": 283,
+    "sha256": "ece36c3289309eb8611559bef9669b0e9f1bd9c4fa4ee2c9d8538b846e71f4ff"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Light/GfxHemisphereLight.cs": {
+    "bytes": 279,
+    "sha256": "883cb82c4f697138e00227ddc6e8fb9ae86348e9edfa5c9dc65b95c1daff6afc"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Light/GfxHemisphereLightFlags.cs": {
+    "bytes": 157,
+    "sha256": "04d276bca15f275942ff0e93901633977478872121b19371ef1ed698174dc340"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Light/GfxLight.cs": {
+    "bytes": 3781,
+    "sha256": "dbf6787c9e85e7bac0b93e9e2eb6734aa60fef8e43cadfd2eafc0622be904c7b"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Light/GfxLightType.cs": {
+    "bytes": 150,
+    "sha256": "81280cbe227cf545afe42ccb342ecc18ca3314c70de8596a3d35d19a4a679455"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Light/GfxVertexLight.cs": {
+    "bytes": 575,
+    "sha256": "ca3e23039df629327587288036f94d428687e849d3a6108450aac6199bb2263c"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Light/GfxVertexLightFlags.cs": {
+    "bytes": 183,
+    "sha256": "daa3d1a74801ea21ecd14147acab6be02e67aa2b9d9bea680654226cbfec1cab"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/GfxBillboardMode.cs": {
+    "bytes": 271,
+    "sha256": "37eca72f90f0c356b2a7255c4cde396c7549bb51afd8cd170d7aad85343340dc"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/GfxBone.cs": {
+    "bytes": 937,
+    "sha256": "64fa9b79c5b6a325af2ca85aaa299366ca1def90d71574a1a1914ee2c2507f51"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/GfxBoneFlags.cs": {
+    "bytes": 560,
+    "sha256": "e2be8d5b861c55113901f927e07d66966335897239dd7b49fa46a5f2303e4624"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/GfxMeshNodeVisibility.cs": {
+    "bytes": 365,
+    "sha256": "c4ee73f3d018ef99c2a40e233bb18fa1860f4f226421689b1558b3e45eb409ae"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/GfxModel.cs": {
+    "bytes": 1027,
+    "sha256": "7489085e6b68298c245bedc2cef50dbf26fa7809642da38f98b24e5c7122edda"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/GfxModelFlags.cs": {
+    "bytes": 178,
+    "sha256": "1a6a3bb9f677c50e9d79c1111a1aa6db11b9407488d55bf6aab2dda2beafaebf"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/GfxModelSkeletal.cs": {
+    "bytes": 138,
+    "sha256": "157a456143d8afd924bffc48308abbd79ae6534277a29af17861687d8e19331c"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/GfxSkeleton.cs": {
+    "bytes": 581,
+    "sha256": "70d20002a21ea1ee88890d7f0119c769d620d1569a385f2063e2af9c3768c8ba"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/GfxSkeletonScalingRule.cs": {
+    "bytes": 161,
+    "sha256": "3c15c35af544a4128feaf455d813eef6417c6b446cb39e05b69cd3feef18bba2"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxAlphaTest.cs": {
+    "bytes": 1622,
+    "sha256": "17f1e33d0bfd9ed456a34b50606c65b50c11a6cc3a968f52165667579c3c84cb"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxBumpMode.cs": {
+    "bytes": 160,
+    "sha256": "fea6c67edf687397f838e1bba9910bf089f7098e0a46623dcb402c63ffe4863a"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxFaceCulling.cs": {
+    "bytes": 887,
+    "sha256": "eb42e1b4292eab908b3275504c5693e1630492387d19c4d0913a5e679f107ddb"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxFragLight.cs": {
+    "bytes": 950,
+    "sha256": "ef227b27524ccc0d64e5b7d083eb5e2797839b9639440c989d721a546cae8cad"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxFragLightLUTs.cs": {
+    "bytes": 1744,
+    "sha256": "c503968084074de4f830461f224aa301a22e891bbd49ed56a89e37f56bc5f9ed"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxFragOp.cs": {
+    "bytes": 4802,
+    "sha256": "7ddfdf955b87f57cc496a2f1aa86cdcddcad3bb5aff9dc8dc47643a0863bad07"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxFragOpBlend.cs": {
+    "bytes": 2200,
+    "sha256": "7350acd89faa484806d5193434d89f87a92aba030e87643bc47905fba59338a9"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxFragOpBlendMode.cs": {
+    "bytes": 187,
+    "sha256": "0838979fee60fc5dcf1589e750e34947cbdb036a0380e96c81600d596e4b44aa"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxFragOpDepth.cs": {
+    "bytes": 1539,
+    "sha256": "b58d8e3dfb2649d5c51b43ffec8c71624e51f38f8706364f0eb6c7f86da4ff74"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxFragOpDepthFlags.cs": {
+    "bytes": 209,
+    "sha256": "c802f67e4519a8a11d894ea6355e1c3d0aa3db865351dba051fda4ab427d6d53"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxFragOpStencil.cs": {
+    "bytes": 2006,
+    "sha256": "a3d7ec832b76e969e03740d60b5ee077266f8e361e0b6b55ff1ebbb1e6274ecb"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxFragShader.cs": {
+    "bytes": 3534,
+    "sha256": "909cf34d3fd7434a846f057169bbefc9f424c36949963315fa83d9662b0a8c7e"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxFragmentFlags.cs": {
+    "bytes": 577,
+    "sha256": "e609080e6c7933d37645fce3d29c7e0bf33dd642144906d962a99f870bf86d1c"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxFresnelSelector.cs": {
+    "bytes": 170,
+    "sha256": "836ae2ca62afdaa8ef5c959e413964ea9fcf8f4d977e701ee96d3911325e408e"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxLogicalOp.cs": {
+    "bytes": 1984,
+    "sha256": "38d75a20af2fbd640199f6545295bdce78f99a1ab26e05f66745429546db50d2"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxMaterial.cs": {
+    "bytes": 7586,
+    "sha256": "b1431930365e09e82afc6cc5fcc4db942c757766825e33155f2242ea6d52b0d7"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxMaterialColor.cs": {
+    "bytes": 3087,
+    "sha256": "6355078db391990030fc2a6d66c1057b1a7a82e7b42a272ecf53275f60d017ee"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxMaterialFlags.cs": {
+    "bytes": 421,
+    "sha256": "25b7a48b62d9a5e183e7be098e792a87f0871e29c24314e4edc97ac427492a5d"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxProcTextureMapper.cs": {
+    "bytes": 125,
+    "sha256": "101f5ebd6d308a3f24192b7d2cd0b9737def4052dc052be710a9bfc28384a6f8"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxRasterization.cs": {
+    "bytes": 1411,
+    "sha256": "5e656059f11109204385f2affe1eb157be8bcd8b3c74efe0264244b9edf43d33"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxShaderDesc.cs": {
+    "bytes": 118,
+    "sha256": "e3605dd652ba4def00c970912365b8cead92e8952ebe97f4df43373627b91000"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxShaderDescFlags.cs": {
+    "bytes": 301,
+    "sha256": "08c86cb968557aff210a3d28e261b9408046363a3c9af30b2b40ee886b5d22f9"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxShaderParam.cs": {
+    "bytes": 119,
+    "sha256": "e2a4a050f28788b13d29ccd82dcdb9bf7e9e7680223d97a56df8baf1199c9443"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxShaderReference.cs": {
+    "bytes": 473,
+    "sha256": "a1b1383d2583e8ce15cd19f395ef385d2939c4ff6452341f7173b0c55a7b71f0"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxTestFunc.cs": {
+    "bytes": 1317,
+    "sha256": "715892bdf6ed7dc0fce15c5c27a95e0fe6f55481d9083bb410507bec56d8eb6a"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxTexCoordConfig.cs": {
+    "bytes": 237,
+    "sha256": "da382392d9f8f3dd5e9e25ef2263e446f49d1516e09cdc8a3b4148323bf370cf"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxTexEnv.cs": {
+    "bytes": 9141,
+    "sha256": "7b44904813e07e5cfa962538aeeb4341bc1da15341796bf1e079d0781dda36c0"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxTexEnvConstant.cs": {
+    "bytes": 326,
+    "sha256": "9f02ce831edfb9d0be01f8555693c6c974e96e0d0d0caa31caca9d932e382fe6"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxTextureCoord.cs": {
+    "bytes": 1836,
+    "sha256": "3737ad3bfdfaf8dba60fa01a7ca38edc1b8b0ac5f2eed6046ecb1b9249f3489b"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxTextureMapper.cs": {
+    "bytes": 5261,
+    "sha256": "5fc53cc6bf4fdd89134b6edacd68e4a2c6b313f397b9233edc63d17b071358ef"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxTextureMappingType.cs": {
+    "bytes": 258,
+    "sha256": "b5fbf6981a27bf6665935a027ddf7d82abc8324241797d8b62ec677fa2d0d12a"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxTextureMinFilter.cs": {
+    "bytes": 261,
+    "sha256": "5254815c5e24079180f084583af5e9844ea0d06a9b0c24700318de586dc9cb05"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxTextureReference.cs": {
+    "bytes": 476,
+    "sha256": "e2221d72b239e22b2fa49fddbedaaff9c0dc160bd27601b4d8b7b3996903f483"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxTextureSampler.cs": {
+    "bytes": 298,
+    "sha256": "49689cd168cea4fee2677c0b8252d8e04cccea0906e158fbecc864cc43c8e0cf"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxTextureSamplerStd.cs": {
+    "bytes": 218,
+    "sha256": "bddf6f81de740189c367ba89680aefbbdf8dffa9e320a2fb6824f4b1423c0e81"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxTextureTransformType.cs": {
+    "bytes": 178,
+    "sha256": "51ef3c2e578e788cbd49f5b1ff69d5893ef613d40ff9b90396e0a642a414b6b5"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Material/GfxTranslucencyKind.cs": {
+    "bytes": 181,
+    "sha256": "d8079f37c1f0bff548a18e77291b880e92979a701d4b16ec604f9ae12ff190d5"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Mesh/GfxAttribute.cs": {
+    "bytes": 2561,
+    "sha256": "f61db9dae1bfc7f11dc5b886b070d6942550f48b94f89c1451dbdb1ca0a93d24"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Mesh/GfxBlendShape.cs": {
+    "bytes": 402,
+    "sha256": "407c74d00eea85ee7ed16749be8a34bbe4c969b8a8d411341bc3471ab2d93a57"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Mesh/GfxBoundingBox.cs": {
+    "bytes": 253,
+    "sha256": "7bdba7f25d6f05b2e9ff03bc62672e8f0d7215ec0863182b0fbc0370f1240b2b"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Mesh/GfxFace.cs": {
+    "bytes": 440,
+    "sha256": "ec8278a13b6bd54f4ec1f35c2be8bf2e8c6b357b678764c34e8cda1c9575d0b8"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Mesh/GfxFaceDescriptor.cs": {
+    "bytes": 1763,
+    "sha256": "f827d9bfcd93059e5f5caf41cd1ac2580368743044d3878115808553b7495b35"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Mesh/GfxGLDataType.cs": {
+    "bytes": 1040,
+    "sha256": "6d3c19a15b9de966516bf0eb3fb6a7098f39e0310a00fc462b348f75e6c9a1cd"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Mesh/GfxMesh.cs": {
+    "bytes": 1400,
+    "sha256": "779bc762827dc9522762f517f2b04e7bec7703504962a9ee4faf385bea5c4a6c"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Mesh/GfxShape.cs": {
+    "bytes": 822,
+    "sha256": "1c84f6d3c6138f0ac0ce50ae019c9129448d6c2baf2b9fc84d00752ea9eec711"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Mesh/GfxSubMesh.cs": {
+    "bytes": 416,
+    "sha256": "721c6b08be611c2beafa209bcc768f8e824badb4eb360e61b9bff72d911bc8e6"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Mesh/GfxSubMeshSkinning.cs": {
+    "bytes": 156,
+    "sha256": "85d8b7c573ea7eb3466f327229c690c0241e799bb204399c2dac77a56016d456"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Mesh/GfxVertexBuffer.cs": {
+    "bytes": 438,
+    "sha256": "c4ae29534ad3107013488d8e34f58a0435e8b7cbc8b7ec6fb31da30c8392b42b"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Mesh/GfxVertexBufferFixed.cs": {
+    "bytes": 251,
+    "sha256": "bd988d6545ab3807447167f5a0d5a986b18e26b3f48ecddefc16622b62ea2a6f"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Mesh/GfxVertexBufferInterleaved.cs": {
+    "bytes": 506,
+    "sha256": "9a7ab7fd3bd8619ff1dc3353e785a8def4d40128bb4d176fc82ebd9169384c32"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Model/Mesh/GfxVertexBufferType.cs": {
+    "bytes": 162,
+    "sha256": "37904703e4b567b7bd90c29725b054df0aa9af53aebff9e50f8c0ea27306de25"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Scene/GfxScene.cs": {
+    "bytes": 309,
+    "sha256": "accc3b9cbbf854fe841403b34b080ae540cfcdb2e247b75c93252abe3468322b"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Shader/GfxShader.cs": {
+    "bytes": 311,
+    "sha256": "8b0d3a4ad534afc16670ba2dcf9284e3b97237a6964460b427f75a96118f4923"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Texture/GfxTexture.cs": {
+    "bytes": 553,
+    "sha256": "ae7013022e2dae0b16a209aa7960c859b0e7bbe832147544f5b2d5c60172d538"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Texture/GfxTextureCube.cs": {
+    "bytes": 384,
+    "sha256": "1a92dc730a03826e56727596479201b3b70ef489f456a9aaaa4332af47f8b374"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Texture/GfxTextureImage.cs": {
+    "bytes": 146,
+    "sha256": "1edfa0793b1732bf178ec72a5896a655d3edbbf91ea9995bcba55d9768cee695"
+  },
+  "tools/SPICA/SPICA/Formats/CtrGfx/Texture/GfxTextureImageData.cs": {
+    "bytes": 414,
+    "sha256": "b6bca6ec5877e5e0140dfdd3a6dfc8ea5c5625d3fc0b4df2ebc14312c950e0c4"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimBoolean.cs": {
+    "bytes": 595,
+    "sha256": "1442d1e3ed22361d56798bfc4ee6777a50b37d2470867fd04aa32d6cafb46f6f"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimFloat.cs": {
+    "bytes": 761,
+    "sha256": "2054c3e323b98d6de090dd63e335d145a91688234db721eba609e2dbde89d92a"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimMtxTransform.cs": {
+    "bytes": 862,
+    "sha256": "15de6153dc7f133372aa874778903c30c67660aeef8f399988b39e2a96d190de"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimQuatTransform.cs": {
+    "bytes": 7004,
+    "sha256": "426fda4f1fa76028bd0052b8c5f0dcd1443bb2526fc65cfaee29ab5e76af2d16"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimQuatTransformFlags.cs": {
+    "bytes": 395,
+    "sha256": "5ebdd2ce5d77e34553e7b0cf4d90695a67100c1a9aeb01cdbc1f9faf8b0176fb"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimRGBA.cs": {
+    "bytes": 1131,
+    "sha256": "17a224adc5ea3f46ac292c9a9ea8e2ce294f19e8df2835d1715ddc2408e7edb4"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimTransform.cs": {
+    "bytes": 6704,
+    "sha256": "069cb196230b6fa3be738bcb488e1e19106c92be6dc87fccc0a3bf505c1aab62"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimTransformFlags.cs": {
+    "bytes": 1258,
+    "sha256": "2e59035f2bfd09194b910ac4d6e46fee1acef04be1a03abeb8f26ce09a49ef70"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimVector.cs": {
+    "bytes": 3434,
+    "sha256": "081201fe135cc8441629f9d8c27d5889891ae4e6be3f2fd83a45c95fe7689681"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimVector2D.cs": {
+    "bytes": 939,
+    "sha256": "5f68023ad1de06b4329f9118cd64f5916c632e1e8dafa2968285018e313909d3"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimVector3D.cs": {
+    "bytes": 1039,
+    "sha256": "8d08f98c927b372e58a47da254133f9253fd74af52a1428672f1c01d979aa769"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimVectorFlags.cs": {
+    "bytes": 532,
+    "sha256": "d0215e87dd501009b3104c1ae686593395984a1231b28ed2f9ce424f21794bdb"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimation.cs": {
+    "bytes": 754,
+    "sha256": "57c9dfc005067ab23f07fca61bb4894f07ec73f07eae1f319a3f09f99d584f9b"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimationCurve.cs": {
+    "bytes": 285,
+    "sha256": "aa6a538595b26b2968884e15271413c2b823d20c6d59115bf0fc2822960cf227"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimationElement.cs": {
+    "bytes": 2266,
+    "sha256": "d3dfab8bd039326e957c22e73770d27bab48b32c94e9b7310288701e30559ffe"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimationFlags.cs": {
+    "bytes": 166,
+    "sha256": "7eb9fecb49a4a0b52b0effc8152c90e75f099010afba5b1eafe8d492f83b4a8c"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DAnimationType.cs": {
+    "bytes": 211,
+    "sha256": "77b2d949667ac4fd7a453a7021a9bafd1c1518b8c09abfb14ef0d0e181458651"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DFloatKeyFrameGroup.cs": {
+    "bytes": 10280,
+    "sha256": "a000f902b6c5933ebf37d45db8ca1a585e8b2805961348de8f755f57223375df"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DInterpolationType.cs": {
+    "bytes": 159,
+    "sha256": "e46e3e74eb3297cf0bbe1812c444fde730f38d55b3dc9d50fb65b1ade4dce67e"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DLoopType.cs": {
+    "bytes": 182,
+    "sha256": "9718a8e30e357ed7a99fe7d4da84f2a2c2923eb1f6355dcd9ebb566eed3e00d7"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DMaterialAnim.cs": {
+    "bytes": 711,
+    "sha256": "a5e2d8e1234176f3a109e3d38b641c512cda19dc60e0cf97e3aa38b957acc3f9"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DPrimitiveType.cs": {
+    "bytes": 297,
+    "sha256": "db44cfbb500d9149c49cc009a186c47482b2fb309213e4fa41d3c00666e701bf"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Animation/H3DTargetType.cs": {
+    "bytes": 1561,
+    "sha256": "16c852106c7bc9d829f47367e36e824a6ac3e9fd550d1374757ad969ae342e71"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Camera/H3DCamera.cs": {
+    "bytes": 1352,
+    "sha256": "f02907c1b87222299ad519a272f758f6cb3fc3cb1676f47fb3322dc3b6f0bfa7"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Camera/H3DCameraFlags.cs": {
+    "bytes": 277,
+    "sha256": "b9ce4fd660d9ac9ce226bda1ef90df77322d54bf04780c6dc03d8d2c70cbc176"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Camera/H3DCameraProjectionOrthogonal.cs": {
+    "bytes": 232,
+    "sha256": "aabc31baaef122e9d53df8cce17c42537041ecff40a510fa14943dd6ad6e29ed"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Camera/H3DCameraProjectionPerspective.cs": {
+    "bytes": 231,
+    "sha256": "2553fe396738b19f19bfd4d858526a761a12cc66169e7be88ade620a6e96cae6"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Camera/H3DCameraProjectionType.cs": {
+    "bytes": 152,
+    "sha256": "d207b8ef8e2b3af15431763a8210f38b409a19ca7023a7aa6970133f2ff6ab95"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Camera/H3DCameraViewAim.cs": {
+    "bytes": 186,
+    "sha256": "33f9a6a4caf2cf24629e1e10d1ba9f8f2d5ed07ca4bcaf264d48be3eabadb34d"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Camera/H3DCameraViewLookAt.cs": {
+    "bytes": 192,
+    "sha256": "685c19e0dac96f1e605ad41df4b9980fae68d544033578cac95d30b905d24ec8"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Camera/H3DCameraViewRotation.cs": {
+    "bytes": 162,
+    "sha256": "7a0be597f3b74efdd85fd2e975aeed142d7293f8c00497fbaf96c9f2e26a2301"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Camera/H3DCameraViewType.cs": {
+    "bytes": 151,
+    "sha256": "d16bc52a2ab34e3c1f68312907fde33e9dbd773c188b771f064f4d050c164549"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Fog/H3DFog.cs": {
+    "bytes": 201,
+    "sha256": "a2c9106e6757cc5db22f567281fd1733834e7cdc05ca239beff9b6de45e9dc63"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3D.cs": {
+    "bytes": 10463,
+    "sha256": "7c9369e485032e9911aa4010847e4c7183e78e8e3258f942b47e8b16783bc809"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3DBoundingBox.cs": {
+    "bytes": 243,
+    "sha256": "0b29f148b180796c6feefb0b75730b26493e4342f8a531c804408b8f63f14cd8"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3DComparers.cs": {
+    "bytes": 1525,
+    "sha256": "b5c45468e46958f6546aba018c8b033ff45d29484bd22bc4d5cfc55f281da8e4"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3DDict.cs": {
+    "bytes": 3089,
+    "sha256": "e2be680e7c426338955fead671812e2460b2762436e724b6a7261da27ccf9f30"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3DFlags.cs": {
+    "bytes": 231,
+    "sha256": "89d0b4f357129c023d2bbbec9c785a953196feac939c6e996392233695085fe6"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3DHeader.cs": {
+    "bytes": 1177,
+    "sha256": "2091f8a6b543933a3efccc5adb618ce21846f4ba6f7650e4248f73ab46e217c7"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3DMetaData.cs": {
+    "bytes": 2044,
+    "sha256": "c37dda8b3fabd3b438a521b06ce767a48041835b49105e3a98a043f4fb54ebbc"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3DMetaDataType.cs": {
+    "bytes": 220,
+    "sha256": "da782b847df1c1422cc0effc4d5a38236bdb9e261969bfd07bd00199075c28e8"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3DMetaDataValue.cs": {
+    "bytes": 2850,
+    "sha256": "2317ed71b7c0ef9ff94d25fecb84d38c917e9b32f89605874589b654e4553992"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3DPatriciaTree.cs": {
+    "bytes": 3837,
+    "sha256": "62d7377b60fcb608c6d97f75bbd606f38e3b98e0b680da6ecec1be70ded6c702"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3DPatriciaTreeNode.cs": {
+    "bytes": 831,
+    "sha256": "d527e389b629e4b605cdc141073f57353d5188cbe3c0619a1c7427835c96b448"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3DRelocator.cs": {
+    "bytes": 8624,
+    "sha256": "67ba4f08b466794f939b6a0a4235efa24935490c1d7c3a8c5e4deb3bd5b130ec"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3DSection.cs": {
+    "bytes": 402,
+    "sha256": "91d526d54cd1cc15eef117d8b203fdfaecfc9802b1e11af5b6782f87fc6c81a6"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3DStringUtf16.cs": {
+    "bytes": 864,
+    "sha256": "4609d62f52006379f76748b90efafdb3ec64ae08fd74c2a29001520479c7b449"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3DVertexData.cs": {
+    "bytes": 3947,
+    "sha256": "6bd12eff57aa93323006a530572ce2fe708ea6b4814fd660a368a99817a9c5d7"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3DVertexDataAttribute.cs": {
+    "bytes": 4598,
+    "sha256": "cdda332b3d7f3ed815e422c1921a745f117259d9c74e1dd66959c3577aa3508d"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/H3DVertexDataIndices.cs": {
+    "bytes": 2729,
+    "sha256": "c8e0d59c42b5f1366a6ba033a7b5afe092e7d5c869ed6010ae95d00307f4167f"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/LUT/H3DLUT.cs": {
+    "bytes": 508,
+    "sha256": "b47754dbfe808a9d8fb2018884d0f6239c4af4c989d6e2eda1994e5b21a7875f"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/LUT/H3DLUTFlags.cs": {
+    "bytes": 154,
+    "sha256": "24d89c446d85d9353a41a169f54c6f9c6f0a5bb0f266a31e8b9031cf024d7e11"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/LUT/H3DLUTSampler.cs": {
+    "bytes": 2970,
+    "sha256": "3026229ac99138ffcac04af923f7903a84628643360a06e3751559302a9ce45c"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Light/H3DAmbientLight.cs": {
+    "bytes": 146,
+    "sha256": "e0c48141f6b5f5bcee1b25c4b7916cb1afb89bc93ea7ae0763dbe99bd6c87c96"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Light/H3DFragmentLight.cs": {
+    "bytes": 671,
+    "sha256": "a7037b7dea3d50199e3cd2bccc00b23042adff0bba98422bdb1c58a8a35d4d67"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Light/H3DHemisphereLight.cs": {
+    "bytes": 268,
+    "sha256": "48eb1d70c0b14a295fa49686447b911ab02943118fdf3500605b44294666cb83"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Light/H3DLight.cs": {
+    "bytes": 2199,
+    "sha256": "c271132fa8976238ba004f7e5e34ac09f2574653059201457428c0b4fd5240d1"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Light/H3DLightFlags.cs": {
+    "bytes": 212,
+    "sha256": "53114ceb62fa21d0800ad05061775e05911ad6387eb91050617a4194c473f8ad"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Light/H3DLightType.cs": {
+    "bytes": 467,
+    "sha256": "bcdd7b5a3d44bbf8ab356ac6e33bf76e24503ff2e63e80b2a52e40c1dbdbc5c4"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Light/H3DVertexLight.cs": {
+    "bytes": 440,
+    "sha256": "2338e7e343658325dd191f48375a2fc57fc0d370daab8da05d888b11955f22d5"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/H3DBillboardMode.cs": {
+    "bytes": 264,
+    "sha256": "acea514bebc4b7181267d28a199064cc44a5cb743b9a83cf87ea8b70131b11f9"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/H3DBone.cs": {
+    "bytes": 3991,
+    "sha256": "67a0ea9014e92303e406ca0ba0b70140f6a59359a980254c84ef3423ea7ec6f1"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/H3DBoneFlags.cs": {
+    "bytes": 676,
+    "sha256": "526595ad791473c23d95f7ffed7242639d6eb70575407938abc6c0c91605f9d6"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/H3DBoneScaling.cs": {
+    "bytes": 153,
+    "sha256": "553953103d48fd67a3a27f83f19ce2bab8f2064ae264f135a206b8e2dd434614"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/H3DModel.cs": {
+    "bytes": 3448,
+    "sha256": "c51e67446062922b0e5f5b6b953e93821b325609983f96ec2de1aace17931f5e"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/H3DModelFlags.cs": {
+    "bytes": 276,
+    "sha256": "448d1aaaee8d80315d58d4096d3f75e2f186cc5733a5e418c938e14dd72cdde2"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DBumpMode.cs": {
+    "bytes": 160,
+    "sha256": "e76ffd6f01db0e032bb213c7407ccd120dc798d24c650e32b47b6b654d39e8c0"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DFragmentFlags.cs": {
+    "bytes": 621,
+    "sha256": "a063230e7448483e2bc0cbe207d56d625da06371dc9949f9c2897a6997d1e240"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DFresnelSelector.cs": {
+    "bytes": 170,
+    "sha256": "980aa1a7f5ce39c55fe2e669aa55b5676092bd7e43038a6af8849e25167d9608"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DMaterial.cs": {
+    "bytes": 9151,
+    "sha256": "945c059708f94d3325c0a5ba528598a640123b9f009c5a1b29f8f9261cda55e9"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DMaterialFlags.cs": {
+    "bytes": 1060,
+    "sha256": "e2e6830ff8a2e43bd640d76280c6118e10313acff35a6c861c03441333487f00"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DMaterialParams.cs": {
+    "bytes": 21487,
+    "sha256": "7b7c271abefdab3738fccb8f2002dc29e34ab03e0c3ca4ecec2e2b6166dcb29d"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DMaterialShader.cs": {
+    "bytes": 122,
+    "sha256": "4a972f18b16ad716f4dfb46677eac0abc8ac36979b3675a729ef696c7d625607"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DTexCoordConfig.cs": {
+    "bytes": 230,
+    "sha256": "4a50f1582445bc3cf2513aa765ada2a8957a4ec82891f62795b6e047723bf269"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DTextureCoord.cs": {
+    "bytes": 755,
+    "sha256": "23bd2417d9f57a134ff260a7402564e613a2facb3003f431a0f690ecbc415ae5"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DTextureCoordFlags.cs": {
+    "bytes": 171,
+    "sha256": "5a0bf466ef925852c7239f81111aececa56a55588156bad666ca9cec2a5f0e3e"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DTextureMagFilter.cs": {
+    "bytes": 148,
+    "sha256": "84db85f2e011965b9631b896c6d96dbdcd1e3955b296e8d37f755ae9a03feb83"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DTextureMapper.cs": {
+    "bytes": 799,
+    "sha256": "0795a238804d1107c0882b7fd446928b480016807b99598d3805d6b764bc78aa"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DTextureMappingType.cs": {
+    "bytes": 258,
+    "sha256": "3a30c0009f4f1b0574616a92e508cf8905779d650a20ed280b5525942eb17a25"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DTextureMinFilter.cs": {
+    "bytes": 268,
+    "sha256": "0d3246e77d85a28e5574947ce8c514c6d0ae1e4ae1d4e8748814319e15b14f14"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DTextureTransformType.cs": {
+    "bytes": 178,
+    "sha256": "5d03074142a4038fa388e83ee1a00bc16b4beb75cfb52d3a6110ca26ffe08a3b"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DTextureWrap.cs": {
+    "bytes": 188,
+    "sha256": "9a18c56760013682ab1ee1fe7ddff90f0c74a08327951fd30b22a4d8839dd289"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Material/H3DTranslucencyKind.cs": {
+    "bytes": 290,
+    "sha256": "947cd159f580401e69a93c7cca9e7d5c25cf09b361ddd8a336c9f5bf25f424b6"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Mesh/H3DMesh.cs": {
+    "bytes": 17530,
+    "sha256": "6dfc83a059d4750d3dc711e49c6d4054a2f0701b8b5b446662b57b4c733a924f"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Mesh/H3DMeshSkinning.cs": {
+    "bytes": 154,
+    "sha256": "770fde2264250c99a486ce1f34bc6e72021382fc2152c00b47d88f3681052fa8"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Mesh/H3DMeshType.cs": {
+    "bytes": 139,
+    "sha256": "90bfca3b538ab171575437afa9d155c56572289a7db9505a6cdcd7c6115283c0"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Mesh/H3DSubMesh.cs": {
+    "bytes": 6082,
+    "sha256": "fb84df604a220977a72995aab5fe2b051f805813fc94af790248da6dc5949a60"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Mesh/H3DSubMeshCulling.cs": {
+    "bytes": 119,
+    "sha256": "34bfc136517ccdb942f53b28f84adc380a48fa1145bf5f951c87e66636859738"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Model/Mesh/H3DSubMeshSkinning.cs": {
+    "bytes": 156,
+    "sha256": "3afa550684f6ad76fed61b43507593641b806e5e13f4db139e15af968fbc0364"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Scene/H3DScene.cs": {
+    "bytes": 205,
+    "sha256": "6b02d705d75d814550dced9f34e0d08bcfc9aec247249319f05a69a2fa9cc6f7"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Shader/H3DShader.cs": {
+    "bytes": 708,
+    "sha256": "35db9a29ee97df2562e2b2245100f9f94de290493ad98e763ee1bef0fdc030bd"
+  },
+  "tools/SPICA/SPICA/Formats/CtrH3D/Texture/H3DTexture.cs": {
+    "bytes": 9432,
+    "sha256": "38e9868a284c21396425fc2b0926f7f4d0a20e4113ae58d5160d244e70cff74e"
+  },
+  "tools/SPICA/SPICA/Formats/GFL/GF1MotionPack.cs": {
+    "bytes": 1708,
+    "sha256": "1c0c60c3a88e74424c892c18f5ae934ed3ac1a7f44c4ed54d44dc9049fba854b"
+  },
+  "tools/SPICA/SPICA/Formats/GFL/Motion/GF1MotBone.cs": {
+    "bytes": 1853,
+    "sha256": "e6f677f37ac52ea9db4d4ccde5c66c97b2ec97d70d6ae81c01128fee021fd7e9"
+  },
+  "tools/SPICA/SPICA/Formats/GFL/Motion/GF1MotBoneTransform.cs": {
+    "bytes": 1289,
+    "sha256": "65324d553f856cebce3b206b071252357608f9e1762c23ab479ddd0f84f073da"
+  },
+  "tools/SPICA/SPICA/Formats/GFL/Motion/GF1MotKeyFrame.cs": {
+    "bytes": 375,
+    "sha256": "742ffc391fe5376c686883ce63df114c0166537225affb4dc46a9d8cb4a456bc"
+  },
+  "tools/SPICA/SPICA/Formats/GFL/Motion/GF1Motion.cs": {
+    "bytes": 14745,
+    "sha256": "1ee30ecd2277c349668fbaaec511d1cb6a3bde160755d691eaefb0628b52b028"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/GFModelPack.cs": {
+    "bytes": 4887,
+    "sha256": "484e3d9db85aeb7ad79c768269ff22d560f500ea947b4098c2edc9a36cc5f5d8"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/GFMotionPack.cs": {
+    "bytes": 1929,
+    "sha256": "4340f6ce0fd07b394ea6cd539e4adfb777236e85d35a1e3972c72790a726daec"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/GFNV1.cs": {
+    "bytes": 711,
+    "sha256": "e21860716fff8593ff99f1a3c87c8f76827238cc843af68f222eeb246203aeeb"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/GFSection.cs": {
+    "bytes": 1229,
+    "sha256": "6c5e077607115b3e00af2fbdd2a7a60c0c2c36decdcb2f5214f1ebb49a4db9e7"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Model/GFBone.cs": {
+    "bytes": 1058,
+    "sha256": "d29433417719d3b4cc9b57357b73f676b0a720d695e7a995c68da6efce01334e"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Model/GFHashName.cs": {
+    "bytes": 718,
+    "sha256": "5dece4fcf06c33142433cd8fb25850bf6b2072fdd929301d611d3c4610706af3"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Model/GFLUT.cs": {
+    "bytes": 3874,
+    "sha256": "640bb71465ed2facbda0a9cf23d16f732ff3aabf4c6c6d6bde8f14700630d814"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Model/GFModel.cs": {
+    "bytes": 21355,
+    "sha256": "96f3ea48d5bed254ed07ddd41ed2b79aa90db433a6ad1449add5e8ea36074583"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Model/Material/GFMagFilter.cs": {
+    "bytes": 138,
+    "sha256": "0c58fe3a8ff9b47bf27d97b277e2c373920b67bc470fea265a63bb853ae0bee8"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Model/Material/GFMaterial.cs": {
+    "bytes": 18688,
+    "sha256": "4846e1fb2155b92044abfc9afbc375bbabe24db70fe51b7d3a26ae8c02dc71ec"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Model/Material/GFMinFilter.cs": {
+    "bytes": 258,
+    "sha256": "dba1d23d23a23936d91812504df84e62944a3707f6a560a4d8bd274b5ac7f5ec"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Model/Material/GFTextureCoord.cs": {
+    "bytes": 2105,
+    "sha256": "8b5ab688ffd09343bed787a49a15a4377c954ed4626e6411d5bee18fe76f9eac"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Model/Material/GFTextureMappingType.cs": {
+    "bytes": 255,
+    "sha256": "797459739e6cc7ec343253012422751bcb78f7d9338e137d8090b33b5d54c930"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Model/Material/GFTextureWrap.cs": {
+    "bytes": 185,
+    "sha256": "724c1a899edc132adc1cf165c93d6ba0007777795e285633adfb7f6723276e26"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Model/Mesh/GFMesh.cs": {
+    "bytes": 18383,
+    "sha256": "7f129673d3d3cab0048830ccff8f76228fb4115f3df75d596f5d16d2d0b7cbb9"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Model/Mesh/GFSubMesh.cs": {
+    "bytes": 1119,
+    "sha256": "b0ae064a6dac9a93f48713e64924bf544e72ce21db061350995c97ec544aecca"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Motion/GFMaterialMot.cs": {
+    "bytes": 4604,
+    "sha256": "eed844ab6859d9e26f87c5c47711364511df999812e5cdf9f6b0fa9b3119b6d4"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Motion/GFMotBoneTransform.cs": {
+    "bytes": 3606,
+    "sha256": "d7090d23c6aab80738b92fbc1d6461ea20552f929871aebdc6947908047f63f6"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Motion/GFMotBoolean.cs": {
+    "bytes": 730,
+    "sha256": "756d90788e24cbfbcfcf94e8d08722424a0b47ef5b0fc062c002a601856a4646"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Motion/GFMotKeyFrame.cs": {
+    "bytes": 2954,
+    "sha256": "ba6cb416157c262e7a6e3f8391e5e2a7e05793840731bde4158d4d3db84d2741"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Motion/GFMotUVTransform.cs": {
+    "bytes": 1843,
+    "sha256": "4337e66ac7a20fb7d30a37467d7d1379978b1ad21fab6486d3ea37f8d996365f"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Motion/GFMotion.cs": {
+    "bytes": 4134,
+    "sha256": "6549f46e66cae90c2096e8294c46ca5b64e78215b9200aa842881349b906d50b"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Motion/GFSkeletonMot.cs": {
+    "bytes": 4816,
+    "sha256": "2c77a3d403f300cba17b3b8a220b78ffa096efc1fd8e0c214bb7ff6dafaf7ff5"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Motion/GFVisibilityMot.cs": {
+    "bytes": 2241,
+    "sha256": "4f7c40b6548f745cfc32cc2485ec161950f386c36052493bf37a3c2c8339b137"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Shader/GFShader.cs": {
+    "bytes": 13343,
+    "sha256": "e0aebadebb8b7f4e3c721befd5af885969762622c039a30bc3d32aceea3a73f1"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Texture/GFTexture.cs": {
+    "bytes": 2459,
+    "sha256": "59a90091bc50ce06f71ce4d1b0e6f924a47cb8e41a604189ed9f92050563b8bb"
+  },
+  "tools/SPICA/SPICA/Formats/GFL2/Texture/GFTextureFormat.cs": {
+    "bytes": 1874,
+    "sha256": "12e98fcb9748114c09df31b6fdcd2b9f0bfa117562daf936ff39da8dd79f45db"
+  },
+  "tools/SPICA/SPICA/Formats/GFLX/GFLXPack.cs": {
+    "bytes": 2886,
+    "sha256": "ffedda6790ccc1a50ea7c0fbc8777b09619b4bb6783f833087e33691fa6b5daa"
+  },
+  "tools/SPICA/SPICA/Formats/GFLX/GFbmdl.cs": {
+    "bytes": 281,
+    "sha256": "fdf276747b9f38a9fb96b2fd7af0f6a8457fe2a8a424997fe1329dd877a38479"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAE.cs": {
+    "bytes": 30914,
+    "sha256": "0ed5fc86c2b26f3d6fda55f3422e5ffa4bd6dcd4d98a29adbf3a405d554e3538"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEAccessor.cs": {
+    "bytes": 960,
+    "sha256": "84cc77d5618e23f2414d2e49fa4abf3ea685ec0790f97f42b3c8dfdea3117f11"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEAnimation.cs": {
+    "bytes": 991,
+    "sha256": "e37bd2582b51800149dc70cc1b465d0a93261f028cc23244a44cb481e6c3541e"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEArray.cs": {
+    "bytes": 254,
+    "sha256": "ce8560b1b58943a744268cba68d7a75edb5a5335ae4c0470bbd4c5c2dd058bde"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEAsset.cs": {
+    "bytes": 303,
+    "sha256": "a52e07f14a3a49c7ab37a4b1b8a6d15af1c76701539659bf60175cd870638c0b"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEController.cs": {
+    "bytes": 265,
+    "sha256": "6d32340a89ad965e14252aa4e02a0769b399b303a912c7656ae62a023b6269f9"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEEffect.cs": {
+    "bytes": 4058,
+    "sha256": "c837c1fc760e738d552438834105e370fc12d3ca517efb922ccf0246f07d2d8b"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEGeometry.cs": {
+    "bytes": 263,
+    "sha256": "01e9e2aecdff8df2480734d4e96ebfd033fb894c6b066cfc720b6cac26316e68"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEImage.cs": {
+    "bytes": 248,
+    "sha256": "6a3678688c01f0c56d702b2855b636fde4f518f71d4ffc404edaa767d54aea02"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEInput.cs": {
+    "bytes": 220,
+    "sha256": "e406f13b40968bea72f6bb342f78eadbcf11d6c8bdbbc591ed692f8bd5c7acfc"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEInputOffset.cs": {
+    "bytes": 406,
+    "sha256": "b47b484599a80ed7146e74646ed7cd94e611e8fb7b0a27fe47e26fc6e8900bb6"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEMaterial.cs": {
+    "bytes": 389,
+    "sha256": "ed14214ef69d21d1589b78e6e21e8286319e7030f24a757124b080e0e1490661"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEMatrix.cs": {
+    "bytes": 873,
+    "sha256": "a51ef4ffa363d7fb0f86a893fec5e4252b97a3d3e7f06c472220eb477156b25a"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEMesh.cs": {
+    "bytes": 1951,
+    "sha256": "4c600c4cba9eb265701623f654cd6892b0e44f6303669fd198013fb582aa3cc1"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAENode.cs": {
+    "bytes": 2267,
+    "sha256": "1c39952fddbdeb94ab1738900b656f96f19a94226faa1e7b48c8bc60336b1422"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAESkin.cs": {
+    "bytes": 1373,
+    "sha256": "ca9c1970b321b1241c2c2f5aaedd58712775daf39611905ff6fe0dc3c6a13322"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAESource.cs": {
+    "bytes": 1549,
+    "sha256": "79b0812b55d178e3f9fbcfa07fe294e23e10c795c91529171f1ad567002b453a"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEUtils.cs": {
+    "bytes": 1787,
+    "sha256": "d1432802e694c65a76a9e2acfbcbfd6c2cdee02c99d60ce507ec498965b0bb75"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEVector3.cs": {
+    "bytes": 470,
+    "sha256": "0e6de93c64248b6f7dfe7a9d6045b29ffa7ff9b7869fc3d5ef052182c218e183"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEVector4.cs": {
+    "bytes": 472,
+    "sha256": "b3f35c002ca735c4687821305b90facfef6965b440dc2bb211785ad0471c8730"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/COLLADA/DAEVisualScene.cs": {
+    "bytes": 570,
+    "sha256": "d6be50cdabe7d7efd724fb56d3f80e21fc7f8481c211047b524c06171590d7cc"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/StudioMdl/SMD.cs": {
+    "bytes": 18125,
+    "sha256": "ff649df282a5d14381801a102671947b6ee201f14d4a1537eebb3a43961b673f"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/StudioMdl/SMDBone.cs": {
+    "bytes": 216,
+    "sha256": "3a9813eab2a6335205cd822350eb48f87d545977130c1f339ce0a7dd54d56512"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/StudioMdl/SMDMesh.cs": {
+    "bytes": 334,
+    "sha256": "914037b7751fc0a2ecfac18745001327864b4462ff439c5059a56e086770e5fc"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/StudioMdl/SMDNode.cs": {
+    "bytes": 179,
+    "sha256": "abb32882111a4f5ce7f92fbe32bb061fc6156a5d5113a737fb22f24ca6b00936"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/WavefrontOBJ/OBJ.cs": {
+    "bytes": 15000,
+    "sha256": "8a74333bad7ef2fb27f92336ac0a87c3567451633b8859df915a370c754f3926"
+  },
+  "tools/SPICA/SPICA/Formats/Generic/WavefrontOBJ/OBJMesh.cs": {
+    "bytes": 522,
+    "sha256": "8be682cb2d74e3c5fac807fcc4a5cba07e4d96650defd803840b5c8e643e6256"
+  },
+  "tools/SPICA/SPICA/Formats/MTFramework/Model/MTBone.cs": {
+    "bytes": 388,
+    "sha256": "30374b94716a7cd8e0140a67219a6eb5d840c11b24896e12a6abbd6effca5516"
+  },
+  "tools/SPICA/SPICA/Formats/MTFramework/Model/MTMaterial.cs": {
+    "bytes": 327,
+    "sha256": "d5e9aea5d139a962fb6b30086700d99efdb5c31d231bd17236ffe9fa07f48a1d"
+  },
+  "tools/SPICA/SPICA/Formats/MTFramework/Model/MTMaterials.cs": {
+    "bytes": 6037,
+    "sha256": "f7f0f4ec93d843a55a9bd8bef6f9c36d78fbb909713900dcc3657bed0c4eb0ab"
+  },
+  "tools/SPICA/SPICA/Formats/MTFramework/Model/MTMesh.cs": {
+    "bytes": 3036,
+    "sha256": "1aefaa631f92eef18cc4754fd64857f0b9e150abf59cb83eec52d956973aa64b"
+  },
+  "tools/SPICA/SPICA/Formats/MTFramework/Model/MTModel.cs": {
+    "bytes": 14655,
+    "sha256": "136617fbdc59bde5328563a27881964a86b039bf9f3dd84e78808f7646686286"
+  },
+  "tools/SPICA/SPICA/Formats/MTFramework/Shader/MTAlphaBlend.cs": {
+    "bytes": 2264,
+    "sha256": "b8a2658b9d5edf1539a05890093db2beda51c7cb78d0492c0ffb29714b077f27"
+  },
+  "tools/SPICA/SPICA/Formats/MTFramework/Shader/MTAttributesGroup.cs": {
+    "bytes": 4555,
+    "sha256": "16ded831bfdb5ba466f4e29c8e442daf8b7cd1d869163c508662da84bd11a3d4"
+  },
+  "tools/SPICA/SPICA/Formats/MTFramework/Shader/MTBlendFunction.cs": {
+    "bytes": 2241,
+    "sha256": "7b1eb59e7c575e3539d4a58ba931958043c214015521e48b2d2e405960313184"
+  },
+  "tools/SPICA/SPICA/Formats/MTFramework/Shader/MTDepthStencil.cs": {
+    "bytes": 936,
+    "sha256": "bf9407874992f97940bc4bc344bc169e3406becdf51cf0ec7790066d3f1d75f2"
+  },
+  "tools/SPICA/SPICA/Formats/MTFramework/Shader/MTFragmentLighting.cs": {
+    "bytes": 1303,
+    "sha256": "9d3d98a528375148ecd82cd8507d0ebee161df56e99c3eda074a2200722d3d0f"
+  },
+  "tools/SPICA/SPICA/Formats/MTFramework/Shader/MTShaderEffect.cs": {
+    "bytes": 184,
+    "sha256": "6dbbe6310e38082638e7f12561f4c592ab16b7324c551cf5bb5fb335fef2585d"
+  },
+  "tools/SPICA/SPICA/Formats/MTFramework/Shader/MTShaderEffects.cs": {
+    "bytes": 4289,
+    "sha256": "5040191ae1a1a9d2ad962cb185fbcb180372884348126cc9bdd37434436d8766"
+  },
+  "tools/SPICA/SPICA/Formats/MTFramework/Shader/MTTestFunction.cs": {
+    "bytes": 1191,
+    "sha256": "003add5424617356a521029017dd431e281dcbcbfd62c57a2ab9469668a82d30"
+  },
+  "tools/SPICA/SPICA/Formats/MTFramework/Shader/MTTextureMap.cs": {
+    "bytes": 227,
+    "sha256": "5acaf461313f6882a3a7d4bf8a0b66e42f7999fa5ed41e8212bbc61407c48e76"
+  },
+  "tools/SPICA/SPICA/Formats/MTFramework/Texture/MTTexture.cs": {
+    "bytes": 1975,
+    "sha256": "75c34dd514c785396010d85d503b86f0572bb2b458dc6f48cde64cf2b0c48b13"
+  },
+  "tools/SPICA/SPICA/Formats/MTFramework/Texture/MTTextureFormat.cs": {
+    "bytes": 887,
+    "sha256": "26b9a4797b3abd8e4b4a080adc2270f40d8785ef92e42e147ebc1d559559a37c"
+  },
+  "tools/SPICA/SPICA/Formats/ModelBinary/MBn.cs": {
+    "bytes": 4434,
+    "sha256": "b31f78b885f37440a3ae5a10032b34b48f06eea5678276d24d666fdf00678669"
+  },
+  "tools/SPICA/SPICA/Formats/ModelBinary/MBnAttributeFormat.cs": {
+    "bytes": 883,
+    "sha256": "3a9e78a14e639d75b0ff0cec38adcb86a91f39c1e8316750a71dc8441eea37bc"
+  },
+  "tools/SPICA/SPICA/Formats/ModelBinary/MBnAttributeName.cs": {
+    "bytes": 1236,
+    "sha256": "5190d692dcb4e4b43d7fccb1ec1cc4979a7f7bf407f628d6542ab3a261767537"
+  },
+  "tools/SPICA/SPICA/Formats/ModelBinary/MBnIndicesDesc.cs": {
+    "bytes": 1220,
+    "sha256": "1e73dd6609eaf7c5c49593d87e7c45bd6d4fc06f07f49503411aafb64a307b8a"
+  },
+  "tools/SPICA/SPICA/Formats/ModelBinary/MBnVerticesDesc.cs": {
+    "bytes": 3433,
+    "sha256": "d4be109367ca62d5479e388c38416c098af354bc1245c38c61bbb362f88a3bf2"
+  },
+  "tools/SPICA/SPICA/Formats/Packages/GFL/GFPackage.cs": {
+    "bytes": 1434,
+    "sha256": "6ad9690838c3f333e07268b8066a94685a70ff2bc9b2f2fa117a0302f01c53d6"
+  },
+  "tools/SPICA/SPICA/Formats/SceneState.cs": {
+    "bytes": 409,
+    "sha256": "9cda294afb6803df52aa5c7515db2435f217e96783b4a9c17f408d0aca196943"
+  },
+  "tools/SPICA/SPICA/Math3D/Interpolation.cs": {
+    "bytes": 571,
+    "sha256": "5995ae5dadbe0ed7534c12a54c7f5c897e53a588211e568b1abd28eb88b98879"
+  },
+  "tools/SPICA/SPICA/Math3D/Matrix.cs": {
+    "bytes": 4220,
+    "sha256": "9e7a1e5be1e0a6218fcf922b6daccbf5a0c512d3dbc0c78eac82e244c188d02e"
+  },
+  "tools/SPICA/SPICA/Math3D/Matrix3x3.cs": {
+    "bytes": 1763,
+    "sha256": "6db3a19de5d01689d0707e70e76d58abf014f3ae27ccd5f661b849ad49f29d7d"
+  },
+  "tools/SPICA/SPICA/Math3D/Matrix3x4.cs": {
+    "bytes": 2049,
+    "sha256": "4c9a395db279b29836e0b0f24d070279eae64548eae29fd0ff710c6c55aa0aa4"
+  },
+  "tools/SPICA/SPICA/Math3D/RGBA.cs": {
+    "bytes": 1928,
+    "sha256": "8d4affafb0f2086385580c78208bd68be6bf01bfcb47f15c6dc74e91badfde14"
+  },
+  "tools/SPICA/SPICA/Math3D/Vector.cs": {
+    "bytes": 2668,
+    "sha256": "77dc40a3b21ed304aff9bc95fbb950c8058da90769e17c74e92f4ed23ad83a0b"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICAAlphaTest.cs": {
+    "bytes": 672,
+    "sha256": "6bb4bcb5d0783c5b0d3907bd4a2414074d3167eefc972f7fd55d5d07c0c0eff7"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICAAttribute.cs": {
+    "bytes": 2918,
+    "sha256": "dead6ed79d48f1f23a09a915d316c4f23c46b84ce86d858f553661fc49adeadb"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICAAttributeFormat.cs": {
+    "bytes": 160,
+    "sha256": "da2361efe5f23bbe4e7a7d32b2655ca5fac06f8e0b8fe0922927d73004c2c987"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICAAttributeName.cs": {
+    "bytes": 589,
+    "sha256": "7016a04b3b9880ba8ca9bcff188db8b8d41ce9919d713262e0356cafb7956afe"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICABlendEquation.cs": {
+    "bytes": 187,
+    "sha256": "5387e3ede6c849ce22db65dad1dd72018280393f6dde5f0ae1e8a6608e29cd20"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICABlendFunc.cs": {
+    "bytes": 483,
+    "sha256": "e410df6b7f13ccfb436dfa8c0bcee89070110e00b201df919daddee8c84981d3"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICABlendFunction.cs": {
+    "bytes": 1295,
+    "sha256": "7d208b98bcbacb7c43d472d2778898576601a4cff561788e7cb2f9f7cf63eb39"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICABlendMode.cs": {
+    "bytes": 120,
+    "sha256": "6516c4f419735e71bb5a0c2dbe7603d43bc63da79a72bf901a9547a25145f0f4"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICAColorOperation.cs": {
+    "bytes": 599,
+    "sha256": "c4ce905eb55c01b4105ec7a9a390d1d69e070e28f7bc5184b69f7f6e984e3cb3"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICADepthColorMask.cs": {
+    "bytes": 1224,
+    "sha256": "177c78097ce822a251e0e2d1589ef97e2f748f0749257c039a9ce7b5c90fc3ea"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICADrawMode.cs": {
+    "bytes": 179,
+    "sha256": "2df5e24ec2a26efde421009c764fbb5dcf5d1a6ac664de1b394380acc1b2843b"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICAFaceCulling.cs": {
+    "bytes": 148,
+    "sha256": "4a39365351c9818d865009578dd8ffa2372189d3f2461ffedfb7510a83e4a12b"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICAFixedAttribute.cs": {
+    "bytes": 173,
+    "sha256": "bf4b1abf1c7eac0fa72f555e063dfdddbecf3678a62f11f71a70702d6d3f6d62"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICAFragOpMode.cs": {
+    "bytes": 146,
+    "sha256": "d56b60da42ecf7f2323d0382cbe8ff68fb5181a83402391ee958fb61ce3ae876"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICALUTInAbs.cs": {
+    "bytes": 1178,
+    "sha256": "7c23b2d86fad42628a759c8b0505a3a74688239b55956cbfcab8dfb99a00d9e3"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICALUTInScale.cs": {
+    "bytes": 1294,
+    "sha256": "0d5e3db3f70ea283dead7d7273e239ab0340e57825af9a97400e073673ee11fc"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICALUTInSel.cs": {
+    "bytes": 1290,
+    "sha256": "d514ff8b1b71781a04cddddda42afb26ae27714f38d8fd2b31d7bf048b2a2303"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICALUTInput.cs": {
+    "bytes": 225,
+    "sha256": "07000b1b0b1d2bdf320566de6ca745bacc9f2854b3fdd0784c46de062ac456ad"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICALUTScale.cs": {
+    "bytes": 842,
+    "sha256": "96f40d45e3644d60f3b9f7a2ff80975c03b9c5cfdd545efdad29472b52765cf0"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICALUTType.cs": {
+    "bytes": 602,
+    "sha256": "05ec81d2b4d44d8604517ac7a79ea34c8c43369814b96e2dd579acef2894bdc5"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICALogicalOp.cs": {
+    "bytes": 354,
+    "sha256": "a23767e8527189810a7fa1290e5972d3e9f9cd8d399f8004e89d8e62fe4bbd68"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICAPrimitiveMode.cs": {
+    "bytes": 189,
+    "sha256": "9caf1134a508c650d4a272198724edf7ced11502205bf576ac7265a34c8d05e7"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICAStencilOp.cs": {
+    "bytes": 237,
+    "sha256": "097a325297f33f792581e3378404c2526d52b88713b5535cbdd32c2e6f0fcba0"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICAStencilOperation.cs": {
+    "bytes": 717,
+    "sha256": "a2b9db6b60c6d62237f17ae3eda78c0b6cb184af2e4e083178a6f6e6bba9b24e"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICAStencilTest.cs": {
+    "bytes": 907,
+    "sha256": "e54210c9e3ef0ecb3d758cb3c92b9659031d4b08533eae55718afb660f2edb4d"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICATestFunc.cs": {
+    "bytes": 218,
+    "sha256": "9cfbd6134a996aa60e2d6bdb1a1398a824c1509c5aee8857f1d4a7dfeac09140"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICATexEnvCombiner.cs": {
+    "bytes": 609,
+    "sha256": "d9cdb795e09e6b7ee6606ad62e38cadae079a5923b420e4b96fc432f1ed04180"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICATexEnvOperand.cs": {
+    "bytes": 1422,
+    "sha256": "497ab41984cb9fb3ca0301577078ec46f333d8e7b8e894f84daac1504881ab22"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICATexEnvScale.cs": {
+    "bytes": 597,
+    "sha256": "d6cbf29ae92314904cb9c6573499e6536025071b1c555e1507f98a116f45724c"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICATexEnvSource.cs": {
+    "bytes": 1413,
+    "sha256": "205eecdaaaf1118a4359c1b7ea572a00ac862549b7d41c91a63791da601e4693"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICATexEnvStage.cs": {
+    "bytes": 4070,
+    "sha256": "3a70938e06d4ac534bbf00dda67875614cf9a5adf069e2ec8683db14e1649e4c"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICATextureCombinerAlphaOp.cs": {
+    "bytes": 251,
+    "sha256": "48d1ddb1908c1c609101492aba120f036bc9091a2ea548d81a8a13af2ef6c267"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICATextureCombinerColorOp.cs": {
+    "bytes": 333,
+    "sha256": "d06379a8f24e3d43b8ee6db410e1acaf107c1add102e6c5c58369708ca8c3dbf"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICATextureCombinerMode.cs": {
+    "bytes": 293,
+    "sha256": "65803e74cf5ffb10d17f3976990941aae440f06edf7f9865032d4386dcf243ee"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICATextureCombinerScale.cs": {
+    "bytes": 138,
+    "sha256": "82999fcc8ec2042c0a5a7f39fba3e24eb46773188435065d064fb50069c52862"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICATextureCombinerSource.cs": {
+    "bytes": 365,
+    "sha256": "0268a635e58ed967b564b10710363aec0a730d660a23ca5538e16fa68be1f370"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICATextureFilter.cs": {
+    "bytes": 130,
+    "sha256": "661ce7ec22695bc60dc51419eecf2f9487b8388bfa3b5f7d69a9cf778e8a7305"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICATextureFormat.cs": {
+    "bytes": 1480,
+    "sha256": "d6c69e216d3530f2dda8c85152890316cd67670c6df55574894eefa366eee9a0"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICATextureSamplerType.cs": {
+    "bytes": 207,
+    "sha256": "29b20f98903ff33fd2a8f15def4d5140659c06ef91bd90c27ad1e49fee1cf2fc"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICATextureWrap.cs": {
+    "bytes": 173,
+    "sha256": "dfe7fd7e2d05d0adae5ef6fdae01076b03a27a5d36bc7ee55717a79e381bc3a0"
+  },
+  "tools/SPICA/SPICA/PICA/Commands/PICAVectorFloat24.cs": {
+    "bytes": 5162,
+    "sha256": "91a2aec429c6d2a737c9fbce481d79c1da508207c24cce4e253b53f2e6312a03"
+  },
+  "tools/SPICA/SPICA/PICA/Converters/BoneIndices.cs": {
+    "bytes": 992,
+    "sha256": "3b91d8f8715320cbabea75ed1b9b9589eff3e7b8a1acd53e1dcc9350e531ef08"
+  },
+  "tools/SPICA/SPICA/PICA/Converters/BoneWeights.cs": {
+    "bytes": 1002,
+    "sha256": "5318eb7e4b1ec80d87445bb00fd2cef9b3329040c6fb0d2b109bf4f73148427e"
+  },
+  "tools/SPICA/SPICA/PICA/Converters/PICAVertex.cs": {
+    "bytes": 449,
+    "sha256": "90936d392a7d2fd75eeca4f903171cc569c8755b0c3dd561d5e1b0437831254d"
+  },
+  "tools/SPICA/SPICA/PICA/Converters/TextureCompression.cs": {
+    "bytes": 6930,
+    "sha256": "1b449ea2b3b3af2290aac9f574ac6a42d9c54344e2dae9cfd870754ce0fbbd8f"
+  },
+  "tools/SPICA/SPICA/PICA/Converters/TextureConverter.cs": {
+    "bytes": 12252,
+    "sha256": "244ea646cc737e94fb3496074b047ff8285bf94a0d0739f60e11e6f91b2fa84a"
+  },
+  "tools/SPICA/SPICA/PICA/Converters/VerticesConverter.cs": {
+    "bytes": 9209,
+    "sha256": "493b51eb7149c7c52a8b02adc6b9489e480e555b137fd0d4e3c97a900483428f"
+  },
+  "tools/SPICA/SPICA/PICA/PICACommand.cs": {
+    "bytes": 184,
+    "sha256": "5d06f1e4f1479ee93db7feb4574cef98cefec6eadb3f8ea87ea5066b40564b9d"
+  },
+  "tools/SPICA/SPICA/PICA/PICACommandReader.cs": {
+    "bytes": 7240,
+    "sha256": "8e2f7d70190f7945e45c52b62f382b7bc6cb212647fda25aeb65eef363ff5338"
+  },
+  "tools/SPICA/SPICA/PICA/PICACommandWriter.cs": {
+    "bytes": 4006,
+    "sha256": "829dd3c2efe182c1cbb940c333fd3a2360c3ac08087559d63ba16eadc192f4bc"
+  },
+  "tools/SPICA/SPICA/PICA/PICARegister.cs": {
+    "bytes": 23035,
+    "sha256": "acc21225da1673aa08257aeaa0b15ce14233552763bfefde68bcceea36520a7a"
+  },
+  "tools/SPICA/SPICA/PICA/Shader/ShaderBinary.cs": {
+    "bytes": 11864,
+    "sha256": "03b24663c27ada191edb5e3f935464d43bca01032f14a49b79cf265ea774de70"
+  },
+  "tools/SPICA/SPICA/PICA/Shader/ShaderInst1.cs": {
+    "bytes": 485,
+    "sha256": "db1966ea2dc15287430049f554c23197ee9be95f2993b57b855875639a77cac4"
+  },
+  "tools/SPICA/SPICA/PICA/Shader/ShaderInst1c.cs": {
+    "bytes": 553,
+    "sha256": "b6a78ee2b3f450c5232e09ece1586217e7e7891c2471d8529f4feb0b52929926"
+  },
+  "tools/SPICA/SPICA/PICA/Shader/ShaderInst1i.cs": {
+    "bytes": 487,
+    "sha256": "e46537c5f4290f3143358678c4da0c4cd5c99f689b1ee87cd371f4a2871fda4c"
+  },
+  "tools/SPICA/SPICA/PICA/Shader/ShaderInst2.cs": {
+    "bytes": 511,
+    "sha256": "5fb7d9f6a62f5188ae5ddf47e687bcb309c9ce3327bb671edb06a1c9389e0630"
+  },
+  "tools/SPICA/SPICA/PICA/Shader/ShaderInst3.cs": {
+    "bytes": 355,
+    "sha256": "05651fc19eb44d8082bcc658b925c7be85f4a72ea1e1e907598c0511e7c3c68e"
+  },
+  "tools/SPICA/SPICA/PICA/Shader/ShaderInstMAd.cs": {
+    "bytes": 557,
+    "sha256": "1dfe30f2ae40045ae813f004eccf37b6b550ca144783c839e2ca6a5b5d0be142"
+  },
+  "tools/SPICA/SPICA/PICA/Shader/ShaderInstMAdI.cs": {
+    "bytes": 559,
+    "sha256": "447af89000628f6b82513b9418c551ccc51137845711171b544a81dc6d59ab91"
+  },
+  "tools/SPICA/SPICA/PICA/Shader/ShaderLabel.cs": {
+    "bytes": 197,
+    "sha256": "11fe857a28a0b6a1c278fd7d39c8a48a814f3fc24b2a83948f6ea00ca0dc0ded"
+  },
+  "tools/SPICA/SPICA/PICA/Shader/ShaderOpCode.cs": {
+    "bytes": 1056,
+    "sha256": "69e576ebdce2836532b4428a6dfaed796b4ee1f443afb4532e81a7f7d87c85fa"
+  },
+  "tools/SPICA/SPICA/PICA/Shader/ShaderOutputReg.cs": {
+    "bytes": 158,
+    "sha256": "a80d9c20f92c38602685f2ea75202722b96db9815117a314b3138cb56010bfff"
+  },
+  "tools/SPICA/SPICA/PICA/Shader/ShaderOutputRegName.cs": {
+    "bytes": 391,
+    "sha256": "99a174ad207cb6c320fe02ee1099c12eedffa7fbafd425bfbd6baae94f0d0ff1"
+  },
+  "tools/SPICA/SPICA/PICA/Shader/ShaderProgram.cs": {
+    "bytes": 1613,
+    "sha256": "b81d2fb25e124a0b7af4a72ad8a8629e5ff118584709ac942487de0d861a3d97"
+  },
+  "tools/SPICA/SPICA/PICA/Shader/ShaderUniform.cs": {
+    "bytes": 249,
+    "sha256": "f9b7651ede5186c3b3b90e1b2b4013cd18615b4179e3b319eafbe1f8835e3b88"
+  },
+  "tools/SPICA/SPICA/PICA/Shader/ShaderUniformBool.cs": {
+    "bytes": 323,
+    "sha256": "17e0e387badb9c31f484b1b1d046edf7ccea1b78595969816d951ed104a5e0a3"
+  },
+  "tools/SPICA/SPICA/PICA/Shader/ShaderUniformVec4.cs": {
+    "bytes": 355,
+    "sha256": "c83fd4a9e01e9e15f41403f1aeb9010dcd67e4d41d431d25aa4d52307702f093"
+  },
+  "tools/SPICA/SPICA/Properties/AssemblyInfo.cs": {
+    "bytes": 1459,
+    "sha256": "94057b116134fdd84f173bdceff174f0d98ed730e62586299de616564192528e"
+  },
+  "tools/SPICA/SPICA/Serialization/Attributes/CustomLengthAttribute.cs": {
+    "bytes": 393,
+    "sha256": "201cebe3ae3af9d0e14d0e469f052235f0d5585934ee22b9e5a13e5af761b50f"
+  },
+  "tools/SPICA/SPICA/Serialization/Attributes/FixedLengthAttribute.cs": {
+    "bytes": 308,
+    "sha256": "ad14ee422a0295005e54b4db8422af0074e05fefb6008806e4b177318e4142ce"
+  },
+  "tools/SPICA/SPICA/Serialization/Attributes/IfVersionAttribute.cs": {
+    "bytes": 1048,
+    "sha256": "cc0ee28e6f2f8183a379a0d46a076924bdca3b86c6c3d9305bf80fc6066326c0"
+  },
+  "tools/SPICA/SPICA/Serialization/Attributes/IgnoreAttribute.cs": {
+    "bytes": 111,
+    "sha256": "28c2ccb3abfed61131c8aa0b1b03e12ee341633aa914974eb14f383524aad9be"
+  },
+  "tools/SPICA/SPICA/Serialization/Attributes/InlineAttribute.cs": {
+    "bytes": 182,
+    "sha256": "9cdcd1e511421e4383ab9d71e0dd5d1eccdc1c16a44a918a0e3b133c6f29deff"
+  },
+  "tools/SPICA/SPICA/Serialization/Attributes/PaddingAttribute.cs": {
+    "bytes": 246,
+    "sha256": "88d8853d8761ef2a654cfbe5e23502da7e5da631d01c313077b3d9efeafd03a7"
+  },
+  "tools/SPICA/SPICA/Serialization/Attributes/RangeAttribute.cs": {
+    "bytes": 156,
+    "sha256": "fb8392cb1d52de35bb46e64f3c18696efa7663ae3ff674e40e1e5aaaf38f1fbe"
+  },
+  "tools/SPICA/SPICA/Serialization/Attributes/RepeatPointerAttribute.cs": {
+    "bytes": 164,
+    "sha256": "4f3ff7a44d33238a29e358d7a9cd2d862252fa2e08e535b4eb05dacfe90e4595"
+  },
+  "tools/SPICA/SPICA/Serialization/Attributes/SectionAttribute.cs": {
+    "bytes": 314,
+    "sha256": "0ff633bdd25d6c4da1a7446db270cdf08d61882c280c8fe5252be7b982454c79"
+  },
+  "tools/SPICA/SPICA/Serialization/Attributes/TypeChoiceAttribute.cs": {
+    "bytes": 449,
+    "sha256": "1695d3160c0e28a8f130a2448506110ed4b67c99f05d47da579e78a39cf9e62a"
+  },
+  "tools/SPICA/SPICA/Serialization/Attributes/TypeChoiceNameAttribute.cs": {
+    "bytes": 332,
+    "sha256": "d02bdca3f53ee3cbd1b290f4210bd8044f1e56bc0fead66dfa0d2fafa871a152"
+  },
+  "tools/SPICA/SPICA/Serialization/Attributes/VersionAttribute.cs": {
+    "bytes": 158,
+    "sha256": "09c480a46cc18938c6ce1701f1cd0b9c8b990bcbad5f677cf357a1748f686a22"
+  },
+  "tools/SPICA/SPICA/Serialization/BinaryDeserializer.cs": {
+    "bytes": 12353,
+    "sha256": "59ffb6fa667dda2ed85692c9819dd38045aaf5bf7da8b9fa3a26afe0a55622ca"
+  },
+  "tools/SPICA/SPICA/Serialization/BinarySerialization.cs": {
+    "bytes": 2313,
+    "sha256": "742907838818e1c5591bac08d9edf6aebf1f8c0e9c5b8ec36c6d75b14cfeb209"
+  },
+  "tools/SPICA/SPICA/Serialization/BinarySerializer.cs": {
+    "bytes": 16087,
+    "sha256": "d5ed4dcf608bcafd1cddc81125acd750f12d450233dc4182db05e03c5640a61c"
+  },
+  "tools/SPICA/SPICA/Serialization/BitReader.cs": {
+    "bytes": 573,
+    "sha256": "bb45d4056a04f26b90414cf315c3dd3e3b0aabfdf079eff23a8ab9bedcc873c4"
+  },
+  "tools/SPICA/SPICA/Serialization/BitWriter.cs": {
+    "bytes": 727,
+    "sha256": "dc959265b2599a963148a9a90463db6be5294b11b5a8d7f9f3bef37e14406cf6"
+  },
+  "tools/SPICA/SPICA/Serialization/CmpOp.cs": {
+    "bytes": 170,
+    "sha256": "61629a56ad11873bffb3113272452094afc22bb374b8e494489e10f345550be0"
+  },
+  "tools/SPICA/SPICA/Serialization/ICustomSerialization.cs": {
+    "bytes": 204,
+    "sha256": "285344dad7f499a67d3cc3a70294065099d70531eb19b0460b5e0391de2f1688"
+  },
+  "tools/SPICA/SPICA/Serialization/ICustomSerializeCmd.cs": {
+    "bytes": 160,
+    "sha256": "984a5319d4d958d95d5a6f5fc2511ebf74fd1f271edabd90ad7231804f85160f"
+  },
+  "tools/SPICA/SPICA/Serialization/LengthPos.cs": {
+    "bytes": 112,
+    "sha256": "9210e0cdf807043419acf8e0ca7265fec9891795042e843217eeef4b24e75b67"
+  },
+  "tools/SPICA/SPICA/Serialization/LengthSize.cs": {
+    "bytes": 108,
+    "sha256": "70ed9c3eb0e004f179bae0ae3a4dbf1b94d96bbb959f3b98dfe2a6282ef003b6"
+  },
+  "tools/SPICA/SPICA/Serialization/PointerType.cs": {
+    "bytes": 117,
+    "sha256": "3f732aec3dc48b1a407ebdc055e1f8b34190e794e3bdee167f51629acdcc505e"
+  },
+  "tools/SPICA/SPICA/Serialization/SerializationOptions.cs": {
+    "bytes": 333,
+    "sha256": "ee67ce67d86fab8c98942d0e53dbdf2022da183c2e447b336b8f5427cb61529a"
+  },
+  "tools/SPICA/SPICA/Serialization/Serializer/RefValue.cs": {
+    "bytes": 823,
+    "sha256": "b45831b6427f391aac08ab9a0a0330b256ab441aa149a70e7f9dbd3001c5a3e6"
+  },
+  "tools/SPICA/SPICA/Serialization/Serializer/Section.cs": {
+    "bytes": 722,
+    "sha256": "e8faa359f7d09f665b0739f649947728e5304933c143928c870ea3f6a6fcc9e9"
+  },
+  "tools/audit_public_release.py": {
+    "bytes": 3604,
+    "sha256": "acbcf13153d93022168d09428da78a239da32352eb7ad409882b6f27bda1cd41"
+  },
+  "tools/branding/export_icons.py": {
+    "bytes": 743,
+    "sha256": "dbd04e5ace89a6bb52cc2d4623111f308c18a155d916c00372d3ef574b4ccdcc"
+  },
+  "tools/branding/fonts/NotoSans-Bold.ttf": {
+    "bytes": 575740,
+    "sha256": "c976e4b1b99edc88775377fcc21692ca4bfa46b6d6ca6522bfda505b28ff9d6a"
+  },
+  "tools/branding/fonts/OFL.txt": {
+    "bytes": 4377,
+    "sha256": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb"
+  },
+  "tools/branding/fonts/provenance.json": {
+    "bytes": 362,
+    "sha256": "fffd52b22dd264105b96208d4b354703f1bf43d10b4bac73955739e09e093e45"
+  },
+  "tools/build_block_tests.py": {
+    "bytes": 4900,
+    "sha256": "1f34f877fc751d60d066e439cfeca051fece88ba6e1d31f2ad2c1438a7cbd75e"
+  },
+  "tools/build_picto_loading_assets.ps1": {
+    "bytes": 4158,
+    "sha256": "02c736d009173c3c8f6cf2ab110cc01df53dffff7dc9529ebb2637657d4be4ab"
+  },
+  "tools/build_public_loader.py": {
+    "bytes": 4047,
+    "sha256": "5bc9654bd551b38329f273ac135f818d665edbbfc2a3e48538fe433e91769c4a"
+  },
+  "tools/clue_difficulty.py": {
+    "bytes": 3632,
+    "sha256": "93e577408a4dd47774f8c77c1e199db8aba344fea5bd1577825200ede77e74d4"
+  },
+  "tools/colour_logic.py": {
+    "bytes": 2776,
+    "sha256": "2f69a1fc487298b2362ab88819f21e7479d9a8de70d7dbefcd79a8ef919e3d2d"
+  },
+  "tools/design_fitted_puzzle.py": {
+    "bytes": 3507,
+    "sha256": "fbbc0385aba662c71da27393e175a5e2c8efbeeed7ec9c6a67f144d8931fc567"
+  },
+  "tools/fit_native_shapes.py": {
+    "bytes": 4356,
+    "sha256": "6c0ff220b6cddced79324d87f6fb5bd7d7e5bab3faf4c2b6cdf9076045e066b4"
+  },
+  "tools/game_resources.py": {
+    "bytes": 1913,
+    "sha256": "3ecbcc05d8be8eeb7a2d9719c0f9cf0aba8ffffb57f1993bb1d3f8641be71535"
+  },
+  "tools/group_certificate.py": {
+    "bytes": 2160,
+    "sha256": "2ae483c4cc8da7607307cfa70519e477fb7e357f3014d4b4d4a8ba827e04a653"
+  },
+  "tools/mesh_voxels.py": {
+    "bytes": 2428,
+    "sha256": "1a2ac47f046ef2680446f8ab00f27d169f75e8d591385c144271638dc8691753"
+  },
+  "tools/modeltool/BlockCatalog.cs": {
+    "bytes": 2334,
+    "sha256": "e4af358bc9a2a9621535a979f17ad4e05fa74c7b1db405f6ecc9919c7d1da054"
+  },
+  "tools/modeltool/BookCover.cs": {
+    "bytes": 6090,
+    "sha256": "64257c3680ab171c033b9a228a4b49035d0fab13c4dd5a87e52d4e5384205178"
+  },
+  "tools/modeltool/BuildCustomModel.cs": {
+    "bytes": 18391,
+    "sha256": "5432eef81759c046c732dec6e198018218ee825a95d37aea64e5055f6747ca1a"
+  },
+  "tools/modeltool/StudioArtwork.cs": {
+    "bytes": 2326,
+    "sha256": "661e03769c0af5c74c6eea286c659dc4730a7c6c25407a7adfb3e2ffcdb6afdd"
+  },
+  "tools/modeltool/StudioDefaultCover.cs": {
+    "bytes": 1874,
+    "sha256": "a9775761812197d0ef3a55c4ba05f81025bba9f216bca3af35fce3fbffd294c1"
+  },
+  "tools/modeltool/Thumbnail.cs": {
+    "bytes": 5118,
+    "sha256": "50be2656fb06298979970d945be4e8621ae60e54f806c8702b38b73867c4bc6b"
+  },
+  "tools/msbt.py": {
+    "bytes": 3579,
+    "sha256": "00696d0159434236e43d9ff4ed482c3af6de5ba31352fb3ada3f6aa6794d8ae6"
+  },
+  "tools/package_public_app.py": {
+    "bytes": 10464,
+    "sha256": "21f6ff9d9bc7795725c1e5f200609e1bf24eb4ac9bf511f45ccc4361a47704e1"
+  },
+  "tools/prepare_public_source.py": {
+    "bytes": 4665,
+    "sha256": "3d65ab1e50daaa2ffb8320f0a0bbd52c8d2565c1dc5c687aafeae0a4139f67d3"
+  },
+  "tools/puzzle_format.py": {
+    "bytes": 1945,
+    "sha256": "561a8094a1c1b0eac7002dbc9d7bbe666939e1062d5178f0ebccd7f9e386c02a"
+  },
+  "tools/release-dependencies.json": {
+    "bytes": 4830,
+    "sha256": "71ccabc8c90176430e7eba9d849643149fd9c93bb1eea0dc8a17e327de1f6578"
+  },
+  "tools/release_build.py": {
+    "bytes": 4996,
+    "sha256": "9286784c90a8d079f6db3088f923603702dfedb8c9877b1e8c83a5a3fff4591a"
+  },
+  "tools/roslyn/tasks/net472/Microsoft.Build.Tasks.CodeAnalysis.dll": {
+    "bytes": 139952,
+    "sha256": "72b9d5491bb70a0074c44ecd209496654019ed8735fbe0b7af3b84ec0d865cf5"
+  },
+  "tools/roslyn/tasks/net472/Microsoft.CodeAnalysis.CSharp.Scripting.dll": {
+    "bytes": 34064,
+    "sha256": "a831b4546ac9a677c8b13eb36fe0b01468e82709809d7c6fd90f083e828ebea3"
+  },
+  "tools/roslyn/tasks/net472/Microsoft.CodeAnalysis.CSharp.dll": {
+    "bytes": 8005280,
+    "sha256": "bc4e4cfe276fb97e70978e1d484e806c5a1c9301d1f9752c6d39840840118723"
+  },
+  "tools/roslyn/tasks/net472/Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll": {
+    "bytes": 22704,
+    "sha256": "20f09d31349be018dc3c9a49a509d398479a60c089dc7b4fc474b718b5ec638b"
+  },
+  "tools/roslyn/tasks/net472/Microsoft.CodeAnalysis.Scripting.dll": {
+    "bytes": 137888,
+    "sha256": "0fb1a2f195ebc4205bbef9ee4f2a57061217015bb3ff5c07ff87fe4335463e77"
+  },
+  "tools/roslyn/tasks/net472/Microsoft.CodeAnalysis.VisualBasic.dll": {
+    "bytes": 5257376,
+    "sha256": "693c5590ea4b774c6028c5021e9e00ce07e39b23080538ffe48eeaa01aaa4738"
+  },
+  "tools/roslyn/tasks/net472/Microsoft.CodeAnalysis.dll": {
+    "bytes": 4706480,
+    "sha256": "aab3674134122f9c04fcb55a2d1af2d19342cf92a1e593159236dfbce05de59c"
+  },
+  "tools/roslyn/tasks/net472/Microsoft.DiaSymReader.Native.amd64.dll": {
+    "bytes": 1842552,
+    "sha256": "84068d5569a44913ddc38739b6c7e273634e32a64fa1f277657e2db4c7c3b73c"
+  },
+  "tools/roslyn/tasks/net472/Microsoft.DiaSymReader.Native.arm64.dll": {
+    "bytes": 1846544,
+    "sha256": "c416f3dad39f35a523f2990bddb4bf7b96306255dabda889dd4f91033986ad84"
+  },
+  "tools/roslyn/tasks/net472/Microsoft.DiaSymReader.Native.x86.dll": {
+    "bytes": 1547656,
+    "sha256": "4ed612eb56cf7de0768c649b20e12e6ee05086e4f2f32ea1c6528c9e60765adb"
+  },
+  "tools/roslyn/tasks/net472/System.Buffers.dll": {
+    "bytes": 20856,
+    "sha256": "accccfbe45d9f08ffeed9916e37b33e98c65be012cfff6e7fa7b67210ce1fefb"
+  },
+  "tools/roslyn/tasks/net472/System.Collections.Immutable.dll": {
+    "bytes": 198784,
+    "sha256": "d168af8e4a1263b5844180b1b371c5879b21b5b666feef7ca749b10192688006"
+  },
+  "tools/roslyn/tasks/net472/System.Memory.dll": {
+    "bytes": 142240,
+    "sha256": "bf3fb84664f4097f1a8a9bc71a51dcf8cf1a905d4080a4d290da1730866e856f"
+  },
+  "tools/roslyn/tasks/net472/System.Numerics.Vectors.dll": {
+    "bytes": 115856,
+    "sha256": "1d3ef8698281e7cf7371d1554afef5872b39f96c26da772210a33da041ba1183"
+  },
+  "tools/roslyn/tasks/net472/System.Reflection.Metadata.dll": {
+    "bytes": 466576,
+    "sha256": "171317ebbf661b0e7deb43ac58ec8541bdb23409655379a59114660fe42f506e"
+  },
+  "tools/roslyn/tasks/net472/System.Runtime.CompilerServices.Unsafe.dll": {
+    "bytes": 18024,
+    "sha256": "37768488e8ef45729bc7d9a2677633c6450042975bb96516e186da6cb9cd0dcf"
+  },
+  "tools/roslyn/tasks/net472/System.Text.Encoding.CodePages.dll": {
+    "bytes": 764560,
+    "sha256": "67d868132552144c49ad929af33b774b371e3d1e5cb6ad2b67523bcd08351553"
+  },
+  "tools/roslyn/tasks/net472/System.Threading.Tasks.Extensions.dll": {
+    "bytes": 25984,
+    "sha256": "4f81ffd0dc7204db75afc35ea4291769b07c440592f28894260eea76626a23c6"
+  },
+  "tools/roslyn/tasks/net472/VBCSCompiler.exe": {
+    "bytes": 96424,
+    "sha256": "d8a52081b562b66c173945486032b8579dda0e52eaa8804f67f67810a790242b"
+  },
+  "tools/roslyn/tasks/net472/VBCSCompiler.exe.config": {
+    "bytes": 5234,
+    "sha256": "fe45d57c3c3f53747139219dfcb8df458eb06fc9ca4ffe8e473190e7110d0827"
+  },
+  "tools/roslyn/tasks/net472/csc.exe": {
+    "bytes": 60064,
+    "sha256": "c9b43db498213e8e8ca5d7e03a25defdda2031d5e025553b8eb9773f79ebd226"
+  },
+  "tools/roslyn/tasks/net472/csc.exe.config": {
+    "bytes": 4671,
+    "sha256": "e3ddaf7fb2cf0114e97f26af3fc52358318d645bf245e41d5cb42556d4b8a0f3"
+  },
+  "tools/roslyn/tasks/net472/csc.rsp": {
+    "bytes": 1537,
+    "sha256": "c9862ddf2732a7d06ec2b779061d2a3e4861bdcbdee61ca74cf9c04201cc90a3"
+  },
+  "tools/roslyn/tasks/net472/csi.exe": {
+    "bytes": 18072,
+    "sha256": "933deee5d4b36f72f6a64902e6e493602ec5bc6263b050326533489825993ff5"
+  },
+  "tools/roslyn/tasks/net472/csi.exe.config": {
+    "bytes": 4932,
+    "sha256": "b34d57f005caac048e51337ba91272ced8b1cb44bd59279ecc2e8322c2acb02b"
+  },
+  "tools/roslyn/tasks/net472/csi.rsp": {
+    "bytes": 253,
+    "sha256": "6c516de22e4ca634900859443094a371b37f155a3a1f41cb029a063e59293ebe"
+  },
+  "tools/roslyn/tasks/net472/vbc.exe": {
+    "bytes": 60672,
+    "sha256": "b84a254298fed10a04d7486ec1de4d7427060d6b4bcdd746a3d34b269c95c964"
+  },
+  "tools/roslyn/tasks/net472/vbc.exe.config": {
+    "bytes": 4676,
+    "sha256": "eeea5476078441b2f4a50d17283a4f7b534428257203a2b72065a5a0737c2d39"
+  },
+  "tools/roslyn/tasks/net472/vbc.rsp": {
+    "bytes": 1675,
+    "sha256": "2c3867a4590f43673d0796f3734119b36f7326a1221064760f1ec1f0c5a81a0a"
+  },
+  "tools/scoring.py": {
+    "bytes": 1362,
+    "sha256": "bed1e605fac6c4f10b40dcd8c36e3d79994860c798091c9ed241e3ab605ade91"
+  },
+  "tools/test_release_preparation.py": {
+    "bytes": 1077,
+    "sha256": "db99574c6d992805817597adb21f0a52b0b771cd170079387e0110afb35e9ccc"
+  },
+  "vendor/downloads/GCC-runtime-exception.txt": {
+    "bytes": 3324,
+    "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+  },
+  "vendor/downloads/GPL-3.0.txt": {
+    "bytes": 35147,
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  "vendor/downloads/MPL-2.0.txt": {
+    "bytes": 16726,
+    "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04"
+  },
+  "vendor/downloads/MicrosoftEdgeWebview2Setup.exe": {
+    "bytes": 1888976,
+    "sha256": "00c6e5a7413c37753bb92e176539dbf691a101846a622e00a9faec3f23e2816b"
+  },
+  "vendor/downloads/libctru-README.txt": {
+    "bytes": 2727,
+    "sha256": "6ca781f919d70afba6206e61415ac8bd003adce37fc08c10d8367c9114c77fd0"
+  },
+  "vendor/downloads/newlib-notices.txt": {
+    "bytes": 78261,
+    "sha256": "fcfb5ec69b6ab52676dcc4dab7cf4338c8000ef97812dadd35b8592a640a8419"
+  },
+  "vendor/downloads/python-3.14.10-embed-amd64.zip": {
+    "bytes": 12619664,
+    "sha256": "90905e64a840557d8c1bc4f5b74db3d7ee85e3ffb217611cac1c7813acea4159"
+  }
+}

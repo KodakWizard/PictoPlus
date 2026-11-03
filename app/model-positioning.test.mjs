@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import * as THREE from './vendor/package/build/three.module.js';
+import {centredModel,originalPosition,resetPosition} from './model-positioning.js';
+const mesh=new THREE.Mesh(new THREE.BoxGeometry(2,4,6));mesh.position.set(18,4,-9);
+const model=centredModel(THREE,mesh),original=originalPosition(model);
+let centre=new THREE.Box3().setFromObject(model).getCenter(new THREE.Vector3());assert.ok(centre.length()<1e-8);
+model.quaternion.setFromAxisAngle(new THREE.Vector3(0,1,0),Math.PI/3);
+centre=new THREE.Box3().setFromObject(model).getCenter(new THREE.Vector3());assert.ok(centre.length()<1e-8,'Rotating must preserve the centred pivot');
+model.position.set(2,3,4);model.scale.multiplyScalar(1.4);resetPosition(model,original);
+assert.ok(model.position.length()<1e-8);assert.ok(model.quaternion.angleTo(new THREE.Quaternion())<1e-8);assert.deepEqual(model.scale.toArray(),[1,1,1]);
+console.log('PASS: off-origin imports rotate about their centre and reset their full pose.');

@@ -1,0 +1,73 @@
+/* Readability and editing controls in the original studio theme. */
+body{font-size:14px}
+.sidebar-bottom{display:none!important}
+.topbar{min-height:90px;height:auto;padding-top:10px;padding-bottom:10px}
+.document-heading{font-size:21px}
+#viewportSummary.document-meta{display:block;font-size:13px;line-height:1.7;margin-top:3px;opacity:.8;pointer-events:none}
+body:not([data-page=designer]) #viewportSummary.document-meta{display:none}
+.breadcrumb,.workspace-label,.brand small,.section-title,.eyebrow,.field-note,.planned small,.page-intro p,.palette-help,.palette-colour-label,.version,.notice,.settings-card p,.book-card small,.puzzle-card p,.stat-grid span{font-size:12px!important}
+.field-label,.check-label,.inspector-tabs button,.toolset button span,.editing-modes strong,.editing-modes small,.drawing-options,.drawing-options label,.layer-control,.layer-control label,.layer-control strong,.view-switch button,.view-controls button,.mouse-help,.difficulty-switch button,.button,.button.small,.cover-choice span,.dirty{font-size:13px!important}
+input,select,textarea{font-size:14px!important}
+.editing-modes{min-height:54px}.editing-modes button{padding:7px 10px}.editing-modes small{line-height:1.3}
+.editing-modes strong{font-size:14px!important}
+.canvas-toolbar .drawing-options{font-size:13px!important}
+.toolset button{padding:9px 11px}.history-buttons button{font-size:22px}
+.view-switch{max-width:calc(100% - 225px);align-items:center;gap:4px}.view-switch button{padding:7px 9px}
+.view-controls button{padding:8px 10px}
+.zero-preview{font-size:13px;white-space:normal;max-width:230px}
+.palette-row{min-height:43px}.palette-colour-label{min-width:58px}.palette-help{min-height:22px}
+.shape-palette{padding:7px 10px!important}
+.canvas-footer{min-height:38px;height:auto}.mouse-help{display:block;line-height:1.5}
+.statusbar{min-height:30px;height:auto;font-size:13px;line-height:1.5;gap:15px;padding:5px 12px;align-items:center}
+#statusText{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px;min-width:0}
+.statusbar>span:last-child{font-size:12px;white-space:nowrap}
+.toast{font-size:15px;line-height:1.6;max-width:680px;padding:15px 22px}
+.inspector-body{scrollbar-width:thin}.field-note{line-height:1.6}
+.coordinate-panel{display:none!important}
+.axis-end-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.axis-end{display:flex;align-items:center;gap:5px;border:1px solid #445167;border-radius:9px;padding:6px;background:#202936}
+.axis-end strong{font-size:14px;min-width:28px}.axis-end button{border:1px solid #53627a;background:#2b394d;color:inherit;border-radius:6px;font-size:18px;line-height:28px;flex:1;min-width:28px;padding:0 4px}
+.axis-end button:hover:not(:disabled){border-color:#6bd8c3;background:#345448}.axis-end button:disabled{opacity:.25}
+body[data-theme=light] .axis-end{background:#f3f7fa;border-color:#cedbe6;color:#3d5f78}
+body[data-theme=light] .axis-end button{background:#fff;border-color:#c5d5e0}
+body[data-theme=light] .axis-end button:hover:not(:disabled){background:#d9f0e9;border-color:#74c7b2}
+.book-card.active{outline:none;border-color:#42bca9;box-shadow:0 0 0 1px #42bca9}
+.collection-page,.library-bar{background:inherit}.library-bar{outline:0;box-shadow:none;backdrop-filter:none}
+.advanced-clues{font-size:13px}.advanced-clues .field-note{font-size:13px!important}
+body[data-theme=light] .field-note,body[data-theme=light] .section-title{color:#526e85}
+small,kbd,.hover-info,.palette-caption,.nav i,.cover-choice span,.artwork-button b,.artwork-button small,.validation-card p,.stat-grid span,.model-links span,.model-links a,.import-choice small{font-size:12px!important}
+.hover-info{font-size:13px!important}
+.document-heading{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+#viewportSummary.document-meta{display:inline-block;margin:0 0 0 12px;white-space:nowrap;font-size:14px}
+.dirty{background:#e0f2e9;color:#216d50;border:1px solid #a5cdbb;padding:4px 8px;border-radius:5px;font-weight:600}
+body[data-theme=light] .dirty{background:#e0f2e9;color:#216d50}
+.dirty:not(:empty){opacity:1}.dirty.hidden{display:none!important}
+.save-menu{display:flex;gap:1px}.save-menu #saveButton{border-radius:8px 0 0 8px}.save-menu #saveMenuButton{border-radius:0 8px 8px 0;padding:10px}
+#importButton,#saveFileButton,#openPuzzleFile,#collectionFilter,#coverImageButton,#renameBook,#exportBook{display:none!important}
+body:not([data-page=designer]) .save-menu{display:none}
+#libraryOpenFile,#libraryExportBook{display:none}body[data-page=library] #libraryOpenFile,body[data-page=library] #libraryExportBook{display:inline-block}
+.brand small{max-width:140px;line-height:1.55;font-size:10px!important;letter-spacing:1px}
+.zero-preview{white-space:nowrap;max-width:none;align-items:center;gap:5px;font-size:13px!important}.zero-preview #zeroCount{white-space:nowrap}
+body[data-theme=light] .dirty[data-state=unsaved]{background:#fff1c8;color:#805b00;border-color:#dbbf76}
+body[data-theme=dark] .dirty[data-state=unsaved]{background:#594424;color:#ffdf95;border-color:#93723e}
+.view-switch{max-width:calc(100% - 385px);flex-wrap:wrap}.view-controls{display:flex;align-items:center;gap:3px}.view-controls button{padding:7px 8px;font-size:12px!important}
+.shortcut-help{position:relative}.shortcut-help summary{list-style:none;cursor:pointer;border:1px solid #8ba0b455;padding:7px 11px;border-radius:6px;background:var(--panel);font-weight:700}.shortcut-help div{position:absolute;right:0;top:35px;width:290px;background:#1f2938;color:#edf5fa;border:1px solid #849aaa66;padding:15px;border-radius:9px;font-size:13px;line-height:1.85;box-shadow:0 8px 22px #0003;z-index:100}.shortcut-help:hover div{display:block}.shortcut-help:not([open]) div{display:none}
+.shape-palette{padding:8px!important;gap:4px}.palette-help{display:none!important}.palette-row{min-height:61px;gap:6px!important}.shape-choice{width:56px!important;height:56px!important;flex:0 0 56px}.shape-choice img{width:50px!important;height:50px!important}.hover-info{bottom:150px}
+.build-dimensions{font-size:18px;font-weight:600;letter-spacing:1px;margin:12px 0}.axis-end-controls{margin-top:4px}
+.statusbar{display:none}body[data-page=designer] .statusbar{display:flex}
+.context-menu{position:fixed;z-index:200000;background:#243043;color:#eef6fa;border:1px solid #849aaa66;box-shadow:0 9px 30px #0004;border-radius:9px;padding:6px;min-width:195px}.context-menu button{display:block;width:100%;text-align:left;background:transparent;color:inherit;border:0;border-radius:5px;padding:11px 14px;font-size:14px;cursor:pointer}.context-menu button:hover,.context-menu button:focus{background:#168e7f;color:#fff;outline:none}
+body[data-theme=light] .context-menu{background:#fff;color:#24475d}
+.book-card{padding-bottom:30px}.card-more{position:absolute;right:10px;bottom:4px;font-size:26px;line-height:25px;cursor:pointer;min-width:28px;border-radius:5px}.card-more:hover{background:#8ba0b433}.puzzle-card{position:relative}.puzzle-card .card-more{bottom:13px}.puzzle-card .card-meta{padding-bottom:38px}
+.model-dialog{width:min(1050px,94vw)!important;max-width:1050px!important;padding:24px!important}.model-preview{height:min(43vh,430px)!important;min-height:270px}.model-navigation{display:flex;justify-content:flex-end;gap:5px;margin:8px 0}.model-navigation .button{padding:6px 12px}.model-actions .button.active{border-color:#159c8b;background:#d9f0e9;color:#11776b;box-shadow:inset 0 0 0 1px #159c8b}
+#modelDialog .model-actions .button.active{border-color:#159c8b!important;background:#d9f0e9!important;color:#11776b!important;font-weight:600}
+.conversion-summary{font-size:15px;font-weight:600;padding:10px 0;margin:0 0 8px}.conversion-blocks{padding:10px 14px;margin:12px 0;min-inline-size:0}.conversion-blocks .check-label{margin:7px 0}.conversion-blocks .field-note{margin:5px 0}.conversion-blocks legend{padding:0 4px}#modelReport:empty{display:none}#automaticSizeNote,#automaticBlocksNote{display:none!important}
+#manualImportSize .dimensions label{display:grid;grid-template-columns:20px 25px 1fr;gap:6px;align-items:center}#manualImportSize input[type=range]{width:100%;padding:0;height:25px}.model-dialog .dimensions{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:1350px){.view-switch{max-width:calc(100% - 340px)}.shape-choice{width:48px!important;height:48px!important;flex-basis:48px}.shape-choice img{width:44px!important;height:44px!important}.view-controls button{padding:7px 5px}.model-dialog{max-height:95vh}.model-preview{height:34vh!important}}
+@media(max-width:1280px){.topbar{padding-left:16px;padding-right:16px}.header-actions{flex-wrap:wrap;justify-content:flex-end}.view-switch{max-width:calc(100% - 220px)}.mouse-help{font-size:12px!important}.statusbar>span:last-child{display:none}}
+
+/* User-supplied PictoPlus brand artwork; preserve its proportions. */
+.brand .pictoplus-logo{width:48px;height:48px;object-fit:contain;flex-shrink:0;background:transparent;border:0;padding:0}
+
+/* PictoPlus identity: readable subtitle and unscaled mascot. */
+.brand small{font-size:12px!important;line-height:1.4;letter-spacing:.35px;max-width:140px}
+.install-overview{margin-bottom:24px}.install-overview ol{padding-left:24px;line-height:1.8}.install-overview li{padding:5px 0}.install-path{padding:14px 16px;border:1px solid var(--border,#c9d8e5);border-radius:8px;font-size:16px;font-weight:600;overflow-wrap:anywhere}.game-page h3{font-size:16px;margin:24px 0 10px}.game-page code{font-size:14px}.game-page .settings-card p{font-size:14px!important;line-height:1.65}

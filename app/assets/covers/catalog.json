@@ -1,0 +1,82 @@
+[
+  {
+    "id": "01",
+    "name": "Vermilion Orbit",
+    "art": "art-01.png",
+    "ink": "#243b49",
+    "paper": "#f5edda",
+    "motif": "A large vermilion disc offset against a slim charcoal rectangle, a small cobalt circle, and one precise ivory arc. Powerful asymmetric balance."
+  },
+  {
+    "id": "02",
+    "name": "Blue Assembly",
+    "art": "art-02.png",
+    "ink": "#243b49",
+    "paper": "#f5edda",
+    "motif": "Three interlocking cobalt and sky-blue geometric cube-like planes with one tiny vermilion square. Clever spatial puzzle, flat printed shapes rather than a 3D render."
+  },
+  {
+    "id": "03",
+    "name": "Ochre Fold",
+    "art": "art-03.png",
+    "ink": "#243b49",
+    "paper": "#f5edda",
+    "motif": "An abstract folded-paper construction in mustard yellow, warm ochre and charcoal, with a coral red disc. Bold sharp-edged angular planes."
+  },
+  {
+    "id": "04",
+    "name": "Quiet Current",
+    "art": "art-04.png",
+    "ink": "#243b49",
+    "paper": "#f5edda",
+    "motif": "Three wide sweeping indigo and turquoise ribbon-like curves, a small vermilion circle and generous warm ivory space. Abstract movement, no traditional wave illustration."
+  },
+  {
+    "id": "05",
+    "name": "Signal Garden",
+    "art": "art-05.png",
+    "ink": "#243b49",
+    "paper": "#f5edda",
+    "motif": "A playful modular arrangement of mint green stems, raspberry red circles and mustard yellow semicircles. Abstract graphic rhythm, restrained and precise."
+  },
+  {
+    "id": "06",
+    "name": "Night Geometry",
+    "art": "art-06.png",
+    "ink": "#f8eed8",
+    "paper": "#242424",
+    "motif": "Deep charcoal background, a large warm ivory circle, electric cobalt triangular plane and small vermilion square, quietly dramatic modernist composition. Upper 23 percent is uninterrupted charcoal for light title lettering to be added later."
+  },
+  {
+    "id": "07",
+    "name": "Coral Steps",
+    "art": "art-07.png",
+    "ink": "#243b49",
+    "paper": "#f5edda",
+    "motif": "Offset stair-step blocks and rectangles in coral red, brick red and muted teal, on warm ivory, an unexpected tiny black circle. Architectural rhythm."
+  },
+  {
+    "id": "08",
+    "name": "Red Lantern",
+    "art": "art-08.png",
+    "ink": "#243b49",
+    "paper": "#f5edda",
+    "motif": "An abstract oversized vermilion oval split by a slim charcoal vertical line, one indigo rectangle and small warm ochre disc. Modern typographic-poster-like geometry suggesting a lantern without illustrating one."
+  },
+  {
+    "id": "09",
+    "name": "Offset Grid",
+    "art": "art-09.png",
+    "ink": "#243b49",
+    "paper": "#f5edda",
+    "motif": "An inventive off-centre lattice of thick charcoal lines, with a few large cobalt blue and mustard yellow modules shifted outside the grid. Strong negative space and optical puzzle."
+  },
+  {
+    "id": "10",
+    "name": "Mint Balance",
+    "art": "art-10.png",
+    "ink": "#243b49",
+    "paper": "#c9e3d0",
+    "motif": "A pale mint field, a floating charcoal ellipse, a warm ivory rounded square and a small vermilion disc in a beautiful carefully balanced asymmetrical arrangement. Upper 23 percent is quiet pale mint for dark title lettering to be added later."
+  }
+]

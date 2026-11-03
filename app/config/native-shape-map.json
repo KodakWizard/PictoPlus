@@ -1,0 +1,162 @@
+[
+  {
+    "first_id": 0,
+    "last_id": 0,
+    "render_group": 0,
+    "mesh": 0,
+    "extra_transform": 0,
+    "orientation_count": 1
+  },
+  {
+    "first_id": 1,
+    "last_id": 12,
+    "render_group": 1,
+    "mesh": 1,
+    "extra_transform": 0,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 13,
+    "last_id": 24,
+    "render_group": 2,
+    "mesh": 2,
+    "extra_transform": 0,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 25,
+    "last_id": 36,
+    "render_group": 3,
+    "mesh": 3,
+    "extra_transform": 0,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 37,
+    "last_id": 48,
+    "render_group": 4,
+    "mesh": 4,
+    "extra_transform": 0,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 49,
+    "last_id": 60,
+    "render_group": 5,
+    "mesh": 5,
+    "extra_transform": 0,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 61,
+    "last_id": 72,
+    "render_group": 6,
+    "mesh": 6,
+    "extra_transform": 0,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 73,
+    "last_id": 84,
+    "render_group": 7,
+    "mesh": 7,
+    "extra_transform": 0,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 85,
+    "last_id": 96,
+    "render_group": 8,
+    "mesh": 8,
+    "extra_transform": 0,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 97,
+    "last_id": 97,
+    "render_group": 9,
+    "mesh": 9,
+    "extra_transform": 0,
+    "orientation_count": 1
+  },
+  {
+    "first_id": 98,
+    "last_id": 109,
+    "render_group": 10,
+    "mesh": 10,
+    "extra_transform": 0,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 110,
+    "last_id": 121,
+    "render_group": 11,
+    "mesh": 11,
+    "extra_transform": 0,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 122,
+    "last_id": 133,
+    "render_group": 12,
+    "mesh": 12,
+    "extra_transform": 0,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 134,
+    "last_id": 145,
+    "render_group": 13,
+    "mesh": 12,
+    "extra_transform": 1,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 146,
+    "last_id": 157,
+    "render_group": 14,
+    "mesh": 13,
+    "extra_transform": 0,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 158,
+    "last_id": 169,
+    "render_group": 15,
+    "mesh": 14,
+    "extra_transform": 0,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 170,
+    "last_id": 181,
+    "render_group": 16,
+    "mesh": 14,
+    "extra_transform": 1,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 182,
+    "last_id": 193,
+    "render_group": 17,
+    "mesh": 15,
+    "extra_transform": 0,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 194,
+    "last_id": 205,
+    "render_group": 18,
+    "mesh": 16,
+    "extra_transform": 0,
+    "orientation_count": 12
+  },
+  {
+    "first_id": 206,
+    "last_id": 217,
+    "render_group": 19,
+    "mesh": 17,
+    "extra_transform": 0,
+    "orientation_count": 12
+  }
+]

@@ -1,0 +1,21 @@
+name: Source checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  desktop:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Show build environment
+        run: |
+          python --version
+          node --version
+      - name: Build pinned desktop release
+        run: python tools/package_public_app.py
+      - name: Check release contents
+        run: python tools/audit_public_release.py
+      - name: Check release regressions
+        run: python tools/test_release_preparation.py
+      - name: Check editor logic
+        run: node --test app/designer-orbit.test.mjs app/editor-model.test.mjs app/model-positioning.test.mjs app/placement.test.mjs app/puzzle-numbers.test.mjs app/setup-import.test.mjs app/startup.test.mjs
