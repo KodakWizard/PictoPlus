@@ -1,5 +1,5 @@
 """Import only a validated local-game authoring profile; never accept ROM dumps."""
-import hashlib,itertools,json,os,pathlib,shutil,struct,sys,time,uuid,zlib,zipfile
+import hashlib,itertools,json,os,pathlib,shutil,struct,sys,time,uuid,zlib
 ROOT=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'tools'))
 import game_resources
 LIMIT=64*1024*1024
@@ -12,14 +12,6 @@ def rename_ready(source,target):
         except PermissionError:
             if attempt==9:raise ValueError('Windows is still using the setup files. Close other apps using this folder and try setup again.')
             time.sleep(.1*(attempt+1))
-
-def setup_archive(destination):
-    from distribution import usa_setup
-    with zipfile.ZipFile(usa_setup()) as original,zipfile.ZipFile(destination,'w',zipfile.ZIP_DEFLATED) as target:
-        for item in original.infolist():
-            if item.filename!='PictoPlus-First-Time-Setup.txt':target.writestr(item,original.read(item))
-        target.writestr('PictoPlus/authoring.request',b'PPAUTH01\nUSA first-time setup requested by PictoPlus.\n')
-        target.writestr('PictoPlus-First-Time-Setup.txt','PictoPlus First-Time Setup - USA\n\n1. Extract this ZIP to the root of your 3DS SD card. Enable Luma plugins.\n2. Launch your installed USA copy of Picross 3D: Round 2 and wait for setup to finish.\n3. Put the SD card back into your computer. In PictoPlus, choose Import setup file and select PictoPlus/PictoPlus-Setup.pictosetup.\n\nKeep this setup file private. Import it only once. No game dump is required. Existing books and saves are preserved. EUR support is separate.\n')
 
 def generate_shapes(stage):
     import core

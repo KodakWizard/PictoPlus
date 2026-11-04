@@ -46,12 +46,6 @@ def dispatch(route,data):
         begin_background_preparation();return {'ready':True}
     if route=='authoring-status':
         return {'ready':resources_ready(),'region':'USA','requires_installed_game':True}
-    if route=='authoring-setup':
-        import uuid
-        from authoring_setup import setup_archive
-        folder=core.DATA/'exports'/uuid.uuid4().hex;folder.mkdir(parents=True)
-        target=folder/'PictoPlus-USA-SD-Setup.zip';setup_archive(target)
-        return {'file':str(target.relative_to(core.DATA/'exports'))}
     if route=='preparation-activity':PREPARATION.editing();return {'paused':True}
     if route=='prepare-export':
         document=core.check(data['document']);assert document['cells'],'Add blocks before preparing.'
@@ -63,12 +57,12 @@ def dispatch(route,data):
             enabled=core.settings().get('background_preparation',True)
         PREPARATION.configure(enabled)
         return PREPARATION.request(key,document,book,data.get('previous'))
-    if route=='loader-export':
+    if route in ('loader-export','authoring-setup'):
         import shutil,uuid
         from distribution import usa_setup
         source=usa_setup()
         folder=core.DATA/'exports'/uuid.uuid4().hex;folder.mkdir(parents=True)
-        target=folder/'PictoPlus-USA-SD-Setup.zip';shutil.copy2(source,target)
+        target=folder/'PictoPlus-USA-SD-Loader.zip';shutil.copy2(source,target)
         return {'file':str(target.relative_to(core.DATA/'exports'))}
     if route=='books-export':
         def export_books(report):

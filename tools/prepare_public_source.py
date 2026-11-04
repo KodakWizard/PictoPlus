@@ -19,7 +19,7 @@ def prepare():
  for folder in ('docs','.github','native'):
   for p in sorted((ROOT/folder).rglob('*')):
    if p.is_file():put(p.relative_to(ROOT).as_posix(),p)
- for name in ('release_build.py','release-dependencies.json','package_public_app.py','build_public_loader.py','audit_public_release.py','prepare_public_source.py','build_picto_loading_assets.ps1','test_release_preparation.py'):put('tools/'+name,ROOT/'tools'/name)
+ for name in ('release_build.py','release-dependencies.json','package_public_app.py','build_public_loader.py','audit_public_release.py','prepare_public_source.py','build_picto_loading_assets.ps1','test_release_preparation.py','test_puzzle_grid.py'):put('tools/'+name,ROOT/'tools'/name)
  for p in sorted((ROOT/'tools/branding').rglob('*')):
   if p.is_file() and p.suffix in ('.py','.ttf','.txt','.json'):put(p.relative_to(ROOT).as_posix(),p)
  for p in sorted((ROOT/'tools/SPICA/SPICA').rglob('*.cs')):put(p.relative_to(ROOT).as_posix(),p)

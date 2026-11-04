@@ -39,10 +39,22 @@ class Studio:Form {
     if(type=="pickAzahar")using(var dialog=new FolderBrowserDialog{Description="Choose your portable Azahar folder",ShowNewFolderButton=false})if(dialog.ShowDialog(this)==DialogResult.OK)web.CoreWebView2.PostWebMessageAsJson(json.Serialize(new {type="azaharPath",path=dialog.SelectedPath}));
     if(type=="export")using(var dialog=new SaveFileDialog{Filter="PictoPlus book|*.pictobook|PictoPlus puzzle|*.pictopuzzle",FileName=message.ContainsKey("name")?Path.GetFileName((string)message["name"]):"Custom puzzle.pictopuzzle",FilterIndex=message.ContainsKey("name")&&((string)message["name"]).EndsWith(".pictobook",StringComparison.OrdinalIgnoreCase)?1:2})if(dialog.ShowDialog(this)==DialogResult.OK){File.WriteAllText(dialog.FileName,(string)message["json"],new UTF8Encoding(false));web.CoreWebView2.PostWebMessageAsJson("{\"type\":\"exported\"}");}
     if(type=="savePackage"){
-     string root=Path.GetFullPath(Path.Combine(app,"data","exports"))+Path.DirectorySeparatorChar;string file=Path.GetFullPath(Path.Combine(root,(string)message["file"]));
-     bool pack=Path.GetExtension(file)==".pictobook"||Path.GetExtension(file)==".pictopack"||Path.GetExtension(file)==".voxpack";
-     if(!file.StartsWith(root,StringComparison.OrdinalIgnoreCase)||(!pack&&Path.GetExtension(file)!=".zip"))throw new Exception("Invalid export package.");
-     using(var dialog=new SaveFileDialog{Filter=pack?"PictoPlus book|*.pictobook":"PictoPlus archive|*.zip",FileName=message.ContainsKey("name")?Path.GetFileName((string)message["name"]):Path.GetFileName(file)})if(dialog.ShowDialog(this)==DialogResult.OK){File.Copy(file,dialog.FileName,true);web.CoreWebView2.PostWebMessageAsJson("{\"type\":\"exported\"}");}
+     string requestId=message.ContainsKey("requestId")?(string)message["requestId"]:null;
+     bool saved=false;
+     string error=null;
+     try{
+      string root=Path.GetFullPath(Path.Combine(app,"data","exports"))+Path.DirectorySeparatorChar;string file=Path.GetFullPath(Path.Combine(root,(string)message["file"]));
+      bool pack=Path.GetExtension(file)==".pictobook"||Path.GetExtension(file)==".pictopack"||Path.GetExtension(file)==".voxpack";
+      if(!file.StartsWith(root,StringComparison.OrdinalIgnoreCase)||(!pack&&Path.GetExtension(file)!=".zip"))throw new Exception("Invalid export package.");
+      using(var dialog=new SaveFileDialog{Filter=pack?"PictoPlus book|*.pictobook":"PictoPlus archive|*.zip",FileName=message.ContainsKey("name")?Path.GetFileName((string)message["name"]):Path.GetFileName(file)}){
+       if(dialog.ShowDialog(this)==DialogResult.OK){File.Copy(file,dialog.FileName,true);saved=true;}
+      }
+     }catch(Exception failure){
+      if(requestId==null)throw;
+      error="Could not save the export. "+failure.Message;
+     }
+     if(requestId!=null)web.CoreWebView2.PostWebMessageAsJson(json.Serialize(new {type="savePackageResult",requestId,saved,error}));
+     else if(saved)web.CoreWebView2.PostWebMessageAsJson("{\"type\":\"exported\"}");
     }
    }catch(Exception exception){MessageBox.Show(this,exception.Message,"PictoPlus");}};
    web.CoreWebView2.NavigationCompleted+=(s,e)=>{Stage("navigation-completed");if(!e.IsSuccess&&!screenReady)loading.Text="Unable to load PictoPlus. Please restart the app.";};

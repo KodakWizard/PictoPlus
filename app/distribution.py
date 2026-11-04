@@ -1,7 +1,7 @@
 """Allowlisted standalone USA setup; never export private console-test archives."""
 import hashlib,json,pathlib,zipfile
 ROOT=pathlib.Path(__file__).resolve().parents[1]
-SETUP_FILES={'luma/plugins/0004000000187D00/PictoPlus.3gx','PictoPlus/Books/','PictoPlus-First-Time-Setup.txt'}
+SETUP_FILES={'luma/plugins/0004000000187D00/PictoPlus.3gx','PictoPlus/Books/','PictoPlus-First-Time-Setup.txt','PictoPlus/Setup files/Create setup file/authoring.request','PictoPlus/Setup files/Skip Setup/authoring.skip'}
 SETUP_NOTICES={'PictoPlus/licenses/'+name for name in ('MPL-2.0.txt','loader-startup.s','loader-csvc.s','NOTICE.txt','libctru.txt','newlib.txt','GCC-runtime-exception.txt','GPL-3.0.txt','ArticBase-MIT.txt','Noto-OFL.txt')}
 def usa_setup():
     folder=ROOT/'app/distribution/USA';source=folder/'PictoPlus-USA-SD-Setup.zip'

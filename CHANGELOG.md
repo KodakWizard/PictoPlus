@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.9.0 Beta
+
+- Large imported puzzles use their full grid when setting slicer travel.
+- Imported reveals sit at table level, and puzzle artwork follows the accepted model orientation.
+- Covers fit both 3DS screens. Puzzle descriptions wrap at word boundaries.
+- One USA SD loader for setup and updates, with optional skip and replacement files.
+- Setup survives portable upgrades when app data is kept. The app checks key templates for corruption.
+- The export window returns to the Book Library after a successful save.
+- The optional Animals pack includes the updated 15-puzzle book.
+
 ## 0.8.0 - first public release candidate
 
 This is the first public candidate, bringing together the work from private development. Publication and release signing are still separate steps.

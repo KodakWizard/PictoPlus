@@ -199,11 +199,33 @@ static int direct_utf16(const char*s,uint16_t*out,unsigned capacity){
   if(c>=0x10000){if(n+2>=capacity)return 0;c-=0x10000;out[n++]=0xd800+(c>>10);out[n++]=0xdc00+(c&1023);}else{if(n+1>=capacity)return 0;out[n++]=c;}
  }out[n]=0;return 1;
 }
+static const DirectEntry*direct_find(uint32_t key){
+ unsigned lo=0,hi=direct_count;
+ while(lo<hi){unsigned mid=(lo+hi)/2;if(direct_entries[mid].key<key)lo=mid+1;else hi=mid;}
+ return lo<direct_count&&direct_entries[lo].key==key?direct_entries+lo:0;
+}
+
+void native_slicer_grid_bounds(uint8_t*state,uint32_t puzzle_id){
+ const DirectEntry*entry=puzzle_id<=65535?direct_find(0x10000|puzzle_id):0;
+ if(entry&&entry->patch_id==puzzle_id){
+  for(unsigned axis=0;axis<3;axis++)if(state[1+axis]<1||state[1+axis]>10)goto original;
+  // Final gameplay bounds feed the native handle anchors and limits.
+  // Keep the original occupied scan for solution operations and stock puzzles.
+  uint16_t*bounds=(uint16_t*)(state+0x196c);
+  for(unsigned axis=0;axis<3;axis++){
+   bounds[2*axis]=0;
+   bounds[2*axis+1]=state[1+axis]-1;
+  }
+  return;
+ }
+original:
+ ((void(*)(void*))0x1b8578)(state);
+}
+
 static __attribute__((noinline)) int direct_open_asset(void*object,const uint16_t*path,unsigned mode,unsigned extra){
  char name[128];unsigned n=0;while(path[n]){if(n>=127||path[n]>127)return 0;name[n]=(char)path[n];n++;}name[n]=0;
  uint32_t key=direct_key(name);if(!key)return 0;
- unsigned lo=0,hi=direct_count;while(lo<hi){unsigned mid=(lo+hi)/2;if(direct_entries[mid].key<key)lo=mid+1;else hi=mid;}
- const DirectEntry*entry=lo<direct_count&&direct_entries[lo].key==key?direct_entries+lo:0;if(!entry)return 0;
+ const DirectEntry*entry=direct_find(key);if(!entry)return 0;
  DirectOpen*slot=0;for(unsigned i=0;i<DIRECT_OPEN_MAX;i++)if(__sync_bool_compare_and_swap(&direct_open_files[i].claimed,0,1)){slot=direct_open_files+i;break;}if(!slot)return -1;
  slot->handle=0;slot->owner=direct_thread();slot->entry=entry;
  uint16_t book[256];if(!direct_utf16(direct_sources[entry->source],book,256)){slot->claimed=0;return -1;}
@@ -311,7 +333,13 @@ int install_native_catalogue(FILE*log,int compiled_count){
 #endif
     trampoline(direct_trampoline,0x11de2c);trampoline(open_trampoline,0x1ee99c);
     if(!apply_ips(paging_payloads[0],paging_sizes[0])){fputs("Invalid built-in paging patch.\n",log);return 0;}
-    if(active_books){jump(0x11de2c,native_mount_hook);jump(0x1ee99c,native_open_hook);}
+    if(active_books){
+        jump(0x11de2c,native_mount_hook);jump(0x1ee99c,native_open_hook);
+        extern void native_slicer_bounds_hook(void);
+        const uint32_t site=0x203630, slicer_veneer=0x2cbfc8;
+        jump(slicer_veneer,native_slicer_bounds_hook);
+        *(uint32_t*)site=0xeb000000|(((slicer_veneer-site-8)>>2)&0xffffff);
+    }
     // A near branch reaches an absolute-jump veneer in verified RO padding.
     // The 3GX loader maps game memory executable, including this padding.
     uint32_t veneer=0x2cbfc0;

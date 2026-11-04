@@ -35,9 +35,12 @@ def run():
   assert 'LICENSES/Noto-OFL.txt' in entries and 'SOURCE/loader-startup.s' in entries
   assert not any('visual-preview' in n for n in entries)
   setup=entries['app/distribution/USA/PictoPlus-USA-SD-Setup.zip']
-  assert setup==(ROOT/'build/public-release/PictoPlus-USA-SD-Setup.zip').read_bytes()
+  assert setup==(ROOT/'build/public-release/PictoPlus-USA-SD-Loader.zip').read_bytes()
   with zipfile.ZipFile(io.BytesIO(setup)) as sd:
    assert 'PictoPlus/licenses/Noto-OFL.txt' in sd.namelist()
+   assert 'PictoPlus/authoring.request' not in sd.namelist()
+   assert sd.read('PictoPlus/Setup files/Create setup file/authoring.request')==sd.read('PictoPlus/Setup files/Skip Setup/authoring.skip')==b'PPAUTH01\n'
+   assert 'PictoPlus/authoring.skip' not in sd.namelist()
  docs(ROOT)
  result=dict(binary_entries=len(entries),binary_sha256=hashlib.sha256(archive.read_bytes()).hexdigest(),icons_match=True,docs_links=True,game_assets_or_private_paths_found=False,history='No project Git repository supplied; external history not certified',legal_clearance=False)
  source=ROOT/'build/public-release/PictoPlus-Source.zip'

@@ -70,6 +70,16 @@ class BuildCustomModel {
     if(points.Distinct().Count()==3)indices[part].AddRange(points);
    }
   }
+  if(imported&&indices[0].Count>0){
+   // Completion models rest on Y=0. The fitted mesh can have clearance
+   // above the voxel floor, especially after fitting or trimming.
+   float floor=indices[0].Min(i=>vertices[0][i].Position.Y);
+   for(int i=0;i<vertices[0].Count;i++){
+    var vertex=vertices[0][i];
+    vertex.Position.Y-=floor;
+    vertices[0][i]=vertex;
+   }
+  }
   // Empty material parts are represented by a collapsed triangle.
   for(int part=0;part<2;part++)if(!vertices[part].Any()){vertices[part].Add(new PICAVertex{Position=new Vector4(0,0,0,1),Normal=new Vector4(0,1,0,0),Color=Vector4.One});indices[part].AddRange(new ushort[]{0,0,0});}
   string selected=null;H3D scene=null;int[] selectedMeshes=null;long best=long.MaxValue;List<PICAVertex>[] selectedVertices=null;List<ushort>[] selectedIndices=null;

@@ -142,13 +142,16 @@ static bool prepare_local_base(){
 /* Opt-in local authoring preparation. Never installed or shared as game content. */
 #include "authoring_manifest.h"
 static bool prepare_authoring_profile(){
- if(!exists(home+"authoring.request"))return true;
- if(!picto_mount_game()){fprintf(report,"First-time setup: installed game unavailable. Request retained.\n");return false;}
+ std::string target=home+"PictoPlus-Setup.pictosetup",temp=target+".tmp",previous=target+".previous";
+ if(exists(previous)&&!exists(target)&&rename(previous.c_str(),target.c_str())){
+  fprintf(report,"First-time setup: previous profile could not be restored. Request retained.\n");return false;
+ }
+ if(!exists(home+"authoring.request")&&(exists(target)||exists(home+"authoring.skip")))return true;
+ if(!picto_mount_game()){fprintf(report,"First-time setup: installed game unavailable. Request retained.\n");loader_progress("Setup failed",0,1);return false;}
  const unsigned count=sizeof(authoring_files)/sizeof(authoring_files[0]),head=32+count*176;
  Bytes index(count*176,0);unsigned total=head;
  for(unsigned i=0;i<count;i++){uint8_t*p=index.data()+i*176;strncpy((char*)p,authoring_files[i].name,159);put32(p+160,authoring_files[i].size);put32(p+164,authoring_files[i].checksum);put32(p+168,total);total+=authoring_files[i].size;}
  uint8_t header[32]={};memcpy(header,"PPAUTH01",8);put32(header+8,1);put32(header+12,count);put32(header+16,176);put32(header+20,total);put32(header+24,crc(index.data(),index.size()));put32(header+28,crc(header,32));
- std::string target=home+"PictoPlus-Setup.pictosetup",temp=target+".tmp";
  FILE*out=fopen(temp.c_str(),"wb");static char authoring_buffer[65536];if(out)setvbuf(out,authoring_buffer,_IOFBF,sizeof(authoring_buffer));
  bool ok=out&&fwrite(header,1,32,out)==32&&fwrite(index.data(),1,index.size(),out)==index.size();Bytes().swap(index);
  for(unsigned i=0;ok&&i<count;i++){
@@ -156,7 +159,16 @@ static bool prepare_authoring_profile(){
   FILE*in=fopen(name.c_str(),"rb");unsigned check=0;ok=in&&local_copy(out,in,0,item.size,check)&&fgetc(in)==EOF&&check==item.checksum;if(in)fclose(in);
  }
  if(out&&fclose(out))ok=false;picto_unmount_game();
- if(ok){remove(target.c_str());ok=!rename(temp.c_str(),target.c_str());}
+ if(ok&&exists(target)){
+  if(exists(previous)&&remove(previous.c_str()))ok=false;
+  if(ok)ok=!rename(target.c_str(),previous.c_str());
+ }
+ if(ok){
+  ok=!rename(temp.c_str(),target.c_str());
+  if(!ok&&exists(previous))rename(previous.c_str(),target.c_str());
+ }
+ if(ok&&exists(previous))remove(previous.c_str());
+ loader_progress(ok?"Setup file saved":"Setup failed",ok?1:0,1);
  if(ok){remove((home+"authoring.request").c_str());fprintf(report,"First-time setup ready: PictoPlus/PictoPlus-Setup.pictosetup (%u files). Open it once in the desktop app.\n",count);}
  else {remove(temp.c_str());fprintf(report,"First-time setup failed; request retained. Existing books/progress unchanged.\n");}
  return ok;
@@ -216,7 +228,7 @@ extern "C" int native_progress_changed(const uint8_t*data,const uint8_t*snapshot
 static bool fingerprint(const std::vector<std::string>&files,Bytes&out){
     // The metadata includes CRCs of every native asset. Unchanged metadata
     // reuses previously validated extracted assets, never unvalidated payloads.
-    out=Bytes{'V','X','F','A','S','T','0','7'};u32(out,files.size());
+    out=Bytes{'V','X','F','A','S','T','0','8'};u32(out,files.size());
     for(auto&path:files){
         FILE*f=fopen(path.c_str(),"rb");if(!f)return false;
         uint8_t header[160];static uint8_t buffer[65536];
@@ -589,6 +601,7 @@ static bool msbt(const std::string&source,const std::string&dest,const std::vect
 static unsigned stream_message_count(const std::vector<Book>&books,unsigned resource){
  if(resource<2)return books.size()+(resource==0?2:0);unsigned n=0;for(auto&b:books)n+=get16(b.h.data()+36);return n;
 }
+#include "trivia_wrap.h"
 static Message stream_message(const std::vector<Book>&books,unsigned resource,unsigned index){
  if(resource<2){
   if(index>=books.size())return index==books.size()?Message{"BOOKNO_STUDIO_PREVIOUS",utf16("Left: Previous")}:Message{"BOOKNO_STUDIO_NEXT",utf16("Right: Next")};
@@ -598,7 +611,7 @@ static Message stream_message(const std::vector<Book>&books,unsigned resource,un
  if(bi==books.size()){fail("Invalid text puzzle index.");return {"",{}};}
  auto&b=books[bi];std::string id=std::to_string(bank_game_id(b.slots[index]));
  if(resource==2){char no[16];snprintf(no,sizeof(no),"C%03u",index+1);return {"PUZZLE_NO_"+id,utf16(no)};}
- uint8_t*p=book_row(b,index);return {"PUZZLE_NAME_"+id,resource==3?text(p+32,56):text(p+88,440)};
+ uint8_t*p=book_row(b,index);return {"PUZZLE_NAME_"+id,resource==3?text(p+32,56):wrap_trivia(text(p+88,440))};
 }
 static bool stream_msbt(const std::vector<Book>&books,unsigned resource,const std::string&source,const std::string&stage,const std::string&name){
  Bytes raw=read(source);if(raw.size()<32||memcmp(raw.data(),"MsgStdBn",8)||raw[12]!=1)return fail("Unexpected base text resource.");

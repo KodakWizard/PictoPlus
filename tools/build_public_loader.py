@@ -41,7 +41,9 @@ def build(sdk=None):
  release=ROOT/'app/distribution/USA';release.mkdir(parents=True,exist_ok=True)
  with zipfile.ZipFile(release/'PictoPlus-USA-SD-Setup.zip','w',zipfile.ZIP_DEFLATED) as z:
   z.writestr('luma/plugins/0004000000187D00/PictoPlus.3gx',data);z.writestr('PictoPlus/Books/',b'')
-  z.writestr('PictoPlus-First-Time-Setup.txt','PictoPlus USA loader\nExtract to SD root. Enable Luma plugins. Keep existing books, registry and progress. For first-time desktop setup, use Download USA SD Setup in the app; that also requests your private setup file. EUR is separate.\n')
+  z.writestr('PictoPlus/Setup files/Create setup file/authoring.request',b'PPAUTH01\n')
+  z.writestr('PictoPlus/Setup files/Skip Setup/authoring.skip',b'PPAUTH01\n')
+  z.writestr('PictoPlus-First-Time-Setup.txt',b'PictoPlus USA SD Loader\n\nCopy the luma and PictoPlus folders to your SD card root. Enable Luma plugins. Keep existing books, registry and progress.\n\nThe installed USA game creates a desktop setup profile if one is missing. To skip generation, copy authoring.skip from PictoPlus/Setup files/Skip Setup into SD:/PictoPlus/ before launching. To explicitly create or replace a profile later, copy authoring.request from PictoPlus/Setup files/Create setup file into SD:/PictoPlus/ and launch the game.\n\nAfter startup, look for SD:/PictoPlus/PictoPlus-Setup.pictosetup. A successful request disappears. If no profile appeared or the request is still there, read SD:/PictoPlus/native-loader-status.txt for the result and retry after correcting the issue. To cancel a pending request, remove authoring.request and copy authoring.skip into SD:/PictoPlus/. Keep the profile private. EUR is separate.\n')
  report=dict(sha256=hashlib.sha256(data).hexdigest(),hardware_verified=False,purpose='USA source build; local installed-game preparation')
  (release/'build-info.json').write_text(json.dumps(report,indent=2));print(json.dumps(report));return plugin
 if __name__=='__main__':build()

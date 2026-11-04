@@ -4,11 +4,25 @@ class StudioArtwork {
   int size=a[0].StartsWith("thumbnail")?64:a[0]=="icon"?128:256;
   using(var source=new Bitmap(a[1]))using(var image=new Bitmap(size,size))using(var g=Graphics.FromImage(image)){
    g.Clear(Color.FromArgb(249,247,240));g.InterpolationMode=InterpolationMode.HighQualityBicubic;
-   // Cover art is composed in its 3:4 front-face space. The native cover uses a
-   // square storage texture mapped onto that portrait face; encode the inverse
-   // mapping here. Icon alpha retains the native book silhouette; puzzle cards
-   // use a 7 x 8 custom-card layout, sampling the top-left 44 x 46 pixels of their 64 x 64 storage texture.
-   if(a[0]=="cover"||a[0]=="icon")g.DrawImage(source,new Rectangle(0,0,size,size));
+   if(a[0]=="cover"){
+    // BGcafebook's front panel samples U=.171940..918506, V=.009055..990945.
+    // Its mesh face is 1.154846 by 1.426154 world units.
+    const float u0=.171940f,u1=.918506f,v0=.009055f,v1=.990945f;
+    const float faceWidth=1.154846f,faceHeight=1.426154f;
+    float scale=Math.Min(faceWidth/source.Width,faceHeight/source.Height);
+    float width=size*(u1-u0)*source.Width*scale/faceWidth;
+    float height=size*(v1-v0)*source.Height*scale/faceHeight;
+    g.DrawImage(source,new RectangleF((size*(u0+u1)-width)/2,(size*(v0+v1)-height)/2,width,height),
+                new Rectangle(0,0,source.Width,source.Height),GraphicsUnit.Pixel);
+   }
+   else if(a[0]=="icon"){
+    // The USA BookIcon44 alpha occupies columns 10 through 117.
+    // Fit inside its opaque footprint before restoring the original alpha.
+    const float w=108,h=128;
+    float scale=Math.Min(w/source.Width,h/source.Height);
+    float width=source.Width*scale,height=source.Height*scale;
+    g.DrawImage(source,new RectangleF((size-width)/2,(size-height)/2,width,height),new Rectangle(0,0,source.Width,source.Height),GraphicsUnit.Pixel);
+   }
    else {
     // Preserve the exact square app artwork, including its chosen framing.
     // Native custom cards use 7x8 layout units: 36+(7-6)*8 by 30+(8-6)*8.

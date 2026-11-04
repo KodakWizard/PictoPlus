@@ -28,6 +28,14 @@ native_save_hook:
     pop {r0-r12,lr}
     ldr pc, =0x293b3c
 
+/* At the final bounds call, the live QPP pointer is in the caller's frame.
+ * The game copies its ID into the state later, so read it from the QPP. */
+.global native_slicer_bounds_hook
+native_slicer_bounds_hook:
+    ldr r1,[sp,#12]
+    ldr r1,[r1,#4]
+    b native_slicer_grid_bounds
+
 .global native_save_write_hook
 native_save_write_hook:
     push {r0-r12,lr}

@@ -8,18 +8,20 @@ The app needs Windows 10 22H2 or Windows 11 x64, .NET Framework 4.x and Microsof
 
 ## USA 3DS setup
 
-1. In the welcome screen, choose **Download USA SD Setup**. Use the app button for first-time setup: it also requests the private setup file. The separate release SD ZIP installs or updates the loader only.
+1. Choose **Download USA SD Loader** in the app, or use the same standalone `PictoPlus-USA-SD-Loader.zip`. If you already have a valid profile, choose **Import an existing setup file** on the welcome screen.
 2. Extract it onto the SD card root. The plugin belongs at `luma/plugins/0004000000187D00/PictoPlus.3gx`. Keep only one plugin for this title. Enable Luma's plugin loader.
-3. Launch the installed USA game. First-time preparation reads the required resources locally from that game.
-4. When preparation finishes, return the card to your PC. Import `PictoPlus/PictoPlus-Setup.pictosetup` in the desktop app. Older `.pictoauthoring` setup files are still accepted.
+3. Launch the installed USA game. The loader generates a setup file if one is missing. To skip generation, copy `authoring.skip` from `PictoPlus/Setup files/Skip Setup` into `SD:/PictoPlus/` before launching. To create or replace a profile later, copy `authoring.request` from `PictoPlus/Setup files/Create setup file` into `SD:/PictoPlus/` and launch the game.
+4. When preparation finishes, return the card to your PC. Import `PictoPlus/PictoPlus-Setup.pictosetup` in the desktop app.
 
 Keep the setup file private. It contains local game resources, not a book to share. No ROM dump or external save editing is needed for this workflow.
 
 ## Books and updates
 
+For a Windows update, close PictoPlus and back up `app/data`. Extract the new Windows ZIP into the same folder, replacing program files when prompted. If you prefer a new folder, copy the old `app/data` into the new app folder before opening it. This retains your setup, library and settings. To repair missing setup templates, import a saved valid profile from the welcome screen or Help.
+
 Export selected books from Book Library, then copy the `.pictobook` files into `SD:/PictoPlus/Books/`. Extract a multi-book ZIP first. Keep one current file per book identity; don't leave two conflicting revisions in that folder.
 
-To update the loader, extract the newer USA setup over the existing SD contents. Preserve the Books folder, registry, progress and caches. There is no need to delete them or repeat a completed desktop setup. A new or revised book is prepared on the next game launch; an unchanged library stays cached.
+To update only the loader, use the same USA SD Loader ZIP. To skip generation on an SD card with no profile, copy the optional skip file. Preserve the Books folder, registry, progress and caches. There is no need to delete them or repeat a completed desktop setup. A new or revised book is prepared on the next game launch; an unchanged library stays cached.
 
 Back up your SD card before updating. Books support 210 puzzles each. The loader reserves up to 71 persistent book identities, retaining progress when books are removed. That is a persistent-slot limit, not a promise of unlimited new books after deleting old ones.
 
