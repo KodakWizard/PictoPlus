@@ -8,6 +8,7 @@ Build something from blue cubes and yellow shapes, turn it into a puzzle, and se
 
 **v0.9 Beta** · [Windows app](https://github.com/KodakWizard/PictoPlus/releases/download/v0.9.0/PictoPlus-Windows-USA.zip) · [USA SD loader](https://github.com/KodakWizard/PictoPlus/releases/download/v0.9.0/PictoPlus-USA-SD-Loader.zip) · [Release notes](https://github.com/KodakWizard/PictoPlus/releases/tag/v0.9.0)
 
+
 ![The PictoPlus block designer](docs/images/designer.png)
 
 ## Start with a few blocks
@@ -26,9 +27,9 @@ The public loader supports the **USA** game. EUR work is separate. For Windows r
 
 <img src="docs/images/animals-cover.png" width="180" alt="Cover artwork from the Animals Puzzle Pack">
 
-The optional **Animals Puzzle Pack** has 15 puzzles, from a hummingbird to a hippopotamus. Unzip it and copy `Animals.pictobook` to your Books folder. If you already have Animals, replace the older file. The download includes the model credits and CC BY 3.0 licence details. [Download the Animals pack](https://github.com/KodakWizard/PictoPlus/releases/download/v0.9.0/PictoPlus-Animals-Puzzle-Pack.zip)
+The optional **Animals Puzzle Pack** has 15 puzzles, from a hummingbird to a hippopotamus. Unzip it and copy `Animals.pictobook` to your Books folder. If you already have Animals, replace the older file. The download includes the model credits and CC BY 3.0 licence details. 
 
-[Changelog](CHANGELOG.md) · [Contributing](CONTRIBUTING.md) · [Previous v0.8 Alpha](https://github.com/KodakWizard/PictoPlus/releases/tag/v0.8.0)
+[Download the Animals pack](https://github.com/KodakWizard/PictoPlus/releases/download/v0.9.0/PictoPlus-Animals-Puzzle-Pack.zip)
 
 ## A note on AI
 
