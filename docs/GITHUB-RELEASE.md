@@ -10,7 +10,7 @@ pictoplus, picross, picross-3d, puzzle-editor, voxel-editor, nintendo-3ds, homeb
 
 ## Release title
 
-PictoPlus 0.8.0 - first public release
+PictoPlus 0.8.0 Alpha - first public release
 
 ## Release notes
 

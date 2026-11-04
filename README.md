@@ -4,6 +4,8 @@
 
 **A puzzle creator for Picross 3D: Round 2.**
 
+[Download the Windows alpha](https://github.com/KodakWizard/PictoPlus/releases/download/v0.8.0/PictoPlus-Windows-USA.zip) · [Release notes and all downloads](https://github.com/KodakWizard/PictoPlus/releases/tag/v0.8.0)
+
 Build something out of blocks, turn it into a puzzle, and play it on your 3DS. PictoPlus brings the designer, puzzle books and export tools together in one Windows app.
 
 ![The PictoPlus block designer](docs/images/designer.png)
@@ -20,9 +22,11 @@ The converter is still experimental. Small details and complex shapes often need
 
 ## Download PictoPlus
 
-[Download PictoPlus for Windows](https://github.com/KodakWizard/PictoPlus/releases/latest/download/PictoPlus-Windows-USA.zip) · [All downloads](https://github.com/KodakWizard/PictoPlus/releases/latest)
+**PictoPlus 0.8.0 is an alpha release.** Expect rough edges; bug reports and feedback are welcome.
 
-New here? Start with the Windows app and follow its welcome steps. Already set up? The release also includes the USA loader update and an optional [Animals pack with 15 puzzles](https://github.com/KodakWizard/PictoPlus/releases/latest/download/PictoPlus-Animals-Puzzle-Pack.zip).
+[Download PictoPlus for Windows](https://github.com/KodakWizard/PictoPlus/releases/download/v0.8.0/PictoPlus-Windows-USA.zip) · [All downloads](https://github.com/KodakWizard/PictoPlus/releases/tag/v0.8.0)
+
+New here? Start with the Windows app and follow its welcome steps. Already set up? The release also includes the USA loader update and an optional [Animals pack with 15 puzzles](https://github.com/KodakWizard/PictoPlus/releases/download/v0.8.0/PictoPlus-Animals-Puzzle-Pack.zip).
 
 ## What you'll need
 
