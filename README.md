@@ -113,7 +113,7 @@ You'll need:
 
 - A Windows 10 (22H2 or newer) or Windows 11 PC, 64-bit.
 - A Nintendo 3DS with Luma3DS, or the Azahar emulator.
-- A **legally obtained USA or EUR copy of Picross 3D: Round 2**.
+- A **personal USA or EUR copy of Picross 3D: Round 2**.
 
 PictoPlus v1.0.0 supports the USA and EUR game revisions only. EUR physical 3DS testing is pending.
 
@@ -137,7 +137,7 @@ Extract its `luma` and `PictoPlus` folders to the root of your 3DS SD card, keep
 2. Find **Plugin Loader** and set it to **Enabled**.
 3. Press `B` to exit the menu.
 
-Now launch your legally obtained USA or EUR copy of Picross 3D: Round 2. The ZIP puts each plugin in its own title folder so Luma3DS can load the right one automatically.
+Now launch your personal USA or EUR copy of Picross 3D: Round 2. The ZIP puts each plugin in its own title folder so Luma3DS can load the right one automatically.
 
 ### 3. Complete the one-time setup
 
@@ -175,7 +175,7 @@ Prefer playing on your PC? PictoPlus also works with [Azahar](https://www.azahar
 
 Both USA and EUR booted with the loader in Azahar. USA gameplay was also previously tested on a physical 3DS.
 
-You'll need a **legally obtained USA or EUR copy of Picross 3D: Round 2**.
+You'll need a **your personal USA or EUR copy of Picross 3D: Round 2**.
 
 ### Setup
 
