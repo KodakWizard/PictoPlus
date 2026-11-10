@@ -113,7 +113,7 @@ You'll need:
 
 - A Windows 10 (22H2 or newer) or Windows 11 PC, 64-bit.
 - A Nintendo 3DS with Luma3DS, or the Azahar emulator.
-- A personal **USA or EUR copy of Picross 3D: Round 2.**
+- A personal **USA/EUR copy of Picross 3D: Round 2.**
 
 PictoPlus v1.0.0 supports the USA and EUR game revisions only. EUR physical 3DS testing is pending.
 
