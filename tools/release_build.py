@@ -1,7 +1,7 @@
 """Pinned, deterministic .NET release builds. No packing, injection or self-extraction."""
 import hashlib,json,pathlib,subprocess
 ROOT=pathlib.Path(__file__).resolve().parents[1]
-HELPERS=('BlockCatalog','BuildCustomModel','StudioArtwork','StudioDefaultCover','Thumbnail')
+HELPERS=('BlockCatalog','BuildCustomModel','StudioArtwork','StudioDefaultCover','Thumbnail','ImportNativeModel')
 FLAGS=['/nologo','/noconfig','/codepage:65001','/deterministic+','/optimize+','/debug-','/r:System.dll','/r:System.Core.dll']
 
 def dependency_path(root,name):
@@ -45,7 +45,7 @@ def build(output):
   if name in ('BuildCustomModel','StudioArtwork'):sources.append('tools/modeltool/BookCover.cs')
   compile('modeltool/'+name+'.exe',sources,['/target:exe','/main:'+name,'/r:'+str((model/'SPICA.dll').relative_to(ROOT)),'/r:System.Drawing.dll','/r:System.Numerics.dll','/r:System.Numerics.Vectors.dll','/r:System.Web.Extensions.dll'])
  sources=['app/native/Launcher.cs','app/native/Studio.cs',assembly,'app/native/InstallerIntegrity.cs','app/native/PictoPlus.manifest','tools/package_public_app.py','tools/release_build.py','tools/release-dependencies.json',*['tools/modeltool/'+name+'.cs' for name in HELPERS],'tools/modeltool/BookCover.cs']
- return dict(format=1,version='0.9.0',compiler_sha256=sha(compiler),compiler_flags=FLAGS,dependencies=lock,compatibility_patches={"SPICA declaration-order deserialization":sha(patch)},source_sha256={name:sha(ROOT/name) for name in sources},binary_sha256={p.relative_to(output).as_posix():sha(p) for p in sorted(output.rglob('*')) if p.suffix in ('.exe','.dll')},signing='PictoPlus binaries are unsigned; no signing certificate is available. Microsoft/Python binaries retain upstream signatures.')
+ return dict(format=1,version='1.0.0',compiler_sha256=sha(compiler),compiler_flags=FLAGS,dependencies=lock,compatibility_patches={"SPICA declaration-order deserialization":sha(patch)},source_sha256={name:sha(ROOT/name) for name in sources},binary_sha256={p.relative_to(output).as_posix():sha(p) for p in sorted(output.rglob('*')) if p.suffix in ('.exe','.dll')},signing='PictoPlus binaries are unsigned; no signing certificate is available. Microsoft/Python binaries retain upstream signatures.')
 if __name__=='__main__':
  try:print(json.dumps(build(ROOT/'build/security-review/rebuild'),indent=2))
  except subprocess.CalledProcessError as error:print(error.stdout,error.stderr);raise

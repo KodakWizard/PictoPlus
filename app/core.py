@@ -176,9 +176,12 @@ def settings(value=None):
     current=json.loads(path.read_text()) if path.exists() else {'azahar':str(ROOT/'tools/azahar-studio'),'launch_after_install':False}
     if value:
         if 'azahar' in value:current['azahar']=str(pathlib.Path(value['azahar']).resolve())
-        for key in ('live_save','overwrite_shapes','navigation_pinned','visible_block_preview','background_preparation'):
+        for key in ('live_save','overwrite_shapes','navigation_pinned','visible_block_preview','background_preparation','compact_layout'):
             if key in value:current[key]=bool(value[key])
         if 'launch_after_install' in value:current['launch_after_install']=bool(value['launch_after_install'])
+        if 'interface_scale' in value:
+            assert value['interface_scale'] in ('auto','100','90','80','75'),'Unknown interface scale.'
+            current['interface_scale']=value['interface_scale']
         if 'theme' in value:
             assert value['theme'] in ('light','dark'),'Unknown theme.'
             current['theme']=value['theme']
@@ -191,6 +194,29 @@ def run_tool(name,*args):
       creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0)|priority)
     if process.returncode:raise ValueError((process.stderr or process.stdout or 'Game conversion failed.')[-1600:])
     return process.stdout
+def read_native_model(files):
+    import tempfile
+    if not isinstance(files,list) or not 1<=len(files)<=8:
+        raise ValueError('Choose one native model and up to seven texture files.')
+    with tempfile.TemporaryDirectory(prefix='pictoplus-model-') as directory:
+        stage=pathlib.Path(directory)
+        paths=[]
+        remaining=12_000_000
+        for index,encoded in enumerate(files):
+            if not isinstance(encoded,str) or len(encoded)>10_666_668:
+                raise ValueError('Each native resource must be smaller than 8 MB.')
+            data=base64.b64decode(encoded,validate=True)
+            remaining-=len(data)
+            if len(data)>8_000_000 or remaining<0:
+                raise ValueError('Select at most 12 MB of native resources in total.')
+            path=stage/f'{index}.bin'
+            path.write_bytes(data)
+            paths.append(path)
+        output=stage/'model.json'
+        try:run_tool('ImportNativeModel.exe',output,*paths)
+        except subprocess.TimeoutExpired:raise ValueError('The native model took too long to read.') from None
+        return json.loads(output.read_text(encoding='utf-8'))
+
 def put(folder,name,data):
     p=folder/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(data)
 def export_package(docs,folder,compile_only=False):
@@ -323,7 +349,7 @@ def export_play_pack(ids,progress=None):
     atomic(DATA/'last-export-timing.json',performance)
     record['revision']=revision;atomic(author_file,author)
     if progress:progress({'completed':len(documents)*3+3,'total':len(documents)*3+3,'stage':'Book ready','book':name})
-    return {'file':str(output.relative_to(DATA/'exports')),'message':'Book ready. Copy it to PictoPlus/Books on your SD card with the updated USA loader.','performance':performance}
+    return {'file':str(output.relative_to(DATA/'exports')),'message':'Book ready. Copy it to PictoPlus/Books on your SD card with the updated SD loader.','performance':performance}
 
 def export_books(book_ids,progress=None):
     """Each selected book stays a standalone, directly playable .pictobook."""

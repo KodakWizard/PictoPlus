@@ -4,7 +4,7 @@ ROOT=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'too
 import game_resources
 LIMIT=64*1024*1024
 def manifest():return json.loads((ROOT/'app/config/authoring-manifest.json').read_text())
-def status():return {'ready':game_resources.ready(),'region':'USA','requires_installed_game':True}
+def status():return {'ready':game_resources.ready(),'regions':['USA','EUR'],'requires_installed_game':True}
 def rename_ready(source,target):
     # Windows indexers/antivirus can briefly hold newly generated files open.
     for attempt in range(10):
@@ -39,7 +39,7 @@ def import_profile(path,progress=None):
             end=32+len(table)
             for i,item in enumerate(expected):
                 row=table[i*176:(i+1)*176];name=row[:160].split(b'\0',1)[0].decode('ascii');n,crc,offset,reserved=struct.unpack_from('<4I',row,160)
-                if (name,n,crc,offset,reserved)!=(item['name'],item['size'],item['crc'],end,0) or n>total-end:raise ValueError('This setup file does not match the supported USA game.')
+                if (name,n,crc,offset,reserved)!=(item['name'],item['size'],item['crc'],end,0) or n>total-end:raise ValueError('This setup file does not match the supported USA or EUR game resources.')
                 target=stage/'romfs'/item['name'];target.parent.mkdir(parents=True,exist_ok=True);digest=hashlib.sha256();checksum=0;left=n
                 with target.open('wb') as output:
                     while left:
@@ -52,6 +52,7 @@ def import_profile(path,progress=None):
             if end!=total or source.read(1):raise ValueError('Unexpected setup file data.')
         if progress:progress({'completed':count,'total':count+1,'stage':'Preparing block shapes'})
         generate_shapes(stage)
+        # The shared v1 template set retains its original marker for upgrade compatibility.
         (stage/'ready.json').write_text(json.dumps({'format':'PPAUTH01','region':'USA','files':len(expected)}))
         # The old working resources remain intact if validation or generation fails.
         backup=home.with_name(home.name+'.previous-'+uuid.uuid4().hex[:8])

@@ -1,3 +1,4 @@
+#include "game_region.h"
 /* Temporary native loading screen, released before the game starts. */
 #include <3ds.h>
 #include <stdio.h>
@@ -84,11 +85,11 @@ static unsigned display_frames;
 #define TOP_BYTES (400u*240u*3u)
 #define BOTTOM_BYTES (320u*240u*3u)
 static void display_note(const char*phase,Result result){
- if(!display_log)display_log=fopen("sdmc:/PictoPlus/startup-display.txt","a");
+ if(!display_log)display_log=fopen(PP_STATE_SD "startup-display.txt","a");
  if(display_log){fprintf(display_log,"DISPLAY %s: %08lx\n",phase,(unsigned long)result);fflush(display_log);}
 }
 void loader_display_reserve(void){
- FILE*f=fopen("sdmc:/PictoPlus/disable-startup-graphics.flag","rb");
+ FILE*f=fopen(PP_STATE_SD "disable-startup-graphics.flag","rb");
  if(f){fclose(f);display_failed=1;display_note("disabled by flag",0);return;}
  /* Reserve before the native heap allocator divides remaining process RAM. */
  Result r=svcControlMemory(&display_memory,0,0,DISPLAY_BYTES,MEMOP_ALLOC_LINEAR,MEMPERM_READWRITE);
@@ -100,7 +101,7 @@ static int display_begin(void){
  if(display_attempted)return !display_failed;
  display_attempted=1;
  if(display_failed||!display_memory)return 0;
- Handle session=*(Handle*)0x2d3488;
+ Handle session=*(Handle*)PP_GSP_SESSION;
  if(!session){display_failed=1;display_note("native GSP session absent",-1);return 0;}
  *gspGetSessionHandle()=session;
  display_note("native session ready (no GPU acquisition)",0);return 1;
@@ -142,7 +143,7 @@ void loader_progress(const char*phase,unsigned done,unsigned total){
     uint64_t tick=svcGetSystemTick();
     if(!began)began=tick;
     if((!done||done%4==0||done==total)&&(strcmp(logged_phase,phase)||logged_done!=done)){
-      if(!progress_log)progress_log=fopen("sdmc:/PictoPlus/startup-progress.txt","w");
+      if(!progress_log)progress_log=fopen(PP_STATE_SD "startup-progress.txt","w");
       if(progress_log){fprintf(progress_log,"%s %u/%u at %u ms\n",phase,done,total,(unsigned)((tick-began)/268123));fflush(progress_log);}
       strncpy(logged_phase,phase,31);logged_done=done;
     }

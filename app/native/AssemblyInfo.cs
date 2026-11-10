@@ -1,9 +1,9 @@
 using System.Reflection;
 [assembly: AssemblyCompany("PictoPlus")]
 [assembly: AssemblyProduct("PictoPlus")]
-[assembly: AssemblyVersion("0.9.0.0")]
-[assembly: AssemblyFileVersion("0.9.0.0")]
-[assembly: AssemblyInformationalVersion("0.9.0 Beta")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyInformationalVersion("1.0.0")]
 #if PICTOPLUS_LAUNCHER
 [assembly: AssemblyTitle("PictoPlus launcher")]
 [assembly: AssemblyDescription("Starts the bundled PictoPlus desktop application.")]

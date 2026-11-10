@@ -1,3 +1,4 @@
+#include "game_region.h"
 /* Revision-pinned native SD redirection. No external SAVEDATA access. */
 #include <3ds.h>
 #include <stdint.h>
@@ -5,7 +6,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include "csvc.h"
+#ifdef PICTOPLUS_EUR
+#include "paging_payloads_eur.h"
+#else
 #include "paging_payloads.h"
+#endif
 
 extern void native_mount_hook(void),native_open_hook(void),native_save_hook(void);
 extern void install_page_timing(void);
@@ -48,6 +53,7 @@ static uint32_t checksum(const void*data,unsigned n){
     uint32_t c=~0u;const uint8_t*p=data;
     while(n--)c=table[(c^*p++)&255]^(c>>8);return ~c;
 }
+int native_game_supported(void){return checksum((void*)0x100000,PP_TEXT_SIZE)==PP_TEXT_CRC;}
 static void jump(uint32_t at,const void*target){uint32_t*p=(uint32_t*)at;p[0]=0xe51ff004;p[1]=(uint32_t)target;}
 /* Each four-book group has a separate three-profile band. The first group
  * retains the exact legacy offsets. Official SAVEDATA remains unchanged. */
@@ -67,12 +73,12 @@ static __attribute__((noinline)) int progress_prepare(FILE*log){
  unsigned needed=native_progress_span();if(needed>progress_span)progress_span=needed;
  if(progress_span>EXTRA_SIZE){free(candidate);return 0;}
  for(unsigned i=0;i<2;i++){
-  const char*path=i?"/PictoPlus/progress-USA-B.bin":"/PictoPlus/progress-USA-A.bin";
+  const char*path=i?PP_STATE "progress-" PP_REGION "-B.bin":PP_STATE "progress-" PP_REGION "-A.bin";
   Result result=FSUSER_OpenFileDirectly(&progress_files[i],ARCHIVE_SDMC,fsMakePath(PATH_EMPTY,""),fsMakePath(PATH_ASCII,path),FS_OPEN_READ|FS_OPEN_WRITE|FS_OPEN_CREATE,0);
   if(R_FAILED(result)){free(candidate);return 0;}
   uint64_t size=0;if(R_FAILED(FSFILE_GetSize(progress_files[i],&size))){free(candidate);return 0;}if(!size)continue;
   uint32_t h[8],read=0;result=FSFILE_Read(progress_files[i],&read,0,h,32);
-  if(R_FAILED(result)||read!=32||memcmp(h,"PPLUSUS1",8)||h[2]!=1||h[3]<LEGACY_EXTRA||h[3]>EXTRA_SIZE||size!=32+h[3])continue;
+  if(R_FAILED(result)||read!=32||memcmp(h,PP_PROGRESS_MAGIC,8)||h[2]!=1||h[3]<LEGACY_EXTRA||h[3]>EXTRA_SIZE||size!=32+h[3])continue;
   result=FSFILE_Read(progress_files[i],&read,32,candidate,h[3]);
   if(R_FAILED(result)||read!=h[3]||progress_crc(candidate,h[3])!=h[5])continue;
   if(!progress_valid||(int32_t)(h[4]-progress_sequence)>0){
@@ -89,7 +95,7 @@ static void progress_restore(void*data){
 int native_store_progress(void*object){
  if(!object)return 0;uint8_t*data=*(uint8_t**)((uint8_t*)object+4);if(!data)return 0;
  unsigned next=progress_valid?1-progress_generation:0;uint32_t written=0,h[8]={0};
- memcpy(h,"PPLUSUS1",8);h[2]=1;h[3]=progress_span;h[4]=progress_sequence+1;h[5]=progress_crc(data+SAVE_HEAD,progress_span);
+ memcpy(h,PP_PROGRESS_MAGIC,8);h[2]=1;h[3]=progress_span;h[4]=progress_sequence+1;h[5]=progress_crc(data+SAVE_HEAD,progress_span);
  Result result=FSFILE_Write(progress_files[next],&written,32,data+SAVE_HEAD,progress_span,0);
  if(R_FAILED(result)||written!=progress_span)return 0;
  result=FSFILE_SetSize(progress_files[next],32+progress_span);if(R_FAILED(result))return 0;
@@ -159,7 +165,7 @@ static DirectOpen*direct_handle(Handle h){for(unsigned i=0;i<DIRECT_OPEN_MAX;i++
 static DirectOpen*direct_pending(void){uint32_t t=direct_thread();for(unsigned i=0;i<DIRECT_OPEN_MAX;i++)if(direct_open_files[i].claimed&&!direct_open_files[i].handle&&direct_open_files[i].owner==t)return direct_open_files+i;return 0;}
 static __attribute__((noinline)) int direct_init(FILE*log){
  direct_count=0;if(!active_books)return 1;
- char path[96];snprintf(path,sizeof(path),"sdmc:/PictoPlus/direct%c/catalogue.bin",active_cache);
+ char path[96];snprintf(path,sizeof(path),PP_STATE_SD "direct%c/catalogue.bin",active_cache);
  FILE*f=fopen(path,"rb");if(!f)return 0;
  uint32_t h[8];int ok=fread(h,1,32,f)==32&&!memcmp(h,"PPLUSID2",8)&&h[2]==2&&h[3]<=DIRECT_MAX&&h[6]&&h[6]<=72&&h[7]==32+h[6]*256+h[3]*24&&h[5]>=h[7]&&h[5]<=0x8000000;
  if(ok)ok=fread(direct_sources,256,h[6],f)==h[6]&&fread(direct_entries,24,h[3],f)==h[3];
@@ -174,12 +180,12 @@ static __attribute__((noinline)) int direct_init(FILE*log){
  if(ok){fseek(f,0,SEEK_END);ok=ftell(f)==h[5];}
  for(unsigned i=0;ok&&i<h[6];i++){
   const char*p=direct_sources[i];ok=memchr(p,0,256)&&!strstr(p,"..")&&
-   (!strncmp(p,"vx:/PictoPlus/Books/",20)||!strcmp(p,"vx:/PictoPlus/directA/catalogue.bin")||!strcmp(p,"vx:/PictoPlus/directB/catalogue.bin"));
+   (!strncmp(p,PP_VX "Books/",sizeof(PP_VX "Books/")-1)||!strncmp(p,PP_STATE_VX "Books/.prepared/",sizeof(PP_STATE_VX "Books/.prepared/")-1)||!strcmp(p,PP_STATE_VX "directA/catalogue.bin")||!strcmp(p,PP_STATE_VX "directB/catalogue.bin"));
  }
  for(unsigned i=0;ok&&i<h[3];i++){
   DirectEntry*e=direct_entries+i;ok=e->key&&(!i||direct_entries[i-1].key<e->key)&&e->source<h[6]&&e->size&&e->offset<=0x10000000&&e->size<=0x10000000-e->offset;
   if(!ok)break;
-  if(strncmp(direct_sources[e->source],"vx:/PictoPlus/direct",20))continue;
+  if(strncmp(direct_sources[e->source],PP_STATE_VX "direct",sizeof(PP_STATE_VX "direct")-1))continue;
   if(e->offset<h[7]||e->offset>h[5]||e->size>h[5]-e->offset){ok=0;break;}
   fseek(f,e->offset,SEEK_SET);static uint8_t buffer[4096];uint32_t table[256];
   for(unsigned k=0;k<256;k++){uint32_t c=k;for(unsigned b=0;b<8;b++)c=(c>>1)^(0xedb88320u&(0u-(c&1)));table[k]=c;}
@@ -219,7 +225,7 @@ void native_slicer_grid_bounds(uint8_t*state,uint32_t puzzle_id){
   return;
  }
 original:
- ((void(*)(void*))0x1b8578)(state);
+ ((void(*)(void*))PP_SLICER_ORIGINAL)(state);
 }
 
 static __attribute__((noinline)) int direct_open_asset(void*object,const uint16_t*path,unsigned mode,unsigned extra){
@@ -252,18 +258,18 @@ static int direct_close(Handle*file){
  if(result>=0&&s){s->handle=0;s->owner=0;__sync_synchronize();s->claimed=0;}return result;
 }
 static void install_direct_hooks(void){
- trampoline(direct_read_original,0x21e668);jump(0x21e668,direct_read);
- trampoline(direct_size_original,0x21e74c);jump(0x21e74c,direct_size);
- trampoline(direct_close_original,0x21e6c0);jump(0x21e6c0,direct_close);
+ trampoline(direct_read_original,PP_READ);jump(PP_READ,direct_read);
+ trampoline(direct_size_original,PP_SIZE);jump(PP_SIZE,direct_size);
+ trampoline(direct_close_original,PP_CLOSE);jump(PP_CLOSE,direct_close);
 }
 
 void native_mount_sd(void){
     if(mounted)return;
     void*archive=0;
-    int result=((int(*)(void**,unsigned))0x134ec8)(&archive,9);
+    int result=((int(*)(void**,unsigned))PP_OPEN_ARCHIVE)(&archive,9);
     trace(result<0?"SD archive mount failed\n":"SD archive mounted\n");
     if(result<0)return;
-    result=((int(*)(const char*,void*,unsigned,unsigned))0x1ec580)("vx:",archive,0,0);
+    result=((int(*)(const char*,void*,unsigned,unsigned))PP_MOUNT_ARCHIVE)("vx:",archive,0,0);
     if(result>=0)mounted=1;
     trace(result<0?"SD alias registration failed\n":"SD alias registered\n");
 }
@@ -278,7 +284,7 @@ int native_redirect_open(void*object,const uint16_t*path,unsigned mode,unsigned 
     // added an extra filesystem open before every original ROMFS read.
     if(!cached_path(path+start))return 0;if(!mounted)native_mount_sd();if(!mounted)return 0;
     int direct=direct_open_asset(object,path+start,mode,extra);if(direct)return direct>0;
-    uint16_t redirected[256];const char*prefix="vx:/PictoPlus/directA/";unsigned n=0;
+    uint16_t redirected[256];const char*prefix=PP_STATE_VX "directA/";unsigned n=0;
     while(prefix[n]){redirected[n]=prefix[n];n++;}redirected[n-2]=active_cache;
     for(unsigned i=start;;i++){
         if(n>=255)return 0;redirected[n++]=path[i];if(!path[i])break;
@@ -318,34 +324,34 @@ static int apply_ips(const uint8_t*p,unsigned size){
 int install_native_catalogue(FILE*log,int compiled_count){
     if(compiled_count<0)compiled_count=0;unsigned char state[2]={0,0};
     if(compiled_count!=0){
-        FILE*f=fopen("sdmc:/PictoPlus/direct-active-cache.txt","rb");
+        FILE*f=fopen(PP_STATE_SD "direct-active-cache.txt","rb");
         int ok=0;if(f){ok=fread(state,1,2,f)==2;fclose(f);}
         if(!ok||(state[0]!='A'&&state[0]!='B')||state[1]<1||state[1]>71){
             fputs("No valid cache; original catalogue with custom books hidden.\n",log);state[0]=state[1]=0;
         }
     }
-    if(checksum((void*)0x100000,0x193b3c)!=ORIGINAL_TEXT_CRC){fputs("Unsupported or already modified game executable; no native patch applied.\n",log);return 0;}
+    if(!native_game_supported()){fputs("Unsupported or already modified game executable; no native patch applied.\n",log);return 0;}
     if(!progress_prepare(log))return 0;active_cache=state[0];active_books=state[1];if(!direct_init(log)){active_cache=0;active_books=0;}
 #ifdef NATIVE_TRACE
     FSUSER_OpenFileDirectly(&trace_handle,ARCHIVE_SDMC,fsMakePath(PATH_EMPTY,""),
-        fsMakePath(PATH_ASCII,"/PictoPlus/native-hook-trace.txt"),FS_OPEN_WRITE|FS_OPEN_CREATE,0);
+        fsMakePath(PATH_ASCII,PP_STATE "native-hook-trace.txt"),FS_OPEN_WRITE|FS_OPEN_CREATE,0);
     if(trace_handle)FSFILE_SetSize(trace_handle,0);
 #endif
-    trampoline(direct_trampoline,0x11de2c);trampoline(open_trampoline,0x1ee99c);
+    trampoline(direct_trampoline,PP_MOUNT_HOOK);trampoline(open_trampoline,PP_OPEN_HOOK);
     if(!apply_ips(paging_payloads[0],paging_sizes[0])){fputs("Invalid built-in paging patch.\n",log);return 0;}
     if(active_books){
-        jump(0x11de2c,native_mount_hook);jump(0x1ee99c,native_open_hook);
+        jump(PP_MOUNT_HOOK,native_mount_hook);jump(PP_OPEN_HOOK,native_open_hook);
         extern void native_slicer_bounds_hook(void);
-        const uint32_t site=0x203630, slicer_veneer=0x2cbfc8;
+        const uint32_t site=PP_SLICER_CALL, slicer_veneer=PP_SLICER_VENEER;
         jump(slicer_veneer,native_slicer_bounds_hook);
         *(uint32_t*)site=0xeb000000|(((slicer_veneer-site-8)>>2)&0xffffff);
     }
     // A near branch reaches an absolute-jump veneer in verified RO padding.
     // The 3GX loader maps game memory executable, including this padding.
-    uint32_t veneer=0x2cbfc0;
+    uint32_t veneer=PP_SAVE_VENEER;
     jump(veneer,native_save_hook);
-    *(uint32_t*)0x2543a4=0xea000000|(((veneer-0x2543a4-8)>>2)&0xffffff);
-    trampoline(save_write_trampoline,0x25409c);jump(0x25409c,native_save_write_hook);trampoline(save_dirty_trampoline,0x253d08);jump(0x253d08,native_save_dirty_hook);install_direct_hooks();install_page_timing();
+    *(uint32_t*)PP_SAVE_LOAD=0xea000000|(((veneer-PP_SAVE_LOAD-8)>>2)&0xffffff);
+    trampoline(save_write_trampoline,PP_SAVE_WRITE);jump(PP_SAVE_WRITE,native_save_write_hook);trampoline(save_dirty_trampoline,PP_SAVE_DIRTY);jump(PP_SAVE_DIRTY,native_save_dirty_hook);install_direct_hooks();install_page_timing();
     svcFlushEntireDataCache();svcInvalidateEntireInstructionCache();
     fprintf(log,"Native game patch installed: %u SD books; cache%c.\n",active_books,active_cache);
     return 1;

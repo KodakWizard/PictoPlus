@@ -45,7 +45,7 @@ def dispatch(route,data):
     if route=='startup-ready':
         begin_background_preparation();return {'ready':True}
     if route=='authoring-status':
-        return {'ready':resources_ready(),'region':'USA','requires_installed_game':True}
+        return {'ready':resources_ready(),'regions':['USA','EUR'],'requires_installed_game':True}
     if route=='preparation-activity':PREPARATION.editing();return {'paused':True}
     if route=='prepare-export':
         document=core.check(data['document']);assert document['cells'],'Add blocks before preparing.'
@@ -59,10 +59,10 @@ def dispatch(route,data):
         return PREPARATION.request(key,document,book,data.get('previous'))
     if route in ('loader-export','authoring-setup'):
         import shutil,uuid
-        from distribution import usa_setup
-        source=usa_setup()
+        from distribution import sd_loader
+        source=sd_loader()
         folder=core.DATA/'exports'/uuid.uuid4().hex;folder.mkdir(parents=True)
-        target=folder/'PictoPlus-USA-SD-Loader.zip';shutil.copy2(source,target)
+        target=folder/'PictoPlus-SD-Loader.zip';shutil.copy2(source,target)
         return {'file':str(target.relative_to(core.DATA/'exports'))}
     if route=='books-export':
         def export_books(report):
@@ -95,6 +95,7 @@ def dispatch(route,data):
     if route=='geometry-hash':
         core.check(data['document']);return {'signature':core.geometry_hash(data['document'])}
     if route=='randomise':return start_job(lambda:interactive(lambda:core.randomise(data['document'],secrets.token_hex(8) if data.get('shuffle') else None)))
+    if route=='read-native-model':return start_job(lambda:core.read_native_model(data['files']))
     if route=='import-model':return start_job(lambda:interactive(lambda:core.import_model(data['triangles'],data['dimensions'],data.get('fit_shapes',True),data.get('blue',True),data.get('yellow',True),data.get('yellow_ratio'),data.get('blue_inside',True))))
     if route=='settings':
         with MUTATE:result=core.settings(data)
@@ -129,9 +130,9 @@ class Handler(http.server.BaseHTTPRequestHandler):
         path=urllib.parse.urlsplit(self.path).path
         if path.startswith('/api/'):
             if not self.permitted():return self.send_json({'error':'Access denied.'},403)
-            if path=='/api/loader-package/usa':
-                from distribution import usa_setup
-                target=usa_setup()
+            if path=='/api/loader-package':
+                from distribution import sd_loader
+                target=sd_loader()
                 if not target.is_file():return self.send_json({'error':'The local USA test package is unavailable.'},404)
                 raw=target.read_bytes();self.send_response(200);self.send_header('Content-Type','application/zip');self.send_header('Content-Length',str(len(raw)));self.send_header('X-Content-Type-Options','nosniff');self.end_headers();self.wfile.write(raw);return
             if path.startswith('/api/export/'):
@@ -140,7 +141,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 raw=target.read_bytes();self.send_response(200);self.send_header('Content-Type','application/octet-stream');self.send_header('Content-Length',str(len(raw)));self.send_header('X-Content-Type-Options','nosniff');self.end_headers();self.wfile.write(raw);return
             if path=='/api/bootstrap':
                 documents=core.list_library()
-                return self.send_json({'library':documents,'books':core.list_books(documents=documents),'covers':core.cover_catalog(),'settings':core.settings(),'version':'0.2 preview'})
+                return self.send_json({'library':documents,'books':core.list_books(documents=documents),'covers':core.cover_catalog(),'settings':core.settings(),'version':'1.0.0'})
             if path=='/api/book-previews':return self.send_json(core.list_books(True))
             if path=='/api/preparation':
                 selected=urllib.parse.parse_qs(urllib.parse.urlsplit(self.path).query).get('ids')

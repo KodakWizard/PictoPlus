@@ -4,9 +4,9 @@ from release_build import build as build_release,dependency_path
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 APP_PY=['authoring_setup','book_packs','core','difficulty_options','distribution','export_assets','export_preparation','game_asset_edits','import_contacts','import_shapes','import_surfaces','import_symmetry','native_book','windows_process','number_layouts','pack_install','server','voxelise']
 TOOLS_PY=['game_resources','colour_logic','clue_difficulty','design_fitted_puzzle','group_certificate','puzzle_format','msbt','scoring','fit_native_shapes','mesh_voxels','build_block_tests']
-HELPERS=['BlockCatalog','BuildCustomModel','StudioArtwork','StudioDefaultCover','Thumbnail']
-def package():
-    out=ROOT/'build/public-release';out.mkdir(parents=True,exist_ok=True);host=out/'host';host.mkdir(exist_ok=True)
+HELPERS=['BlockCatalog','BuildCustomModel','StudioArtwork','StudioDefaultCover','Thumbnail','ImportNativeModel']
+def package(out=ROOT/'build/public-release'):
+    out=pathlib.Path(out).resolve();out.mkdir(parents=True,exist_ok=True);host=out/'host';host.mkdir(exist_ok=True)
     provenance=build_release(host)
     entries={}
     entries['SOURCE/SPICA-BinarySerialization.cs']=(host/'SPICA-BinarySerialization.cs').read_bytes()
@@ -41,7 +41,7 @@ def package():
     for name in HELPERS:
         for suffix in ('.exe','.cs'):put('tools/modeltool/'+name+suffix,(host/'modeltool' if suffix=='.exe' else ROOT/'tools/modeltool')/(name+suffix))
     put('tools/modeltool/BookCover.cs',ROOT/'tools/modeltool/BookCover.cs');put('tools/modeltool/SPICA.dll',host/'modeltool/SPICA.dll')
-    put('app/distribution/USA/build-info.json',ROOT/'app/distribution/USA/build-info.json')
+    put('app/distribution/build-info.json',ROOT/'app/distribution/build-info.json')
     downloads=ROOT/'vendor/downloads' if (ROOT/'vendor/downloads').is_dir() else ROOT/'build/release-downloads'
     put('app/runtime/MicrosoftEdgeWebview2Setup.exe',downloads/'MicrosoftEdgeWebview2Setup.exe')
     artic=ROOT/'native/vendor/ArticBase-MIT.txt'
@@ -60,26 +60,26 @@ def package():
     for name in ('Studio.cs','Launcher.cs','AssemblyInfo.cs','InstallerIntegrity.cs','PictoPlus.manifest'):put('SOURCE/'+name,ROOT/'app/native'/name)
     for name in ('release_build.py','release-dependencies.json','package_public_app.py'):put('SOURCE/'+name,ROOT/'tools'/name)
     entries['BUILD-PROVENANCE.json']=json.dumps(provenance,indent=2).encode()
-    entries['app/public-release.json']=json.dumps({'format':1,'region':'USA','authoring':'local-installed-game-profile','hardware_verified':False}).encode()
+    entries['app/public-release.json']=json.dumps({'format':1,'regions':['USA','EUR'],'authoring':'local-installed-game-profile','hardware_verified':False}).encode()
     entries['THIRD-PARTY-NOTICES.txt']=b'Original PictoPlus code is MIT licensed; see LICENSE. Dependencies retain their licences: Python (PSF and bundled library notices), three.js (MIT), SPICA (Unlicense; declaration-order fix in SOURCE/SPICA-BinarySerialization.cs), Microsoft WebView2 SDK/bootstrapper, libctru, newlib and GCC runtime components. See LICENSES/. The loader atlas uses Noto Sans Bold (SIL OFL 1.1); its font and generator are in SOURCE/. Modified ArticBase startup is MPL 2.0, with complete modified source in SOURCE/loader-startup.s. csvc.s retains its permissive notice. Microsoft runtime installation uses its own terms and may need internet. No extracted Nintendo assets are included. Compatibility patch metadata remains subject to the review notes in docs/RELEASE-AUDIT.md; this is not legal clearance. Do not relicense the whole bundle MIT.\n'
     import io
     setup=io.BytesIO()
-    with zipfile.ZipFile(ROOT/'app/distribution/USA/PictoPlus-USA-SD-Setup.zip') as original,zipfile.ZipFile(setup,'w',zipfile.ZIP_DEFLATED) as target:
+    with zipfile.ZipFile(ROOT/'app/distribution/PictoPlus-SD-Loader.zip') as original,zipfile.ZipFile(setup,'w',zipfile.ZIP_DEFLATED) as target:
         for item in original.infolist():
             if not item.filename.startswith('PictoPlus/licenses/'):target.writestr(item,original.read(item))
         for name in ('MPL-2.0.txt','libctru.txt','newlib.txt','GCC-runtime-exception.txt','GPL-3.0.txt','ArticBase-MIT.txt','Noto-OFL.txt'):target.writestr(zipfile.ZipInfo('PictoPlus/licenses/'+name,(2026,11,2,0,0,0)),entries['LICENSES/'+name])
         target.writestr(zipfile.ZipInfo('PictoPlus/licenses/loader-startup.s',(2026,11,2,0,0,0)),entries['SOURCE/loader-startup.s']);target.writestr(zipfile.ZipInfo('PictoPlus/licenses/loader-csvc.s',(2026,11,2,0,0,0)),entries['SOURCE/loader-csvc.s'])
         target.writestr(zipfile.ZipInfo('PictoPlus/licenses/NOTICE.txt',(2026,11,2,0,0,0)),entries['THIRD-PARTY-NOTICES.txt'])
-    entries['app/distribution/USA/PictoPlus-USA-SD-Setup.zip']=setup.getvalue()
-    (out/'PictoPlus-USA-SD-Loader.zip').write_bytes(setup.getvalue())
-    entries['PictoPlus-First-Time-Setup.txt']=b'PictoPlus - Windows 10 22H2 / Windows 11 x64, USA game\n\nExtract this entire ZIP into a writable folder, then run PictoPlus.exe. Python and the compiler helpers are included. If Microsoft WebView2 is missing, PictoPlus offers the included official installer (one-time internet download).\n\nFirst use: choose Download USA SD Loader. Copy the luma and PictoPlus folders to the SD root. Then launch your legitimately installed USA Picross 3D: Round 2 with Luma plugins enabled. If a setup file is missing, let Preparing first-time setup finish. To skip generation, copy authoring.skip from PictoPlus/Setup files/Skip Setup into SD:/PictoPlus/ before launching. Back on the PC, choose Import setup file and select SD:/PictoPlus/PictoPlus-Setup.pictosetup. The app validates it and finishes setup automatically. This file contains your local game resources: keep it private. No ROM dump or manual extraction is needed.\n\nThen create puzzles/books and export .pictobook files. Copy books to SD:/PictoPlus/Books, or the same folder on the emulator virtual SD, and restart the game. Use the updated USA loader; EUR is separate. Keep registry and progress files.\n\nEarlier USA setup and gameplay were verified by the owner. The final release candidate still needs the hardware smoke test, including its updated loading font. No game assets, sample game books or user data are included in this ZIP. See HARDWARE-TEST.md.\n'
+    entries['app/distribution/PictoPlus-SD-Loader.zip']=setup.getvalue()
+    (out/'PictoPlus-SD-Loader.zip').write_bytes(setup.getvalue())
+    entries['PictoPlus-First-Time-Setup.txt']=b'PictoPlus - Windows 10 22H2 / Windows 11 x64, USA and EUR games\n\nExtract this entire ZIP into a writable folder, then run PictoPlus.exe. Python and the compiler helpers are included. If Microsoft WebView2 is missing, PictoPlus offers the included official installer (one-time internet download).\n\nFirst use: choose Download SD Loader. Copy the luma and PictoPlus folders to the SD root. Then launch your legitimately installed USA or EUR Picross 3D: Round 2 with Luma plugins enabled. If a setup file is missing, let Preparing first-time setup finish. To skip generation, copy authoring.skip from PictoPlus/Setup files/Skip Setup into SD:/PictoPlus/ before launching. Back on the PC, choose Import setup file and select SD:/PictoPlus/PictoPlus-Setup.pictosetup. The app validates it and finishes setup automatically. This file contains your local game resources: keep it private. No ROM dump or manual extraction is needed.\n\nThen create puzzles/books and export .pictobook files. Copy books to SD:/PictoPlus/Books, or the same folder on the emulator virtual SD, and restart the game. Use the combined SD loader. EUR keeps its registry and progress under PictoPlus/EUR. Keep registry and progress files.\n\nUSA setup and gameplay were previously verified by the owner. EUR physical testing is pending. No game assets, sample game books or user data are included in this ZIP. See HARDWARE-TEST.md.\n'
     entries['HARDWARE-TEST.md']=(ROOT/'docs/HARDWARE-TEST.md').read_bytes()
     forbidden=('native-block-catalog','native-shape-samples','fitted-torpedo','availability-template')
     assert not any(name.startswith(('work/','build/','app/data/')) or any(x in name for x in forbidden) for name in entries)
     assert not any(pathlib.PurePosixPath(n).suffix.lower() in ('.bch','.qpp','.ctpk','.msbt','.arc','.3ds','.cci','.cia','.pictoauthoring','.pictosetup') for n in entries)
     hashes={name:dict(bytes=len(data),sha256=hashlib.sha256(data).hexdigest()) for name,data in entries.items()}
     entries['release-manifest.json']=json.dumps(hashes,indent=2).encode()
-    target=out/'PictoPlus-Windows-USA.zip'
+    target=out/'PictoPlus-Windows.zip'
     with zipfile.ZipFile(target,'w',zipfile.ZIP_DEFLATED) as z:
         for name,data in sorted(entries.items()):
             info=zipfile.ZipInfo(name,(2026,11,2,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED;info.external_attr=0o100644<<16;z.writestr(info,data)

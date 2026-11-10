@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.0
+
+- One SD Loader ZIP installs the USA and EUR plugins in their respective title folders.
+- Both regions share books and the Windows setup profile. EUR keeps its progress, registry and cache separate from USA.
+- The desktop model wizard imports BCH and BCRES/CGFX with diffuse textures. Raw GFModel and GFTexture support is experimental.
+- Interface scale and Compact Layout make the editor easier to use on smaller screens. The Book Library search bar scrolls with the puzzle grid.
+- Both regions were tested in Azahar. EUR physical 3DS verification remains pending.
+
 ## 0.9.0 Beta
 
 - Large imported puzzles use their full grid when setting slicer travel.

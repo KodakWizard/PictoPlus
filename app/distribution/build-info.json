@@ -1,0 +1,10 @@
+{
+  "USA": {
+    "title_id": "0004000000187D00",
+    "sha256": "6e3e9debe833cd61cf8da7f34d5e613596887bfa0c2765cd5953eacc39c74090"
+  },
+  "EUR": {
+    "title_id": "0004000000187E00",
+    "sha256": "529f5bc5ad2382cde9f83c118b3c81d2d842f5c2cfdfa2c2915e69c198d54914"
+  }
+}

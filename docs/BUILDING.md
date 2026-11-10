@@ -12,9 +12,9 @@ python tools/package_public_app.py
 
 The curated archive includes the hash-pinned Roslyn build files, WebView2 SDK libraries, SPICA source, three.js runtime modules, official embedded Python archive and official WebView2 bootstrapper. These are redistributable build/runtime dependencies, not private game templates. The package script verifies them before compiling. It writes both download ZIPs into build/public-release.
 
-To run from source after building, extract the resulting Windows ZIP and run PictoPlus.exe. Setup still requires the private file generated from your own installed USA game. No prepared profile or extracted resource is included in the checkout.
+To run from source after building, extract the resulting Windows ZIP and run PictoPlus.exe. Setup still requires the private file generated from your own installed USA or EUR game. No prepared profile or extracted resource is included in the checkout.
 
-## USA loader
+## USA and EUR loader
 
 Install devkitARM and libctru from devkitPro and set DEVKITPRO to the SDK directory, then run:
 
@@ -22,7 +22,7 @@ Install devkitARM and libctru from devkitPro and set DEVKITPRO to the SDK direct
 python tools/build_public_loader.py
 ```
 
-The tested toolchain is devkitARM GCC 16.1.0 with the locally pinned libctru headers/library. Different SDK versions may produce different binaries and require testing. The build uses native/usa and native/vendor directly. It does not read a ROM, extracted game code, generated base folder or private build tree. The native source snapshot includes the complete combined runtime source and generated compatibility headers. Edit those source files for public loader changes; the older private development generators are not required.
+The tested toolchain is devkitARM GCC 16.1.0 with the locally pinned libctru headers/library. Different SDK versions may produce different binaries and require testing. Both targets use native/usa and native/vendor directly. The game_region.h header selects the revision-specific hooks and state paths. The build writes the combined loader archive under app/distribution. It does not read a ROM, extracted game code, generated base folder or private build tree. The native source snapshot includes the complete combined runtime source and generated compatibility headers. Edit those source files for public loader changes; the older private development generators are not required.
 
 Re-run the desktop package step after rebuilding the loader. The release ZIPs include notices and the complete modified MPL startup source. The loader's font atlas can be regenerated with tools/build_picto_loading_assets.ps1 using the included Noto Sans Bold font; copy the resulting headers into native/usa when changing it and test the graphics.
 
@@ -30,6 +30,7 @@ Re-run the desktop package step after rebuilding the loader. The release ZIPs in
 
 ```powershell
 python tools/audit_public_release.py
+python tools/test_native_model_import.py build/public-release/host/modeltool
 node --test app/designer-orbit.test.mjs app/editor-model.test.mjs app/model-positioning.test.mjs app/placement.test.mjs app/puzzle-numbers.test.mjs app/setup-import.test.mjs app/startup.test.mjs
 ```
 

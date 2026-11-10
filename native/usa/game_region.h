@@ -1,0 +1,65 @@
+#pragma once
+/* Each target is independently matched against its stock executable. */
+#define PP_ROOT "/PictoPlus/"
+#define PP_SD "sdmc:" PP_ROOT
+#define PP_VX "vx:" PP_ROOT
+#define PP_GSP_SESSION 0x2d3488
+#define PP_STARTUP_VENEER 0x2cbfa0
+#define PP_SAVE_VENEER 0x2cbfc0
+#define PP_SLICER_VENEER 0x2cbfc8
+#define PP_STARTUP_WORD 0xeb002188
+
+#ifdef PICTOPLUS_EUR
+#define PP_REGION "EUR"
+#define PP_STATE PP_ROOT "EUR/"
+#define PP_PROGRESS_MAGIC "PPLUSEU1"
+#define PP_TEXT_SIZE 0x193b4c
+#define PP_TEXT_CRC 0x3f68517b
+#define PP_STARTUP_CALL 0x120348
+#define PP_GRAPHICS_INIT 0x128970
+#define PP_MOUNT_HOOK 0x11de3c
+#define PP_OPEN_HOOK 0x1ee9ac
+#define PP_SLICER_CALL 0x203640
+#define PP_SLICER_ORIGINAL 0x1b8588
+#define PP_SAVE_LOAD 0x2543b4
+#define PP_SAVE_CONTINUE 0x293b4c
+#define PP_SAVE_WRITE 0x2540ac
+#define PP_SAVE_DIRTY 0x253d18
+#define PP_READ 0x21e678
+#define PP_SIZE 0x21e75c
+#define PP_CLOSE 0x21e6d0
+#define PP_OPEN_ARCHIVE 0x134ed8
+#define PP_MOUNT_ARCHIVE 0x1ec590
+#define PP_PAGE_LOAD 0x207d20
+#define PP_PAGE_REBUILD 0x208258
+#define PP_PAGE_RESOURCE_LOAD 0x1b6c64
+#define PP_PAGE_RESOURCE_RELEASE 0x1b6bc4
+#else
+#define PP_REGION "USA"
+#define PP_STATE PP_ROOT
+#define PP_PROGRESS_MAGIC "PPLUSUS1"
+#define PP_TEXT_SIZE 0x193b3c
+#define PP_TEXT_CRC 0xf8901812
+#define PP_STARTUP_CALL 0x120338
+#define PP_GRAPHICS_INIT 0x128960
+#define PP_MOUNT_HOOK 0x11de2c
+#define PP_OPEN_HOOK 0x1ee99c
+#define PP_SLICER_CALL 0x203630
+#define PP_SLICER_ORIGINAL 0x1b8578
+#define PP_SAVE_LOAD 0x2543a4
+#define PP_SAVE_CONTINUE 0x293b3c
+#define PP_SAVE_WRITE 0x25409c
+#define PP_SAVE_DIRTY 0x253d08
+#define PP_READ 0x21e668
+#define PP_SIZE 0x21e74c
+#define PP_CLOSE 0x21e6c0
+#define PP_OPEN_ARCHIVE 0x134ec8
+#define PP_MOUNT_ARCHIVE 0x1ec580
+#define PP_PAGE_LOAD 0x207d10
+#define PP_PAGE_REBUILD 0x208248
+#define PP_PAGE_RESOURCE_LOAD 0x1b6c54
+#define PP_PAGE_RESOURCE_RELEASE 0x1b6bb4
+#endif
+
+#define PP_STATE_SD "sdmc:" PP_STATE
+#define PP_STATE_VX "vx:" PP_STATE

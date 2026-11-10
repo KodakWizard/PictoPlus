@@ -2,8 +2,26 @@ using System;using System.IO;using System.Diagnostics;using System.Drawing;using
 using Microsoft.Web.WebView2.Core;using Microsoft.Web.WebView2.WinForms;
 class Studio:Form {
  WebView2 web;Process backend;string app,url;Label loading;bool screenReady;Stopwatch startup=Stopwatch.StartNew();JavaScriptSerializer json=new JavaScriptSerializer {MaxJsonLength=20000000};
+ string interfaceScale="100";
  FormWindowState lastVisibleState=FormWindowState.Normal;
  Studio(){app=Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory.TrimEnd(Path.DirectorySeparatorChar)).FullName;Text="PictoPlus · Picross 3D: Round 2 Puzzle Creator";var area=Screen.PrimaryScreen.WorkingArea;MinimumSize=new Size(Math.Min(1120,area.Width),Math.Min(720,area.Height));Size=new Size(Math.Min(1600,area.Width),Math.Min(1000,area.Height));StartPosition=FormStartPosition.CenterScreen;RestoreWindow();BackColor=Color.FromArgb(245,248,251);var iconPath=Path.Combine(app,"assets","pictoplus.ico");if(File.Exists(iconPath))Icon=new Icon(iconPath);AutoScaleMode=AutoScaleMode.Dpi;Shown+=async(s,e)=>await Start();Resize+=(s,e)=>{if(WindowState!=FormWindowState.Minimized)lastVisibleState=WindowState;};FormClosing+=(s,e)=>SaveWindow();FormClosed+=(s,e)=>{try{if(backend!=null&&!backend.HasExited)backend.Kill();}catch{}};}
+ // Browser zoom keeps layout, pointer events and canvas measurements in the same CSS units.
+ internal static double InterfaceZoom(string scale, int width, int height, int dpi){
+  switch(scale){
+   case "75":return .75;
+   case "80":return .8;
+   case "90":return .9;
+   case "auto":
+    double fit=Math.Min(width*96.0/(1400*dpi),height*96.0/(850*dpi));
+    return fit>=1?1:fit>=.9?.9:fit>=.8?.8:.75;
+   default:return 1;
+  }
+ }
+ void ApplyInterfaceScale(){
+  if(web==null||WindowState==FormWindowState.Minimized||web.ClientSize.IsEmpty)return;
+  double zoom=InterfaceZoom(interfaceScale,web.ClientSize.Width,web.ClientSize.Height,web.DeviceDpi);
+  if(Math.Abs(web.ZoomFactor-zoom)>.001)web.ZoomFactor=zoom;
+ }
  void RestoreWindow(){try{string path=Path.Combine(app,"data","window.json");if(!File.Exists(path))return;var state=json.Deserialize<System.Collections.Generic.Dictionary<string,object>>(File.ReadAllText(path));var bounds=new Rectangle(Convert.ToInt32(state["x"]),Convert.ToInt32(state["y"]),Convert.ToInt32(state["width"]),Convert.ToInt32(state["height"]));var area=Screen.FromRectangle(bounds).WorkingArea;MinimumSize=new Size(Math.Min(1120,area.Width),Math.Min(720,area.Height));bounds.Width=Math.Max(MinimumSize.Width,Math.Min(bounds.Width,area.Width));bounds.Height=Math.Max(MinimumSize.Height,Math.Min(bounds.Height,area.Height));bounds.X=Math.Max(area.Left,Math.Min(bounds.X,area.Right-bounds.Width));bounds.Y=Math.Max(area.Top,Math.Min(bounds.Y,area.Bottom-bounds.Height));StartPosition=FormStartPosition.Manual;Bounds=bounds;if(state.ContainsKey("maximized")&&Convert.ToBoolean(state["maximized"]))WindowState=lastVisibleState=FormWindowState.Maximized;}catch{}}
  void SaveWindow(){try{var bounds=WindowState==FormWindowState.Normal?Bounds:RestoreBounds;Directory.CreateDirectory(Path.Combine(app,"data"));string path=Path.Combine(app,"data","window.json");File.WriteAllText(path,json.Serialize(new{x=bounds.X,y=bounds.Y,width=bounds.Width,height=bounds.Height,maximized=lastVisibleState==FormWindowState.Maximized}),new UTF8Encoding(false));}catch{}}
  void Stage(string value){try{Directory.CreateDirectory(Path.Combine(app,"data"));File.AppendAllText(Path.Combine(app,"data","startup-timing.log"),value+"="+startup.Elapsed.TotalMilliseconds.ToString("F0",System.Globalization.CultureInfo.InvariantCulture)+"ms"+Environment.NewLine);}catch{}}
@@ -29,11 +47,14 @@ class Studio:Form {
    Stage("backend-ready");var ready=json.Deserialize<System.Collections.Generic.Dictionary<string,object>>(line);url=(string)ready["url"];if(Array.IndexOf(Environment.GetCommandLineArgs(),"--look-preview")>=0){url+="&look=playful";Text="PictoPlus - New Look Preview";}
    loading.Text=ready.ContainsKey("setup_required")&&Convert.ToBoolean(ready["setup_required"])?"Opening first-time setup":"Opening your workspace";
    await browserReady;
+   web.SizeChanged+=(s,e)=>ApplyInterfaceScale();
+   DpiChanged+=(s,e)=>BeginInvoke((Action)ApplyInterfaceScale);
    web.CoreWebView2.Settings.IsStatusBarEnabled=false;web.CoreWebView2.Settings.AreDefaultContextMenusEnabled=false;web.CoreWebView2.Settings.IsZoomControlEnabled=false;
    web.CoreWebView2.NavigationStarting+=(s,e)=>{if(!e.Uri.StartsWith(new Uri(url).GetLeftPart(UriPartial.Authority)+"/")){e.Cancel=true;OpenExternal(e.Uri);}};
    web.CoreWebView2.NewWindowRequested+=(s,e)=>{e.Handled=true;OpenExternal(e.Uri);};
    web.CoreWebView2.WebMessageReceived+=(s,e)=>{if(!e.Source.StartsWith(new Uri(url).GetLeftPart(UriPartial.Authority)+"/"))return;try{
     var message=json.Deserialize<System.Collections.Generic.Dictionary<string,object>>(e.WebMessageAsJson);string type=(string)message["type"];
+    if(type=="interfaceScale"){interfaceScale=(string)message["value"];ApplyInterfaceScale();return;}
     if(type=="uiReady"&&!screenReady){screenReady=true;Stage("screen-ready");web.Visible=true;web.BringToFront();Controls.Remove(loading);loading.Dispose();return;}
     if(type=="uiFailed"&&!screenReady){Stage("screen-failed");loading.Text=message.ContainsKey("message")?(string)message["message"]:"Unable to open PictoPlus";return;}
     if(type=="pickAzahar")using(var dialog=new FolderBrowserDialog{Description="Choose your portable Azahar folder",ShowNewFolderButton=false})if(dialog.ShowDialog(this)==DialogResult.OK)web.CoreWebView2.PostWebMessageAsJson(json.Serialize(new {type="azaharPath",path=dialog.SelectedPath}));

@@ -14,7 +14,9 @@
 extern "C" uint64_t svcGetSystemTick(void);
 using Bytes = std::vector<uint8_t>;
 extern "C" void loader_progress(const char*,unsigned,unsigned);
-static const std::string home="sdmc:/PictoPlus/";
+#include "game_region.h"
+static const std::string home=PP_STATE_SD;
+static const std::string shared=PP_SD;
 static FILE *report;
 static std::string failure;
 static uint32_t table[256];
@@ -88,9 +90,13 @@ static Bytes text(const uint8_t*p,size_t n){size_t len=0;while(len<n&&get16(p+le
 #include "game_layout_recipe.h"
 extern "C" int picto_mount_game(void);
 extern "C" void picto_unmount_game(void);
-static const std::string local_base=home+"generated-base-USA-v1/";
+static const std::string local_base=home+"generated-base-" PP_REGION "-v1/";
 struct BaseFile {const char*name;unsigned size,checksum;};
+#ifdef PICTOPLUS_EUR
+#include "game_base_manifest_eur.h"
+#else
 #include "game_base_manifest.h"
+#endif
 static bool local_matches(const std::string&path,unsigned size,unsigned checksum){
  FILE*f=fopen(path.c_str(),"rb");if(!f)return false;
  uint8_t buf[4096];unsigned n=0,c=0;size_t k;
@@ -105,7 +111,7 @@ static bool prepare_local_base(){
  bool ready=true;for(auto&item:base_files)ready=local_matches(local_base+item.name,item.size,item.checksum)&&ready;
  ready=local_matches(local_base+"layout/Body_PuzzleSelect.arc",layout_size,layout_crc)&&ready;
  if(ready){fprintf(report,"Installed-game base ready; no RomFS preparation needed.\n");return true;}
- if(!picto_mount_game())return fail("Could not read the installed USA game. Keep your existing books and progress; use the supported USA release.");
+ if(!picto_mount_game())return fail("Could not read the installed " PP_REGION " game. Keep your existing books and progress; use the supported " PP_REGION " release.");
  bool ok=true;unsigned done=0;
  for(auto&item:base_files){
   loader_progress("Preparing game files",done++,sizeof(base_files)/sizeof(base_files[0])+1);
@@ -142,11 +148,11 @@ static bool prepare_local_base(){
 /* Opt-in local authoring preparation. Never installed or shared as game content. */
 #include "authoring_manifest.h"
 static bool prepare_authoring_profile(){
- std::string target=home+"PictoPlus-Setup.pictosetup",temp=target+".tmp",previous=target+".previous";
+ std::string target=shared+"PictoPlus-Setup.pictosetup",temp=target+".tmp",previous=target+".previous";
  if(exists(previous)&&!exists(target)&&rename(previous.c_str(),target.c_str())){
   fprintf(report,"First-time setup: previous profile could not be restored. Request retained.\n");return false;
  }
- if(!exists(home+"authoring.request")&&(exists(target)||exists(home+"authoring.skip")))return true;
+ if(!exists(shared+"authoring.request")&&(exists(target)||exists(shared+"authoring.skip")))return true;
  if(!picto_mount_game()){fprintf(report,"First-time setup: installed game unavailable. Request retained.\n");loader_progress("Setup failed",0,1);return false;}
  const unsigned count=sizeof(authoring_files)/sizeof(authoring_files[0]),head=32+count*176;
  Bytes index(count*176,0);unsigned total=head;
@@ -169,7 +175,7 @@ static bool prepare_authoring_profile(){
  }
  if(ok&&exists(previous))remove(previous.c_str());
  loader_progress(ok?"Setup file saved":"Setup failed",ok?1:0,1);
- if(ok){remove((home+"authoring.request").c_str());fprintf(report,"First-time setup ready: PictoPlus/PictoPlus-Setup.pictosetup (%u files). Open it once in the desktop app.\n",count);}
+ if(ok){remove((shared+"authoring.request").c_str());fprintf(report,"First-time setup ready: PictoPlus/PictoPlus-Setup.pictosetup (%u files). Open it once in the desktop app.\n",count);}
  else {remove(temp.c_str());fprintf(report,"First-time setup failed; request retained. Existing books/progress unchanged.\n");}
  return ok;
 }
@@ -503,8 +509,7 @@ static bool write_direct_index(const std::string&stage){
 }
 
 static bool copyAsset(const Book&b,Ref r,const std::string&path){
-  size_t at=path.find("/",path.find("/PictoPlus/")+13);
-  // stage is always sdmc:/PictoPlus/directA/ or directB/.
+  // Cache generation names have equal lengths.
   std::string prefix=home+"directA/";return direct_record(b,r,path.substr(prefix.size()));
  }
  static std::string sharedAsset(const Book&b,Ref r,const std::string&stage,const std::string&path){return direct_record(b,r,path)?path:std::string();}
@@ -700,7 +705,12 @@ static bool catalogues(std::vector<Book>&books,const std::string&stage){
  const char*resources[]={"BookNo","BookName","PuzzleNo","PuzzleName","Trivia"};
  for(unsigned resource=0;resource<5;resource++){
   loader_progress("Writing book menus",resource,5);
-  for(const char*lang:{"en","fr","es"}){std::string name=std::string("text/")+lang+"/"+resources[resource]+".msbt";
+#ifdef PICTOPLUS_EUR
+  for(const char*lang:{"en","fr","de","es","it"})
+#else
+  for(const char*lang:{"en","fr","es"})
+#endif
+  {std::string name=std::string("text/")+lang+"/"+resources[resource]+".msbt";
    if(!stream_msbt(books,resource,local_base+""+name,stage,name))return false;
   }
  }
@@ -714,8 +724,8 @@ extern "C" int compile_native_books(FILE*log){
     report=log;verified_template_sources.clear();row_book=nullptr;Bytes().swap(row_cache);direct_records.clear();direct_sources.clear();direct_metadata.clear();ready_dirs.clear();resident_bytes=0;failure.clear();for(unsigned i=0;i<256;i++){uint32_t c=i;for(int b=0;b<8;b++)c=(c>>1)^(0xedb88320u&(0u-(c&1)));table[i]=c;}
     if(!prepare_local_base()){fprintf(log,"NOT INSTALLED: %s\n",failure.c_str());return -1;}
     prepare_authoring_profile();
-    std::vector<std::string> files;DIR*d=opendir((home+"Books").c_str());if(!d){fprintf(log,"Books folder not found.\n");return 0;}
-    struct dirent*e;while((e=readdir(d))){std::string n=e->d_name;if((n.size()>=8&&!strcasecmp(n.c_str()+n.size()-8,".voxbook"))||(n.size()>=10&&!strcasecmp(n.c_str()+n.size()-10,".pictobook")))files.push_back(home+"Books/"+n);}closedir(d);std::sort(files.begin(),files.end());
+    std::vector<std::string> files;DIR*d=opendir((shared+"Books").c_str());if(!d){fprintf(log,"Books folder not found.\n");return 0;}
+    struct dirent*e;while((e=readdir(d))){std::string n=e->d_name;if((n.size()>=8&&!strcasecmp(n.c_str()+n.size()-8,".voxbook"))||(n.size()>=10&&!strcasecmp(n.c_str()+n.size()-10,".pictobook")))files.push_back(shared+"Books/"+n);}closedir(d);std::sort(files.begin(),files.end());
     bool missing_prepared=false;
     for(auto&path:files){FILE*f=fopen(path.c_str(),"rb");uint8_t h[160];if(f){if(fullRead(f,h,160)&&get16(h+38)==1&&!exists(prepared_book_name(h)))missing_prepared=true;fclose(f);}}
     int cached=(missing_prepared||exists(home+"rebuild.request"))?0:unchanged(files);if(cached){fprintf(log,"FAST START: %u unchanged books; reusing validated SD catalogue.\n",unsigned(cached));return cached;}

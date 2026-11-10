@@ -1,3 +1,4 @@
+#include "game_region.h"
 /* Read-only diagnostic counters in plugin RAM. No runtime SD writes. */
 #include <3ds.h>
 #include <stdint.h>
@@ -30,7 +31,7 @@ static int timed_read(void*file,uint32_t*count,uint64_t offset,void*data,uint32_
     return result;
 }
 void install_page_timing(void){
-    const uint32_t addresses[]={0x207d10,0x208248,0x1b6c54,0x1b6bb4,0x21e668};
+    const uint32_t addresses[]={PP_PAGE_LOAD,PP_PAGE_REBUILD,PP_PAGE_RESOURCE_LOAD,PP_PAGE_RESOURCE_RELEASE,PP_READ};
     const void*hooks[]={timed_cards,timed_selection,timed_preview,timed_model,timed_read};
     for(unsigned i=0;i<5;i++){
         uint32_t*source=(uint32_t*)addresses[i];

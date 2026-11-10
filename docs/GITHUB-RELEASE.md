@@ -1,57 +1,22 @@
-# GitHub release draft
+# PictoPlus v1.0 - USA & EUR Support
 
-## Repository description
+PictoPlus v1.0.0 brings custom puzzle books to the USA and EUR versions of Picross 3D: Round 2. Use your own legally obtained copy of the game.
 
-Create and share custom Picross 3D: Round 2 puzzle books, with a Windows designer and a USA 3DS loader.
+- One **SD Loader ZIP** installs both region-specific plugins. USA and EUR share the same books and Windows setup profile, with separate progress and caches.
+- The Windows editor adds interface scaling, Compact Layout, and textured BCH and BCRES/CGFX imports. Raw Pokémon GFModel and GFTexture import is experimental.
+- The optional **Animals Puzzle Pack** contains 15 puzzles and includes model credits and licence details.
 
-## Topics
+## Install or update
 
-pictoplus, picross, picross-3d, puzzle-editor, voxel-editor, nintendo-3ds, homebrew, luma3ds, windows, python
+1. Extract **PictoPlus-Windows.zip** and open **PictoPlus.exe**. When updating, keep your existing `app/data` folder.
+2. Extract **PictoPlus-SD-Loader.zip** to the SD card root. Keep one `.3gx` per title folder. USA uses `0004000000187D00` and EUR uses `0004000000187E00`. Enable Plugin Loader in Luma3DS's Rosalina menu, then launch your game.
+3. If you are setting up the editor for the first time, import `PictoPlus/PictoPlus-Setup.pictosetup` from your SD card. Keep the file private. Existing compatible profiles still work.
+4. Copy `.pictobook` files to `PictoPlus/Books`. Keep existing registry and progress files. EUR stores its regional data in `PictoPlus/EUR`.
 
-## Release title
+For Azahar, use a build with 3GX plugin support. Enable its plugin loader and extract the same ZIP to its virtual SD root. On Windows, a short path for the portable emulator helps Azahar create its game save folders.
 
-PictoPlus 0.8.0 Alpha - first public release
+## Verification
 
-## Release notes
+USA and EUR loader builds passed ARM tests for 210-puzzle books, paging, slicers, setup and progress. Both games booted with the loader in Azahar. Earlier USA gameplay was tested on physical hardware. **EUR physical 3DS compatibility has not yet been verified.**
 
-PictoPlus is ready for its first public outing. Draw a puzzle with blocks and shapes, collect your designs into books, then play them in Picross 3D: Round 2 on your 3DS.
-
-This release includes the Windows editor, shareable `.pictobook` exports, custom covers and artwork, and the USA loader. 3D model conversion is available as an experimental starting point; it's worth checking the block design before exporting.
-
-### Getting started
-
-Download **PictoPlus-Windows-USA.zip**, extract the whole folder and open **PictoPlus.exe**. Follow the welcome screen's **Download USA SD Setup** instructions. The app uses a private setup file prepared from your installed USA game. No ROM dump or manual save editing is required.
-
-For an existing installation, **PictoPlus-USA-SD-Setup.zip** installs or updates the USA loader. Preserve your Books, registry, progress and caches. For first-time desktop resource preparation, use the app's download button, which also requests your private setup file.
-
-The source archive includes the curated source tree, build dependencies and the USA loader source. No game resources, user books or setup profiles are included.
-
-### Before installing
-
-- The desktop app targets Windows 10 22H2 / Windows 11 x64.
-- This package is for the supported USA game. EUR is separate.
-- The loader supports 210 puzzles per book and 71 persistent custom-book identities.
-- Back up your SD card. Keep only one plugin for the USA title.
-- The Windows executables are unsigned. See the checksums and security notes; don't disable antivirus protection.
-
-Automated checks cover clean setup, export, native reconstruction, caching and progress preservation. Players have also tested the USA workflow on physical hardware. This is not a claim that every console, game update, model or library has been tested. The final release font-atlas change still needs an on-console visual confirmation.
-
-Thank you to everyone who has helped test and refine it. If something goes wrong, a clear set of steps and a redacted log will help us fix it.
-
-PictoPlus is unofficial and is not affiliated with or endorsed by Nintendo.
-
-## Maintainer checklist before publishing
-
-- Confirm repository URL, copyright attribution and release date.
-- Review docs/RELEASE-AUDIT.md and any outstanding manual-review items.
-- Confirm screenshots contain only project-owned sample designs.
-- Perform the final on-console font/loader smoke test.
-- Publish the curated source tree, never the private workspace.
-- Attach the Windows ZIP, USA loader ZIP, source ZIP and SHA256SUMS.txt.
-- Keep dependency licences and corresponding modified MPL source available with the release.
-- Don't reuse an old antivirus result as proof that a new release is safe.
-
-
-## Optional Animals puzzle pack
-
-Attach PictoPlus-Animals-Puzzle-Pack.zip as a separate release download. It contains the owner's unchanged Animals.pictobook (15 puzzles), model credits, licence/source links and installation instructions. Extract it and copy Animals.pictobook to PictoPlus/Books/ on the SD card. Keep CREDITS.md with redistributions. The model-derived content retains its CC BY 3.0 attribution requirements; it is separate from the app code's MIT licence.
+The release includes the Windows app, combined SD Loader, Animals pack, curated source and SHA-256 checksums. It contains no Nintendo game files or private setup profiles. The Windows executables are unsigned.

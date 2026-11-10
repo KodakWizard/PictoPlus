@@ -1,3 +1,4 @@
+#include "game_region.h"
 /* PictoPlus SD book discovery probe. No game-memory writes. */
 #include <3ds.h>
 #include <stdio.h>
@@ -53,8 +54,8 @@ extern void loader_progress_end(void);
 int prepare_books_main(int argc, char **argv) {
     (void)argc; (void)argv;
     mkdir("sdmc:/PictoPlus", 0777);
-    mkdir("sdmc:/PictoPlus/Books", 0777);
-    FILE *log = fopen("sdmc:/PictoPlus/native-loader-status.txt", "w");
+    mkdir(PP_SD "Books", 0777);
+    FILE *log = fopen(PP_STATE_SD "native-loader-status.txt", "w");
     if (!log) return 1;
     setvbuf(log,NULL,_IONBF,0);
     fputs("DIAGNOSTIC: entered main; SD filesystem mounted. Combined test; preparation deferred until native graphics initialization.\n",log);
@@ -64,7 +65,7 @@ int prepare_books_main(int argc, char **argv) {
     fputs("PictoPlus native loader: discovery probe v1\n"
           "This probe reads SD books; it does not add them to the game yet.\n", log);
 #endif
-    DIR *dir = opendir("sdmc:/PictoPlus/Books");
+    DIR *dir = opendir(PP_SD "Books");
     unsigned accepted=0, rejected=0;
     if (!dir) fputs("Could not open Books folder.\n", log);
     else {
@@ -73,7 +74,7 @@ int prepare_books_main(int argc, char **argv) {
             size_t len = strlen(entry->d_name);
             if (!((len>=8&&!strcasecmp(entry->d_name+len-8,".voxbook"))||(len>=10&&!strcasecmp(entry->d_name+len-10,".pictobook")))) continue;
             char path[512];
-            if (snprintf(path, sizeof(path), "sdmc:/PictoPlus/Books/%s", entry->d_name) >= sizeof(path)) {
+            if (snprintf(path, sizeof(path), PP_SD "Books/%s", entry->d_name) >= sizeof(path)) {
                 rejected++; continue;
             }
             FILE *file = fopen(path, "rb");
@@ -120,7 +121,7 @@ int prepare_books_main(int argc, char **argv) {
     return 0;
 }
 
-/* USA v0: prepare books only after the game's own GSP initialization returns.
+/* Prepare books only after the game's own GSP initialization returns.
  * The one-shot call is restored before executable CRC verification. */
 extern void deferred_startup_hook(void);
 extern uint32_t deferred_stack;
@@ -129,31 +130,40 @@ static uint8_t plugin_thread_state[0x80];
 extern void svcFlushEntireDataCache(void),svcInvalidateEntireInstructionCache(void);
 int prepare_books_main(int argc,char**argv);
 int main(int argc,char**argv){
- mkdir("sdmc:/PictoPlus",0777);mkdir("sdmc:/PictoPlus/Books",0777);
+ mkdir(PP_SD,0777);
+#ifdef PICTOPLUS_EUR
+ mkdir(PP_STATE_SD,0777);
+#endif
+ mkdir(PP_SD "Books",0777);
  memcpy(plugin_thread_state,getThreadLocalStorage(),sizeof(plugin_thread_state));
- FILE*f=fopen("sdmc:/PictoPlus/startup-display.txt","w");
+ FILE*f=fopen(PP_STATE_SD "startup-display.txt","w");
  if(f){fputs("EARLY: waiting for native game graphics initialization.\n",f);fclose(f);}
- uint32_t*call=(uint32_t*)0x120338;
- if(*call!=0xeb002188){
-  f=fopen("sdmc:/PictoPlus/startup-display.txt","a");
+ uint32_t*call=(uint32_t*)PP_STARTUP_CALL;
+ int supported=*call==PP_STARTUP_WORD;
+#ifdef PICTOPLUS_EUR
+ extern int native_game_supported(void);
+ supported=supported&&native_game_supported();
+#endif
+ if(!supported){
+  f=fopen(PP_STATE_SD "startup-display.txt","a");
   if(f){fputs("Unsupported startup call; deferred hook not installed.\n",f);fclose(f);}return 0;
  }
  loader_display_reserve();
  /* Reserved executable RO padding, independently checked by the builder. */
- uint32_t*v=(uint32_t*)0x2cbfa0;v[0]=0xe51ff004;v[1]=(uint32_t)deferred_startup_hook;
- *call=0xeb000000|(((0x2cbfa0-0x120338-8)>>2)&0xffffff);
+ uint32_t*v=(uint32_t*)PP_STARTUP_VENEER;v[0]=0xe51ff004;v[1]=(uint32_t)deferred_startup_hook;
+ *call=0xeb000000|(((PP_STARTUP_VENEER-PP_STARTUP_CALL-8)>>2)&0xffffff);
  svcFlushEntireDataCache();svcInvalidateEntireInstructionCache();return 0;
 }
 void deferred_prepare_books(void){
  uint8_t game_thread_state[0x200];void*tls=getThreadLocalStorage();
  memcpy(game_thread_state,tls,sizeof(game_thread_state));
  memcpy(tls,plugin_thread_state,sizeof(plugin_thread_state));
- *(uint32_t*)0x120338=0xeb002188;
+ *(uint32_t*)PP_STARTUP_CALL=PP_STARTUP_WORD;
  /* Clear the temporary veneer too, before any native patch CRC checks. */
- memset((void*)0x2cbfa0,0,8);
+ memset((void*)PP_STARTUP_VENEER,0,8);
  svcFlushEntireDataCache();svcInvalidateEntireInstructionCache();
- FILE*f=fopen("sdmc:/PictoPlus/startup-display.txt","a");
- if(f){fprintf(f,"DEFERRED: native GSP initialization returned; game session %08lx.\n",(unsigned long)*(uint32_t*)0x2d3488);fclose(f);}
+ FILE*f=fopen(PP_STATE_SD "startup-display.txt","a");
+ if(f){fprintf(f,"DEFERRED: native GSP initialization returned; game session %08lx.\n",(unsigned long)*(uint32_t*)PP_GSP_SESSION);fclose(f);}
  prepare_books_main(0,0);
  __appExit();
  memcpy(tls,game_thread_state,sizeof(game_thread_state));

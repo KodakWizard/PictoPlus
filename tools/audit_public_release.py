@@ -26,7 +26,7 @@ def docs(root):
  for i in range(struct.unpack_from('<H',raw,4)[0]):
   w,h,_,_,_,_,n,at=struct.unpack_from('<BBBBHHII',raw,6+i*16);assert raw[at:at+n]==(root/f'docs/images/icon-{w or 256}.png').read_bytes()
 def run():
- archive=ROOT/'build/public-release/PictoPlus-Windows-USA.zip'
+ archive=ROOT/'build/public-release/PictoPlus-Windows.zip'
  with zipfile.ZipFile(archive) as z:
   assert len(z.namelist())==len(set(z.namelist()));entries={n:z.read(n) for n in z.namelist()}
   inspect(entries);manifest=json.loads(entries['release-manifest.json'])
@@ -34,10 +34,11 @@ def run():
   assert entries['LICENSE']==(ROOT/'LICENSE').read_bytes()
   assert 'LICENSES/Noto-OFL.txt' in entries and 'SOURCE/loader-startup.s' in entries
   assert not any('visual-preview' in n for n in entries)
-  setup=entries['app/distribution/USA/PictoPlus-USA-SD-Setup.zip']
-  assert setup==(ROOT/'build/public-release/PictoPlus-USA-SD-Loader.zip').read_bytes()
+  setup=entries['app/distribution/PictoPlus-SD-Loader.zip']
+  assert setup==(ROOT/'build/public-release/PictoPlus-SD-Loader.zip').read_bytes()
   with zipfile.ZipFile(io.BytesIO(setup)) as sd:
-   assert 'PictoPlus/licenses/Noto-OFL.txt' in sd.namelist()
+   assert {n for n in sd.namelist() if n.endswith('.3gx')}=={f'luma/plugins/{title}/PictoPlus.3gx' for title in ('0004000000187D00','0004000000187E00')}
+   assert 'PictoPlus/licenses/Noto-OFL.txt'  in sd.namelist()
    assert 'PictoPlus/authoring.request' not in sd.namelist()
    assert sd.read('PictoPlus/Setup files/Create setup file/authoring.request')==sd.read('PictoPlus/Setup files/Skip Setup/authoring.skip')==b'PPAUTH01\n'
    assert 'PictoPlus/authoring.skip' not in sd.namelist()

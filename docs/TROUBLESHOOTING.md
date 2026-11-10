@@ -12,13 +12,13 @@ Do not disable antivirus protection. Verify the release checksum and report a de
 
 ## The game doesn't show PictoPlus or my books
 
-Check the game region, enable Luma's plugin loader, and confirm that exactly one plugin is in `luma/plugins/0004000000187D00/`. Books belong in `SD:/PictoPlus/Books/`, not inside a nested ZIP. Restart the game after adding files.
+Check the game region, enable Luma's plugin loader, and confirm that exactly one plugin is in the title folder for your game. USA uses `luma/plugins/0004000000187D00/` and EUR uses `luma/plugins/0004000000187E00/`. Books belong in `SD:/PictoPlus/Books/`, not inside a nested ZIP. Restart the game after adding files.
 
 For Azahar, check its configured virtual SD root and 3GX support. See [installation](INSTALLATION.md).
 
 ## First-time setup fails
 
-Wait for the current preparation stage to finish. Then check `PictoPlus/native-loader-status.txt`, `startup-progress.txt` and `startup-display.txt` if present. Keep your registry and progress files. Don't restore a save or delete everything as a first troubleshooting step.
+Wait for the current preparation stage to finish. Then check `native-loader-status.txt`, `startup-progress.txt` and `startup-display.txt` in `PictoPlus/` for USA or `PictoPlus/EUR/` for EUR. Keep your registry and progress files. Don't restore a save or delete everything as a first troubleshooting step.
 
 The import file is `PictoPlus/PictoPlus-Setup.pictosetup`. Don't share it in a public issue. A truncated or mismatched setup file should be rejected rather than replacing a working configuration.
 

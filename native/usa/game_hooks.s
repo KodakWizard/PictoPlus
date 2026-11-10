@@ -1,3 +1,4 @@
+#include "game_region.h"
 /* Long-range ARM trampolines: preserve the game's complete call frame. */
 .cpu mpcore
 .arm
@@ -26,7 +27,7 @@ native_save_hook:
     mov r1, r8
     bl native_prune_books
     pop {r0-r12,lr}
-    ldr pc, =0x293b3c
+    ldr pc, =PP_SAVE_CONTINUE
 
 /* At the final bounds call, the live QPP pointer is in the caller's frame.
  * The game copies its ID into the state later, so read it from the QPP. */
@@ -62,7 +63,7 @@ native_save_dirty_hook:
 deferred_startup_hook:
  /* Execute the original native graphics initializer with the original r0. */
  push {r4,lr}
- ldr r12,=0x128960
+ ldr r12,=PP_GRAPHICS_INIT
  blx r12
  pop {r4,lr}
  push {r0-r12,lr}

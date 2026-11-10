@@ -80,3 +80,27 @@ body[data-menu-open=false][data-menu-pinned=false] .brand{width:60px;padding:22p
 
 .preparation-ring{display:inline-block;flex-shrink:0;width:18px;height:18px;border:3px solid #159b8c38;border-top-color:#159b8c;border-radius:50%;vertical-align:middle;cursor:help;animation:export-preparing 1.1s linear infinite}.preparation-ring[data-state=ready]{border-color:#159b8c;animation:none;box-shadow:inset 0 0 0 3px var(--surface,#fff);background:#159b8c}.preparation-ring[data-state=attention]{border-color:#d6a133;animation:none;background:none}.preparation-ring[data-state=paused]{border-color:#82959f;animation:none;background:none}.preparation-ring:focus-visible{outline:2px solid var(--accent);outline-offset:4px}@keyframes export-preparing{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.preparation-ring{animation:none}}
 .puzzle-card .card-image .preparation-ring{position:absolute;right:12px;top:12px;z-index:2;box-sizing:content-box;background-color:var(--surface,#fff);box-shadow:0 0 0 5px var(--surface,#fff);width:17px;height:17px}#randomiseButton{position:relative}#randomiseButton[data-busy=true]::after{content:'';position:absolute;right:12px;top:calc(50% - 8px);width:13px;height:13px;border:2px solid #ffffff55;border-top-color:currentColor;border-radius:50%;animation:export-preparing .8s linear infinite}#randomiseButton[data-busy=true]{padding-right:36px;opacity:.85}#resetPositioning{white-space:nowrap}
+
+/* Keep every dialog and its last action reachable within the application window. */
+dialog:not(.model-dialog){max-width:calc(100vw - 24px);max-height:calc(100vh - 24px);overflow:auto}
+.model-stage{overflow:auto}
+@media(max-width:780px){
+ .model-dialog{overflow:auto}
+ .model-wizard-grid{display:block;height:auto}
+ .model-stage #modelPreview{height:36vh!important}
+ .model-option-panel{margin-top:12px}
+}
+
+body[data-compact] .topbar{min-height:0;padding-top:8px;padding-bottom:8px;gap:12px}
+body[data-compact] .canvas-toolbar{padding:6px 10px!important;gap:6px!important}
+body[data-compact] .canvas-footer{padding-top:4px;padding-bottom:4px}
+body[data-compact] .inspector-body{padding:0 12px 12px!important}
+body[data-compact] .inspector section{padding:12px 0}
+body[data-compact] .inspector-tabs,body[data-compact] .inspector-tabs button{min-height:0;padding-top:8px;padding-bottom:8px}
+body[data-compact] .field-label{margin-top:8px;margin-bottom:4px}
+body[data-compact] :is(.collection-page,.faq-page,#settingsPage){padding:16px!important}
+body[data-compact] :is(.page-intro,.dialog-heading){margin-bottom:12px}
+body[data-compact] :is(.settings-groups,.faq-grid,.model-wizard-grid){gap:12px}
+body[data-compact] :is(.settings-card,dialog){padding:14px!important}
+body[data-compact] .settings-card .check-label{margin:8px 0}
+body[data-compact] .model-option-panel>.model-actions{padding-top:8px}
