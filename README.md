@@ -218,6 +218,16 @@ Made something you're proud of?
 
 Share your `.pictobook` file with another PictoPlus user. They can copy it to their Books folder to play, or import it into the desktop app to make their own changes.
 
+**Want to share your puzzles with the community?**
+
+Head over to [Puzzle Book Submissions](https://github.com/KodakWizard/PictoPlus/discussions/categories/puzzle-book-submissions) on GitHub Discussions.
+
+1. Create a new discussion with the name of your puzzle book.
+2. Attach a ZIP containing your `.pictobook` file.
+3. Add a short description and some screenshots if you have any.
+
+Feel free to try other people's puzzles and leave feedback!
+
 Please only share models and artwork you have permission to distribute.
 
 Your setup files, extracted game resources and save data should stay private.
