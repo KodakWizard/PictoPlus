@@ -198,7 +198,9 @@ Compatibility may vary between emulator versions. On Windows, keep portable Azah
 
 ## A book to get you started
 
-<img src="docs/images/animals-cover.png" width="180" alt="Animals Puzzle Pack cover">
+<p align="center">
+  <img src="docs/images/Animals Puzzle Book Banner.png" width="700" alt="Animals Puzzle Pack cover">
+</p>
 
 Not sure where to start? I've put together an **Animals Puzzle Pack** with 15 puzzles, featuring everything from a hummingbird to a hippopotamus.
 
