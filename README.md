@@ -146,7 +146,7 @@ Keep your generated setup file private. It contains resources from your own copy
   </a>
 </p>
 
-I've also put together an Animals book with 30 puzzles, from a hummingbird to a hippopotamus. Hopefully the Pug puzzle isn't too difficult!
+I've also put together a puzzle pack with 30 different animal puzzles, anything from a hummingbird to a hippopotamus. Hopefully the Pug puzzle isn't too difficult!
 
 **[Download the Animals Puzzle Pack](https://github.com/KodakWizard/PictoPlus/releases/download/v1.0.0/PictoPlus-Animals-Puzzle-Pack.zip)**
 
