@@ -16,15 +16,15 @@ PictoPlus lets you create your own 3D puzzles, collect them into books and play 
 It's a little fan-made project for anyone who loves the game and wants to keep creating.
 
 <p align="center">
-  <strong>v0.9 Beta</strong>
+  <strong>v1.0.0</strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/KodakWizard/PictoPlus/releases/download/v0.9.0/PictoPlus-Windows-USA.zip"><strong>Download for Windows</strong></a>
+  <a href="https://github.com/KodakWizard/PictoPlus/releases/download/v1.0.0/PictoPlus-Windows.zip"><strong>Download for Windows</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/KodakWizard/PictoPlus/releases/download/v0.9.0/PictoPlus-USA-SD-Loader.zip"><strong>USA SD Loader</strong></a>
+  <a href="https://github.com/KodakWizard/PictoPlus/releases/download/v1.0.0/PictoPlus-SD-Loader.zip"><strong>USA + EUR SD Loader</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/KodakWizard/PictoPlus/releases/tag/v0.9.0">Release notes</a>
+  <a href="https://github.com/KodakWizard/PictoPlus/releases/tag/v1.0.0">Release notes</a>
 </p>
 
 ## A look inside PictoPlus
@@ -113,21 +113,21 @@ You'll need:
 
 - A Windows 10 (22H2 or newer) or Windows 11 PC, 64-bit.
 - A Nintendo 3DS with Luma3DS, or the Azahar emulator.
-- A **legally obtained USA copy of Picross 3D: Round 2**.
+- A **legally obtained USA or EUR copy of Picross 3D: Round 2**.
 
-The public PictoPlus loader currently supports the USA version of the game. EUR development is separate.
+PictoPlus v1.0.0 supports the USA and EUR game revisions only. EUR physical 3DS testing is pending.
 
 ### 1. Download the Windows app
 
-Download [PictoPlus for Windows](https://github.com/KodakWizard/PictoPlus/releases/download/v0.9.0/PictoPlus-Windows-USA.zip).
+Download [PictoPlus for Windows](https://github.com/KodakWizard/PictoPlus/releases/download/v1.0.0/PictoPlus-Windows.zip).
 
 Extract the entire ZIP to a folder on your computer and open `PictoPlus.exe`.
 
 Keep all the included files together. PictoPlus needs them to run correctly.
 
-### 2. Install the USA SD Loader
+### 2. Install the USA + EUR SD Loader
 
-Download the [PictoPlus USA SD Loader](https://github.com/KodakWizard/PictoPlus/releases/download/v0.9.0/PictoPlus-USA-SD-Loader.zip).
+Download the [PictoPlus USA + EUR SD Loader](https://github.com/KodakWizard/PictoPlus/releases/download/v1.0.0/PictoPlus-SD-Loader.zip).
 
 Extract its `luma` and `PictoPlus` folders to the root of your 3DS SD card, keeping the original folder structure.
 
@@ -137,7 +137,7 @@ Extract its `luma` and `PictoPlus` folders to the root of your 3DS SD card, keep
 2. Find **Plugin Loader** and set it to **Enabled**.
 3. Press `B` to exit the menu.
 
-Now launch your legally obtained USA copy of Picross 3D: Round 2.
+Now launch your legally obtained USA or EUR copy of Picross 3D: Round 2. The ZIP puts each plugin in its own title folder so Luma3DS can load the right one automatically.
 
 ### 3. Complete the one-time setup
 
@@ -173,18 +173,18 @@ You only need to install the loader once. You can add more books whenever you li
 
 Prefer playing on your PC? PictoPlus also works with [Azahar](https://www.azahar-emu.org/), the Nintendo 3DS emulator.
 
-PictoPlus has been successfully tested with **Azahar 2126.2**, using the USA version of the game.
+Both USA and EUR booted with the loader in Azahar. USA gameplay was also previously tested on a physical 3DS.
 
-You'll need a **legally obtained USA copy of Picross 3D: Round 2**.
+You'll need a **legally obtained USA or EUR copy of Picross 3D: Round 2**.
 
 ### Setup
 
 1. Open Azahar and go to **Emulation → Configure → System**.
 2. Enable **3GX Plugin Loader**.
 3. Go to **File → Open Azahar Folder** and locate the `sdmc` folder.
-4. Extract the [PictoPlus USA SD Loader](https://github.com/KodakWizard/PictoPlus/releases/download/v0.9.0/PictoPlus-USA-SD-Loader.zip) into `sdmc`, keeping its folder structure intact.
+4. Extract the [PictoPlus USA + EUR SD Loader](https://github.com/KodakWizard/PictoPlus/releases/download/v1.0.0/PictoPlus-SD-Loader.zip) into `sdmc`, keeping its folder structure intact.
 5. Copy your `.pictobook` files into `sdmc/PictoPlus/Books/`.
-6. Launch your USA copy of Picross 3D: Round 2.
+6. Launch your USA or EUR copy of Picross 3D: Round 2.
 
 **Using portable Azahar?** Your virtual SD card may be located at:
 
@@ -194,7 +194,7 @@ The exact location depends on your installation, so using **File → Open Azahar
 
 You don't need Luma3DS installed inside Azahar. The emulator has its own 3GX plugin loader.
 
-Compatibility may vary between emulator versions. The PictoPlus USA loader is not intended for other game regions.
+Compatibility may vary between emulator versions. On Windows, keep portable Azahar in a short folder path so the emulator can create the game save folders.
 
 ## A book to get you started
 
@@ -204,7 +204,7 @@ Not sure where to start? I've put together an **Animals Puzzle Pack** with 15 pu
 
 It's a nice way to try PictoPlus without having to make your own puzzles first.
 
-**[Download the Animals Puzzle Pack](https://github.com/KodakWizard/PictoPlus/releases/download/v0.9.0/PictoPlus-Animals-Puzzle-Pack.zip)**
+**[Download the Animals Puzzle Pack](https://github.com/KodakWizard/PictoPlus/releases/download/v1.0.0/PictoPlus-Animals-Puzzle-Pack.zip)**
 
 Just unzip the download and copy `Animals.pictobook` into your `PictoPlus/Books/` folder on your 3DS or Azahar virtual SD card.
 
@@ -224,7 +224,7 @@ Your setup files, extracted game resources and save data should stay private.
 
 ## Help & contributing
 
-PictoPlus is still in beta, so there may be a few rough edges.
+Earlier releases remain available in [GitHub Releases](https://github.com/KodakWizard/PictoPlus/releases).
 
 If something isn't working or you have an idea for a new feature, feel free to [open an issue](https://github.com/KodakWizard/PictoPlus/issues).
 
